@@ -202,27 +202,17 @@ function shuffle(array) {
   }
 
   function calculateScore() {
- 
-    score++;    
-    let currentScore = document.querySelectorAll(".score");    
+    score++;
+    let currentScore = document.querySelectorAll(".score");
     let scoreCalc = currentScore.length - score;
-    
-    
     for (let i = currentScore.length - 1; i >= 0; i--) {
-      let playerScore = currentScore[i];
-      playerScore.classList.remove("current-score");
-      //document.getElementsByClass(".score").innerHTML = score;
-
-    //console.log(score);
-      if (i === scoreCalc) {
-        playerScore.classList.add("current-score");
-        console.log(playerScore);
-        break;
-        
-        
-      }
+        let playerScore = currentScore[i];
+        if (i === scoreCalc) {
+            break;
+        }
     }
-  }
+    let displayScore = (document.getElementById("score").innerHTML = `Score: ${score}`);
+}
   
 
 

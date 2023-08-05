@@ -429,6 +429,9 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
  015         |  script.js / index.html    | Chrome        |  getScore      | Fail       | From console logs and alert boses I know that my score is compiling as planned, but I can't get a static score to show on index.html. Attempts to push the score value through via innerHTML are failing. 
 | **Before**                                          |   **After**          ||||
 | ![678px ratio](/assets/testing/test-images/test-fourteen-a.webp) |       | |             | | |
+ 016         |  script.js / index.html    | Chrome        |  getScore      | Pass       | After rewriting the calculaeScore function I have the score now working. I intentially made the text large and red at the top of the page so I could see when it was working properly. 
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-sixteen-a.webp)  ![678px ratio](/assets/testing/test-images/test-sixteen-b.webp) |       | |             | | |
 
 
 

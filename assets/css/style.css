@@ -73,7 +73,7 @@
   
 }
 
-.current-score {
+#score {
     text-align: center;
     color: red;
     font-size: 30px;
