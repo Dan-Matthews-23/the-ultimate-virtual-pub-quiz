@@ -184,3 +184,14 @@ function shuffle(array) {
       }
     } 
   }
+
+  function retriveNextQuestion() {
+    id++;
+    if (id >= connect.results.length) {
+      alert(`Quiz complete! Your score: ${score}/${connect.results.length}`);
+      return;
+    }
+    getQuestionArray();
+    document.getElementById("next").classList.add("hidden");
+    getAnswerArray();
+  }
