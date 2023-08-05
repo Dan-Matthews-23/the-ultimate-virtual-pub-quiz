@@ -119,3 +119,28 @@ async function connectAPI(apiURL) {
       window.location.assign("500.html");
     }
   }
+
+  // Display the question in index.html in the part with an ID of 'question'. Do this based on where we are in the array (question number)
+function getQuestionArray() {
+    const question = (document.getElementById("question").innerHTML = connect.results[id].question);
+  }
+  
+  // Get the list of answers to the question we just called. 
+  
+  function getAnswerArray() {
+    const answerCorrect = connect.results[id].correct_answer;
+    const answerIncorrect = connect.results[id].incorrect_answers;
+    const possibleAnswers = document.querySelectorAll(".answer");
+    const newAnswerDataset = answerIncorrect.concat(answerCorrect);
+    shuffle(newAnswerDataset);
+    for (let i = 0; i < possibleAnswers.length; i++) {
+      possibleAnswers[i].innerHTML = newAnswerDataset[i];
+      possibleAnswers[i].style.background = "";
+      possibleAnswers[i].disabled = false;
+   
+      possibleAnswers[i].removeEventListener("click", confirmAnswer);
+     
+      possibleAnswers[i].addEventListener("click", confirmAnswer);
+    }
+  }
+  
