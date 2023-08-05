@@ -401,3 +401,5 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
 | 006         |  script.js / index.html    | Chrome        |  function showQuizSection() / section.quiz-section      | Pass       | After test failures in Test 005 I realised that .style.display="hide" is not a valid instruction. This should have been .style.display="none". After correcting, tests passed. 
 | **Before**                                          |   **After**          ||||
 | ![678px ratio](/assets/testing/test-images/test-six-a.webp) ![678px ratio](/assets/testing/test-images/test-six-b.webp) ![678px ratio](/assets/testing/test-images/test-six-c.webp)      | |             | | |
+| 007         |  script.js / index.html    | Chrome        |  showQuizSection / showInstructions / showHallOfFame      | Pass       | Following from successful results in Tests 005 and 006 I have replicated the code for each of the three sections: quiz-section, instructions-section and Hall-of-fame-section. The code passed all tests 
+| **Before**                                          |   **After**          ||||

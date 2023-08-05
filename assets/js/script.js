@@ -29,3 +29,29 @@ function showQuizSection() {
   document.getElementById("return-section").classList.remove("hidden");
   document.getElementById("user-selection-section").classList.add("hidden");
 }
+
+function showInstructionsSection() {
+    document.getElementById("quiz-section").classList.add("hidden");
+    document.getElementById("instructions-section").classList.remove("hidden");
+    document.getElementById("hall-of-fame-section").classList.add("hidden");
+    document.getElementById("return-section").classList.remove("hidden");
+    document.getElementById("user-selection-section").classList.add("hidden");
+  }
+  
+  function showHallofFameSection() {
+    document.getElementById("quiz-section").classList.add("hidden");
+    document.getElementById("instructions-section").classList.add("hidden");
+    document.getElementById("hall-of-fame-section").classList.remove("hidden");
+    document.getElementById("return-section").classList.remove("hidden");
+    document.getElementById("user-selection-section").classList.add("hidden");
+  }
+  
+  function returnHomeSection() {
+    document.getElementById("quiz-section").classList.add("hidden");
+    document.getElementById("instructions-section").classList.add("hidden");
+    document.getElementById("hall-of-fame-section").classList.add("hidden");
+    document.getElementById("return-section").classList.add("hidden");
+    document.getElementById("user-selection-section").classList.remove("hidden");
+  }
+
+  
