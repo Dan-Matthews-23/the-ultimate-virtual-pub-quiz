@@ -90,3 +90,7 @@ function showInstructionsSection() {
 },
 
   ];
+ 
+  //Global Variables
+const nextButton = document.getElementById("next");
+nextButton.addEventListener("click", retriveNextQuestion);
