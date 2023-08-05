@@ -20,3 +20,12 @@ returnHome.addEventListener("click", returnHomeSection);
 //selectEasy.addEventListener("click", chooseEasy);
 //selectMedium.addEventListener("click", chooseMedium);
 //selectHard.addEventListener("click", chooseHard);
+
+function showQuizSection() {
+    document.getElementById("quiz-section").style.display("hidden");
+    //document.getElementById("difficulty-section").classList.remove("hidden");
+    document.getElementById("instructions-section").style.display("hidden");
+    document.getElementById("hall-of-fame-section").style.display("hidden");
+    document.getElementById("return-section").style.display("hidden");
+    document.getElementById("user-selection-section").style.display("hidden");
+  }
