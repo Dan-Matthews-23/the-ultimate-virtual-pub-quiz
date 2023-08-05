@@ -73,6 +73,13 @@
   
 }
 
+.current-score {
+    text-align: center;
+    color: inherit;
+    font-size: inherit;
+    padding: inherit;   
+}
+
 /*
 #quiz-section,
 #instructions-section,

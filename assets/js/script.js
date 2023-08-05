@@ -198,10 +198,8 @@ function shuffle(array) {
 
   function calculateScore() {
  
-    score++;
-    
-    let currentScore = document.querySelectorAll(".score");
-    
+    score++;    
+    let currentScore = document.querySelectorAll(".score");    
     let scoreCalc = currentScore.length - score;
     
     for (let i = currentScore.length - 1; i >= 0; i--) {
@@ -215,3 +213,4 @@ function shuffle(array) {
   }
   
   connectAPI(difficultyEasy);
+  console.log(score);
