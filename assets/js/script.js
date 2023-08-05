@@ -54,4 +54,39 @@ function showInstructionsSection() {
     document.getElementById("user-selection-section").classList.remove("hidden");
   }
 
-  
+  // My Question Array
+  const questionArray = 
+  [
+  { 
+    ID: 0,
+    question: `Which is the biggest planet in our solar system?`,
+    correct_answer: `Jupiter`,
+    incorrect_answer: [`Venus`, `Neptune`, `Mercury`]
+     
+},
+
+{ 
+    ID: 1,
+    question: `Which is the smallest planet in our solar system?`,
+    correct_answer: `Mercury`,
+    incorrect_answer: [`Earth`, `Neptune`, `Mars`]
+     
+},
+
+{ 
+    ID: 2,
+    question: `Which is the hottest planet in our solar system?`,
+    correct_answer: `Venus`,
+    incorrect_answer: [`Earth`, `Mercury`, `Mars`]
+     
+},
+
+{ 
+    ID: 3,
+    question: `Which is the coldest planet in our solar system?`,
+    correct_answer: `Uranus`,
+    incorrect_answer: [`Earth`, `Mercury`, `Mars`]
+     
+},
+
+  ];
