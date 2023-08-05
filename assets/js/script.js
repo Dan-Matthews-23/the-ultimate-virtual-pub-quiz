@@ -22,10 +22,10 @@ returnHome.addEventListener("click", returnHomeSection);
 //selectHard.addEventListener("click", chooseHard);
 
 function showQuizSection() {
-    document.getElementById("quiz-section").style.display("hidden");
-    //document.getElementById("difficulty-section").classList.remove("hidden");
-    document.getElementById("instructions-section").style.display("hidden");
-    document.getElementById("hall-of-fame-section").style.display("hidden");
-    document.getElementById("return-section").style.display("hidden");
-    document.getElementById("user-selection-section").style.display("hidden");
-  }
+  document.getElementById("quiz-section").classList.remove("hidden");
+  //document.getElementById("difficulty-section").classList.remove("hidden");
+  document.getElementById("instructions-section").classList.add("hidden");
+  document.getElementById("hall-of-fame-section").classList.add("hidden");
+  document.getElementById("return-section").classList.remove("hidden");
+  document.getElementById("user-selection-section").classList.add("hidden");
+}
