@@ -412,3 +412,17 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
 | ![678px ratio](/assets/testing/test-images/test-nine-a.webp) | ![678px ratio](/assets/testing/test-images/test-nine-b.webp)   ![678px ratio](/assets/testing/test-images/test-nine-c.webp) ![678px ratio](/assets/testing/test-images/test-nine-d.webp) ![678px ratio](/assets/testing/test-images/test-nine-e.webp)     | |             | | |
 | 010         |  script.js / index.html    | Chrome        |  showQuiz section      | Fail       | I have created my own question array, however the function seems to be calling the last question in the data set rather than the first, and the buttons are not populating with the one correct and three incorrect answers. I have spent quite a bit of time researching this but still can't figure it out.
 | **Before**                                          |   **After**          ||||
+
+| ![678px ratio](/assets/testing/test-images/test-ten-a.webp) | ![678px ratio](/assets/testing/test-images/test-ten-b.webp)       | |             | | |
+| 011         |  script.js / index.html    | Chrome        |  getQuestionArray      | Fail       | After trying to fix test 010, I tried to create a new function and call the question section to populate a new question. However the answers did not populate at all, and the question dissapeared. 
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-eleven-a.webp) | ![678px ratio](/assets/testing/test-images/test-eleven-b.webp)       | |             | | |
+| 012         |  script.js / index.html    | Chrome        |  getQuestionArray      | Pass       | I realised that I was calling for the class, not the ID on question from index.html. Made changes and it worked.  
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-twelve-a.webp) |       | |             | | |
+ 013         |  script.js / index.html    | Chrome        |  getQuestionArray      | Fail       | In an attempt to refine my code for calling the questions and to correct a long-standing error from Test 010, I attempted to re-write the function. However the questions did not populate, and the automated testing (via console) gave an error
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-thirteen-a.webp) |   ![678px ratio](/assets/testing/test-images/test-thirteen-b.webp) ![678px ratio](/assets/testing/test-images/test-thirteen-c.webp)    | |             | | |
+ 014         |  script.js / index.html    | Chrome        |  getQuestionArray      | Pass       | After case conferencing with a peer I realised that I was not correctly indexing the questions from the array. I should have been using 'connect.results[id].correct_answer;' instead of 'connect.results.correct_answer'. Made adjustments and passed all tests. Questions are now working
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-fourteen-a.webp) |       | |             | | |
