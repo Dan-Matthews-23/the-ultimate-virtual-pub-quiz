@@ -120,6 +120,13 @@ async function connectAPI(apiURL) {
     }
   }
 
+ // } catch (error) {
+    //console.log(error);
+  //}
+  //console.log(connect.results);
+//}
+//----END OF CODE SNIPPET---------------------------------------------------------------------------------------------------------
+
   // Display the question in index.html in the part with an ID of 'question'. Do this based on where we are in the array (question number)
 function getQuestionArray() {
     const question = (document.getElementById("question").innerHTML = connect.results[id].question);
@@ -143,4 +150,14 @@ function getQuestionArray() {
       possibleAnswers[i].addEventListener("click", confirmAnswer);
     }
   }
+  
+  // Function to shuffle all answers in the array
+//------This section of code was taken from Free Code Camp and slightly modified to suit the purposes of this function-----------------
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+  //---END OF CODE SNIPPET----------
   
