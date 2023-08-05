@@ -30,72 +30,74 @@
 }
 
 /*--------------------USER SCREEN ---------------------------------------*/
-
 .user-screen {
-    background-color: #67442c;
-    margin: auto auto auto auto;
-    max-width: 100%;
-    padding: 10px 10px 10px 10px;
-  }
-  
-  .main-title {
-    color: #fafafa;
-    letter-spacing: 4px;
-    display: block;
-    font-weight: 700px;
-    font-family: "Caveat", cursive;
-    font-size: 5vw;
-  }
-  
-  .sub-button,
-  .answer {
-    background-color: #a37451;
-    padding: 5px 5px 5px 5px;
-    color: white;
-    text-align: center;
-    margin: auto auto auto auto;
-    /*font-size: 22px;*/
-    font-size: 5vw;
-    /*border-radius: 2px;*/
-    width: 50%;
-    font-family: "Caveat", cursive;
-  }
-  
-  .button-container {
-    padding: 5px 5px 5px 5px;
-      
-  }
-  
-  .hall-of-fame-table {
-    text-align: center;
-    color: inherit;
-    font-size: inherit;
-    padding: inherit;
+  background-color: #67442c;
+  margin: auto auto auto auto;
+  max-width: 100%;
+  padding: 10px 10px 10px 10px;
+}
+
+.main-title {
+  color: #fafafa;
+  letter-spacing: 4px;
+  display: block;
+  font-weight: 700px;
+  font-family: "Caveat", cursive;
+  font-size: 5vw;
+}
+
+.sub-button,
+.answer {
+  background-color: #a37451;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  text-align: center;
+  margin: auto auto auto auto;
+  /*font-size: 22px;*/
+  font-size: 5vw;
+  /*border-radius: 2px;*/
+  width: 50%;
+  font-family: "Caveat", cursive;
+}
+
+.button-container {
+  padding: 5px 5px 5px 5px;
     
-  }
+}
+
+.hall-of-fame-table {
+  text-align: center;
+  color: inherit;
+  font-size: inherit;
+  padding: inherit;
   
-  /*
-  #quiz-section,
-  #instructions-section,
-  #hall-of-fame-section {
-    display: none;
-  }*/
-  
-  
-  .hidden {
-    display: none;
-  }
-  
-  .display {
-    display: block;
-  }
-  
-  /*-----------------END OF USER SCREEN-------------------------------------*/
-  /*--------------------MEDIA QUERIES - FOR RESPONSIVE DESIGN ---------------------------------------*/
+}
+
+/*
+#quiz-section,
+#instructions-section,
+#hall-of-fame-section {
+  display: none;
+}*/
+
+
+.hidden {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+/*-----------------END OF USER SCREEN-------------------------------------*/
+
+
+
+/*--------------------MEDIA QUERIES - FOR RESPONSIVE DESIGN ---------------------------------------*/
 @media screen and (max-width: 576px) {
-    .sub-button,
-    .user-screen {
-      padding: 0px 0px 0px 0px;
-    }
+  .sub-button,
+  .user-screen {
+    padding: 0px 0px 0px 0px;
   }
-  /*--------------------END OF MEDIA QUERIES---------------------------------------*/
+}
+/*--------------------END OF MEDIA QUERIES---------------------------------------*/
