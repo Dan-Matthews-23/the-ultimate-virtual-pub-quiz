@@ -94,3 +94,28 @@ function showInstructionsSection() {
   //Global Variables
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", retriveNextQuestion);
+
+// URL for API
+const difficultyEasy = "https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple";
+
+
+let connect = {};
+let score = 0;
+let id = 0;
+
+
+// Function to connect to API. 
+//-----This section of code was based on a template from Chris Minnick, from JavaScript ALL-IN-ONE for dummies, although I have written the code myself. See README for more information------
+async function connectAPI(apiURL) {
+  //try {
+    const connection = await fetch(apiURL);
+    if (connection.status >= 200 && connection.status <= 299) {
+      connect = await connection.json();
+      //return connection.json();
+      getQuestionArray();
+      getAnswerArray();
+    } else {
+      //throw Error("There was an error when trying to connect. Please try again later");
+      window.location.assign("500.html");
+    }
+  }
