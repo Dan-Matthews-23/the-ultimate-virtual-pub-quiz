@@ -131,6 +131,7 @@ async function connectAPI(apiURL) {
   // Display the question in index.html in the part with an ID of 'question'. Do this based on where we are in the array (question number)
 function getQuestionArray() {
     const question = (document.getElementById("question").innerHTML = connect.results[id].question);
+    let displayScore = (document.getElementById("score").innerHTML = `Score: ${score}`);
   }
 
 
@@ -203,6 +204,7 @@ function shuffle(array) {
 
   function calculateScore() {
     score++;
+    //let displayScore = (document.getElementById("score").innerHTML = `Score: ${score}`);
     let currentScore = document.querySelectorAll(".score");
     let scoreCalc = currentScore.length - score;
     for (let i = currentScore.length - 1; i >= 0; i--) {
@@ -211,7 +213,7 @@ function shuffle(array) {
             break;
         }
     }
-    let displayScore = (document.getElementById("score").innerHTML = `Score: ${score}`);
+    
 }
   
 

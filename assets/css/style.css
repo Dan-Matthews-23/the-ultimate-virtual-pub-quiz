@@ -75,9 +75,13 @@
 
 #score {
     text-align: center;
-    color: red;
+    background-color: #1D110F;
+    color: #a37451;
     font-size: 30px;
-    padding: inherit;   
+    padding: 5px 5px 5px 5px;
+    letter-spacing: 4px;
+    display: block;
+    font-weight: 700px;
 }
 
 /*
