@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@300&display=swap"); /* Import the title font*/
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@300;400&display=swap"); /* Import the text font*/
+
+.body {
+  font-family: "Poppins", sans-serif;
+}
+
+.main-container {
+  background-image: url("../../assets/images/background-image.webp");
+  height: 100%;
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: black;
+}
+
+.with-borders {
+  border-style: solid;
+  border-color: black;
+}
+
+.align-center {
+  text-align: center;
+  margin: auto;
+}
+
+.blank-row-with-xxl-padding {
+  padding: 100px 100px 100px 100px;
+}
+
+/*--------------------USER SCREEN ---------------------------------------*/
