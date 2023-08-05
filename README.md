@@ -375,3 +375,29 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
 
 | User Stories| Has this been achieved?     |   How?                                                               |  
 |------------ | ------------                | ------------                                                         |
+
+
+
+
+### Behaviour-Driven Development Testing (Manual testing)
+
+| Test Number|      Page     |   Browser      |   Feature (by class/ ID / name)       | Result     |  Comments |  
+|------------ | ------------  | ------------  | ------------                          |------------| ------------             | 
+| 001         |  style.css    | Chrome        |  Media Query / user-screen title      | Fail       | The title font size did not reduce with screen size. Tested on two viewports: 1500px and 480px. However all media query tests failed despite several attempts 
+| **Before**                                          |   **After**          ||||
+| ![1500px ratio](/assets/testing/test-images/test-one-a.webp)      |![15480px ratio](/assets/testing/test-images/test-one-b.webp) |             | | |
+| 002         |  style.css    | Chrome        |  Media Query / user-screen title      | Pass       | Following the result in Test 001 I decided to use a ViewPort method rather than Media Query and set this to '5VW'. This resolved the issue I had in Test 001. 
+| **Before**                                          |   **After**          ||||
+| ![1500px ratio](/assets/testing/test-images/test-two-a.webp)      |![480px ratio](/assets/testing/test-images/test-two-b.webp) |             | | |
+| 003         |  script.js / index.html    | Chrome        |  function hideQuizSection() / div.quiz-section      | Fail       | A function built to hide the div.quiz-section on HTML when not active after studying the code on [W3 Schools](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp). I tried to send the output to console.log to find out why it wasn't working, however all tests failed
+| **Before**                                          |   **After**          ||||
+| ![1500px ratio](/assets/testing/test-images/test-three-a.webp) ![480px ratio](/assets/testing/test-images/test-three-b.webp)      | |             | | |
+| 004         |  script.js / index.html    | Chrome        |  function hideQuizSection() / section.quiz-section      | Pass       | After test failures in Test 003 I researched other ways to make the function work. I added an 'OnClick()' element to the button to call the function once it was clicked. It passed all tests. However after speaking to my mentor, I decided to use an Event Listener instead (see Other Feedback, test 005)
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-four-a.webp) ![678px ratio](/assets/testing/test-images/test-four-b.webp) ![678px ratio](/assets/testing/test-images/test-four-c.webp)      | |             | | |
+| 005         |  script.js / index.html    | Chrome        |  function hideQuizSection() / section.quiz-section      | Fail       | After following advice from me mentor I attemped to create an EventListener() function in place of the OnClick() function. The quiz-section displayed as expected but the other sections (specifically the user-selection-section) did not hide. Tests failed. 
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-five-a.webp) ![678px ratio](/assets/testing/test-images/test-five-b.webp) ![678px ratio](/assets/testing/test-images/test-five-c.webp)      | |             | | |
+| 006         |  script.js / index.html    | Chrome        |  function showQuizSection() / section.quiz-section      | Pass       | After test failures in Test 005 I realised that .style.display="hide" is not a valid instruction. This should have been .style.display="none". After correcting, tests passed. 
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-six-a.webp) ![678px ratio](/assets/testing/test-images/test-six-b.webp) ![678px ratio](/assets/testing/test-images/test-six-c.webp)      | |             | | |
