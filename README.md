@@ -426,6 +426,9 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
  014         |  script.js / index.html    | Chrome        |  getQuestionArray      | Pass       | After case conferencing with a peer I realised that I was not correctly indexing the questions from the array. I should have been using 'connect.results[id].correct_answer;' instead of 'connect.results.correct_answer'. Made adjustments and passed all tests. Questions are now working
 | **Before**                                          |   **After**          ||||
 | ![678px ratio](/assets/testing/test-images/test-fourteen-a.webp) |       | |             | | |
+ 015         |  script.js / index.html    | Chrome        |  getScore      | Fail       | From console logs and alert boses I know that my score is compiling as planned, but I can't get a static score to show on index.html. Attempts to push the score value through via innerHTML are failing. 
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-fourteen-a.webp) |       | |             | | |
 
 
 

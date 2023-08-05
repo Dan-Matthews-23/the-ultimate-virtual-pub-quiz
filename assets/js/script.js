@@ -114,6 +114,7 @@ async function connectAPI(apiURL) {
       //return connection.json();
       getQuestionArray();
       getAnswerArray();
+      
     } else {
       //throw Error("There was an error when trying to connect. Please try again later");
       window.location.assign("500.html");
@@ -131,6 +132,10 @@ async function connectAPI(apiURL) {
 function getQuestionArray() {
     const question = (document.getElementById("question").innerHTML = connect.results[id].question);
   }
+
+
+  
+
   
   // Get the list of answers to the question we just called. 
   
@@ -202,15 +207,25 @@ function shuffle(array) {
     let currentScore = document.querySelectorAll(".score");    
     let scoreCalc = currentScore.length - score;
     
+    
     for (let i = currentScore.length - 1; i >= 0; i--) {
       let playerScore = currentScore[i];
       playerScore.classList.remove("current-score");
+      //document.getElementsByClass(".score").innerHTML = score;
+
+    //console.log(score);
       if (i === scoreCalc) {
         playerScore.classList.add("current-score");
-        break; 
+        console.log(playerScore);
+        break;
+        
+        
       }
     }
   }
   
+
+
+
   connectAPI(difficultyEasy);
-  console.log(score);
+  
