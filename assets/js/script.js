@@ -96,7 +96,7 @@ const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", retriveNextQuestion);
 
 // URL for API
-const difficultyEasy = "https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple";
+const difficultyEasy = "https://opentdb.com/api.php?amount=20&type=multiple";
 
 
 let connect = {};
@@ -141,19 +141,20 @@ function getQuestionArray() {
   // Get the list of answers to the question we just called. 
   
   function getAnswerArray() {
+    const possibleAnswers = document.querySelectorAll(".answer");
     const answerCorrect = connect.results[id].correct_answer;
     const answerIncorrect = connect.results[id].incorrect_answers;
-    const possibleAnswers = document.querySelectorAll(".answer");
     const newAnswerDataset = answerIncorrect.concat(answerCorrect);
+
     shuffle(newAnswerDataset);
+    
     for (let i = 0; i < possibleAnswers.length; i++) {
       possibleAnswers[i].innerHTML = newAnswerDataset[i];
       possibleAnswers[i].style.background = "";
+      //possibleAnswers[i].classList.add("answerReset");
       possibleAnswers[i].disabled = false;
-   
       possibleAnswers[i].removeEventListener("click", confirmAnswer);
-     
-      possibleAnswers[i].addEventListener("click", confirmAnswer);
+        possibleAnswers[i].addEventListener("click", confirmAnswer);
     }
   }
   
