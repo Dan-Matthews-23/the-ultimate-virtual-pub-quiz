@@ -432,6 +432,9 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
  016         |  script.js / index.html    | Chrome        |  getScore      | Pass       | After rewriting the calculaeScore function I have the score now working. I intentially made the text large and red at the top of the page so I could see when it was working properly. 
 | **Before**                                          |   **After**          ||||
 | ![678px ratio](/assets/testing/test-images/test-sixteen-a.webp)  ![678px ratio](/assets/testing/test-images/test-sixteen-b.webp) |       | |             | | |
+ 017         |  script.js / index.html    | Chrome        |  confirmAnswer      | Pass       | After almost twenty attempts, I have managed to get the function working so that it highlights the correct answer if the user selects an incorrect answer.  
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-seventeen-a.webp)  ![678px ratio](/assets/testing/test-images/test-seventeen-b.webp) |       | |             | | |
 
 
 

@@ -156,6 +156,7 @@ function getQuestionArray() {
       possibleAnswers[i].removeEventListener("click", confirmAnswer);
         possibleAnswers[i].addEventListener("click", confirmAnswer);
     }
+    
   }
   
   // Function to shuffle all answers in the array
@@ -168,32 +169,43 @@ function shuffle(array) {
   }
   //---END OF CODE SNIPPET----------
 
+
+  
   function confirmAnswer() {
     const selectedAnswer = this.innerHTML;
     const answerCorrect = connect.results[id].correct_answer;
-    
-    if (selectedAnswer === answerCorrect) {
+        if (selectedAnswer === answerCorrect) {
       this.style.background = "green";
+      //this.classList.add("correct-answer");
       document.getElementById("next").classList.remove("hidden");
       const possibleAnswers = document.querySelectorAll(".answer");
       for (let j = 0; j < possibleAnswers.length; j++) {
         possibleAnswers[j].disabled = true;
-      }
+              }
       calculateScore(score);
-      
-    } else {
-      this.style.background = "red";
-      const possibleAnswers = document.querySelectorAll(".answer");
-      document.getElementById("next").classList.remove("hidden");
-      for (let j = 0; j < possibleAnswers.length; j++) {
-        possibleAnswers[j].disabled = true;
-        
+          } else {
+    this.style.background = 'red';
+    // Display the background color of the correct answer when user selects wrong answer
+    const correctAnswerButtons = document.querySelectorAll('.answer');
+    
+    for (let j = 0; j < correctAnswerButtons.length; j++) {
+      if (correctAnswerButtons[j].innerHTML === answerCorrect) {
+        correctAnswerButtons[j].style.background = 'orange';
+        console.log(answerCorrect);
+        break;
       }
-    } 
+    }
+    const answerButtons = document.querySelectorAll('.answer');
+    for (let j = 0; j < answerButtons.length; j++) {
+      answerButtons[j].disabled = true;
+    }
+  }
+
   }
 
   function retriveNextQuestion() {
     id++;
+    
     if (id >= connect.results.length) {
       alert(`Quiz complete! Your score: ${score}/${connect.results.length}`);
       return;
@@ -201,6 +213,8 @@ function shuffle(array) {
     getQuestionArray();
     document.getElementById("next").classList.add("hidden");
     getAnswerArray();
+   // this.classList.remove("correct-answer");
+   // this.classList.remove("incorrect-answer");
   }
 
   function calculateScore() {

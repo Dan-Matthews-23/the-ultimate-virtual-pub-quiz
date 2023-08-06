@@ -97,7 +97,52 @@
     font-weight: 700px;
 }
 
+.correct-answer{
+  background-color: green;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  text-align: center;
+  margin: auto auto auto auto;
+  /*font-size: 22px;*/
+  font-size: 5vw;
+  /*border-radius: 2px;*/
+  width: 50%;
+  font-family: "Caveat", cursive;
+}
+
+.incorrect-answer{
+  background-color: red;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  text-align: center;
+  margin: auto auto auto auto;
+  /*font-size: 22px;*/
+  font-size: 5vw;
+  /*border-radius: 2px;*/
+  width: 50%;
+  font-family: "Caveat", cursive;
+}
+
+.highlight-correct-answer{
+  background-color: yellow;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  text-align: center;
+  margin: auto auto auto auto;
+  /*font-size: 22px;*/
+  font-size: 5vw;
+  /*border-radius: 2px;*/
+  width: 50%;
+  font-family: "Caveat", cursive;
+}
+
+
+
+
+
+
 /*
+
 #quiz-section,
 #instructions-section,
 #hall-of-fame-section {
