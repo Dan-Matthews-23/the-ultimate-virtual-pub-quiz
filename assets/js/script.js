@@ -169,28 +169,41 @@ function shuffle(array) {
   }
   //---END OF CODE SNIPPET----------
 
-
-  
   function confirmAnswer() {
     const selectedAnswer = this.innerHTML;
     const answerCorrect = connect.results[id].correct_answer;
-        if (selectedAnswer === answerCorrect) {
+    
+    if (selectedAnswer === answerCorrect) {
       this.style.background = "green";
       //this.classList.add("correct-answer");
       document.getElementById("next").classList.remove("hidden");
       const possibleAnswers = document.querySelectorAll(".answer");
       for (let j = 0; j < possibleAnswers.length; j++) {
         possibleAnswers[j].disabled = true;
-              }
+        
+      }
       calculateScore(score);
-          } else {
-    this.style.background = 'red';
-    // Display the background color of the correct answer when user selects wrong answer
-    const correctAnswerButtons = document.querySelectorAll('.answer');
+      
     
+    } else {
+
+      
+      this.style.background = "red";
+      /*
+      document.getElementById("next").classList.remove("hidden");
+      for (let j = 0; j < possibleAnswers.length; j++) {
+      console.log(answerCorrect);
+      possibleAnswers[j].disabled = true;
+      this.classList.remove("incorrect-answer");
+       
+      }*/
+
+      // Display the background color of the correct answer when user selects wrong answer
+    const correctAnswerButtons = document.querySelectorAll('.answer');
     for (let j = 0; j < correctAnswerButtons.length; j++) {
       if (correctAnswerButtons[j].innerHTML === answerCorrect) {
         correctAnswerButtons[j].style.background = 'orange';
+        document.getElementById("next").classList.remove("hidden");
         console.log(answerCorrect);
         break;
       }
@@ -199,7 +212,12 @@ function shuffle(array) {
     for (let j = 0; j < answerButtons.length; j++) {
       answerButtons[j].disabled = true;
     }
-  }
+  
+
+
+
+    } 
+
 
   }
 
