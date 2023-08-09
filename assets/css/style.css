@@ -43,8 +43,9 @@
 
 .user-screen-container {
   border-color: #1D110F;
-  background-color: #67442c;
-  opacity: 1;
+  /*background-color: #67442c;*/
+  background-color: rgba(103, 68, 44, 0.7);
+  /*opacity: 0.7;*/
   width: 100vw;
   height:fit-content;
   margin: auto auto auto auto;
@@ -55,11 +56,13 @@
 }
 
 .user-screen {
-  background-color: #67442c;
+  
   margin: auto auto auto auto;
   max-width: 100%;
   padding: 10px 10px 10px 10px;
-  opacity: 1;
+  /*background-color: #67442c;*/
+  background-color: rgba(103, 68, 44, 0.7);
+  /*opacity: 0.7;*/
 }
 
 .main-title {

@@ -435,6 +435,12 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
  017         |  script.js / index.html    | Chrome        |  confirmAnswer      | Pass       | After almost twenty attempts, I have managed to get the function working so that it highlights the correct answer if the user selects an incorrect answer.  
 | **Before**                                          |   **After**          ||||
 | ![678px ratio](/assets/testing/test-images/test-seventeen-a.webp)  ![678px ratio](/assets/testing/test-images/test-seventeen-b.webp) |       | |             | | |
+ 018         |  script.js / index.html    | Chrome        |  user-screen-container      | Fail       | I wanted to set the background to a transparent brown. I used the opaque CSS setting, but it did not work as planned, as this was applied to all child elements even though I'd redeclared it in the other classes. Failed tests  
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-eighteen-a.webp)  ![678px ratio](/assets/testing/test-images/test-eighteen-b.webp) |       | |             | | |
+ 019         |  script.js / index.html    | Chrome        |  user-screen-container      | Pass       | Following test failures in Test 018, I did some research and discovered that what I wanted to do was not possible. On [Ww3 Schools] (https://www.w3schools.com/css/css3_colors.asp) I learned that I could convert the background colur to RGBA, where the 'alpha' part would determine the opacisty. The test passed all tests
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-nineteen-a.webp)  ![678px ratio](/assets/testing/test-images/test-nineteen-b.webp) |       | |             | | |
 
 
 
