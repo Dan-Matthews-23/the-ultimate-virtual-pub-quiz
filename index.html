@@ -26,8 +26,26 @@
       <div class="container user-screen-container">
          <div class="row">
             <div class="col">
+               
+               <section class="username user-section" id="username-section">
+                  <div class="container user-screen username-container">
+                     <div class="row">
+                        <div class="col align-center"><h1>The Ultimate Pub Quiz</h1></div>
+                     </div>
+                     <div class="row">
+                        <div class="col align-center"><h2>Choose a username</h2></div>
+                     </div>
+                     <div class="row">
+                        <div class="col user-screen with-borders"><input type="text" id="usernameValue" placeholder="Enter a username"></div>
+                     </div>
+                     <div class="row">
+                        <div class="col user-screen with-borders"><button class="sub-button" id="enter-username">Submit</button></div>
+                     </div>
+                  </div>
+               </section>
+               
                <!--Start of user selection screen section-->
-               <section class="user-section" id="user-selection-section">
+               <section class="user-section hidden" id="user-selection-section">
                   <div class="container user-screen">
                      <div class="row ">
                         <div class="col main-title align-center">
@@ -164,14 +182,9 @@
                         <div class="col">You Scored: THIS</div>
                      </div>
                      <div class="row">
-                        <div class="col user-screen with-borders">Enter your name below to be included in the High Scores</div>
+                        <div class="col"><button class="sub-button" id="view-high-scores">View High Scores</button></div>
                      </div>
-                     <div class="row">
-                        <div class="col user-screen with-borders"><input type="text" id="nickname" placeholder="Enter a nickname"></div>
-                     </div>
-                     <div class="row">
-                        <div class="col user-screen with-borders"><button class="sub-button" id="enter-high-score">Submit</button></div>
-                     </div>
+                     
                   </div>
                 </section>
                

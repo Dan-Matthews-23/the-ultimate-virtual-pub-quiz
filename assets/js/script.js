@@ -2,36 +2,7 @@
 
 // Hide 'quiz-section' on index.html
 
-const showQuiz = document.getElementById("showQuizBtn");
-const showInst = document.getElementById("showInstBtn");
-const showHall = document.getElementById("showHallBtn");
-const returnHome = document.getElementById("return-btn");
 
-addEventListener('click', function (event) 
-{
-  if (event.target === showQuiz) 
-  {
-    document.getElementById("quiz-section").classList.remove("hidden");
-    document.getElementById("return-section").classList.remove("hidden");
-    document.getElementById("user-selection-section").classList.add("hidden");
-
-  } else if (event.target === showInst) 
-  {
-    document.getElementById("return-section").classList.remove("hidden");
-    document.getElementById("user-selection-section").classList.add("hidden");
-    document.getElementById("instructions-section").classList.remove("hidden");
-
-  } else if (event.target === showHall) 
-  {
-    document.getElementById("return-section").classList.remove("hidden");
-    document.getElementById("user-selection-section").classList.add("hidden");
-    document.getElementById("hall-of-fame-section").classList.remove("hidden");
-
-  } else if (event.target === returnHome) 
-    {
-      window.location.assign("index.html");
-    }
-})
 
 
 
@@ -127,14 +98,65 @@ nextButton.addEventListener("click", retriveNextQuestion);
 //const difficultyEasy = "https://opentdb.com/api.php?amount=20&type=multiple";
 const difficultyEasy = "https://opentdb.com/api.php?amount=2&type=multiple";
 
-
-
+//const enterHighScoreBtn = document.getElementById("enter-high-score");
+//enterHighScoreBtn.addEventListener('click', passNickname);
 
 let connect = {};
 let score = 0;
 let id = 0;
+let username;
 
 
+
+const showQuiz = document.getElementById("showQuizBtn");
+const showInst = document.getElementById("showInstBtn");
+const showHall = document.getElementById("showHallBtn");
+const returnHome = document.getElementById("return-btn");
+const enterUsernameBtn = document.getElementById("enter-username");
+const viewHighScoresPostGame = document.getElementById("view-high-scores");
+
+addEventListener('click', function (event, username) 
+{
+  if( event.target === enterUsernameBtn) 
+  {
+    let username = (document.getElementById("usernameValue").value);
+    console.log(`${username}`);
+    document.getElementById("user-selection-section").classList.remove("hidden");
+    document.getElementById("username-section").classList.add("hidden");
+
+  } else if (event.target === showQuiz) 
+  {
+    document.getElementById("quiz-section").classList.remove("hidden");
+    document.getElementById("return-section").classList.remove("hidden");
+    document.getElementById("user-selection-section").classList.add("hidden");
+
+  } else if (event.target === showInst) 
+  {
+    document.getElementById("return-section").classList.remove("hidden");
+    document.getElementById("user-selection-section").classList.add("hidden");
+    document.getElementById("instructions-section").classList.remove("hidden");
+
+  } else if (event.target === showHall) 
+  {
+    document.getElementById("return-section").classList.remove("hidden");
+    document.getElementById("user-selection-section").classList.add("hidden");
+    document.getElementById("hall-of-fame-section").classList.remove("hidden");
+
+  } else if (event.target === returnHome) 
+  {
+      window.location.assign("index.html");
+  } else if  (event.target === viewHighScoresPostGame) 
+  {
+    
+    passNickname(username);
+    document.getElementById("return-section").classList.remove("hidden");
+    document.getElementById("user-selection-section").classList.add("hidden");
+    document.getElementById("hall-of-fame-section").classList.remove("hidden");
+    document.getElementById("game-over-modal").classList.add("hidden");
+    
+  }
+
+})
 // Function to connect to API. 
 //---This section of code was based on a template from Chris Minnick, from JavaScript ALL-IN-ONE for dummies. See README for more information---//
 async function connectAPI(apiURL) {
@@ -154,14 +176,9 @@ function getQuestionArray() {
     const question = (document.getElementById("question").innerHTML = connect.results[id].question);
     let displayScore = (document.getElementById("score").innerHTML = `Score: ${score}`);
   }
-
-
-  
-
   
   // Get the list of answers to the question we just called. 
-  
-  function getAnswerArray() {
+    function getAnswerArray() {
     const possibleAnswers = document.querySelectorAll(".answer");
     const answerCorrect = connect.results[id].correct_answer;
     const answerIncorrect = connect.results[id].incorrect_answers;
@@ -201,13 +218,11 @@ function shuffle(array) {
       //this.classList.add("correct-answer");
       document.getElementById("next").classList.remove("hidden");
       const possibleAnswers = document.querySelectorAll(".answer");
-      for (let j = 0; j < possibleAnswers.length; j++) {
-        possibleAnswers[j].disabled = true;
-        
-      }
+      for (let a = 0; a < possibleAnswers.length; a++) {
+        possibleAnswers[a].disabled = true;
+              }
       calculateScore(score);
-      
-    
+         
     } else {
 
       
@@ -223,36 +238,80 @@ function shuffle(array) {
 
       // Display the background color of the correct answer when user selects wrong answer
     const correctAnswerButtons = document.querySelectorAll('.answer');
-    for (let j = 0; j < correctAnswerButtons.length; j++) {
-      if (correctAnswerButtons[j].innerHTML === answerCorrect) {
-        correctAnswerButtons[j].style.background = 'orange';
+    for (let a = 0; a < correctAnswerButtons.length; a++) {
+      if (correctAnswerButtons[a].innerHTML === answerCorrect) {
+        correctAnswerButtons[a].style.background = 'orange';
         document.getElementById("next").classList.remove("hidden");
         console.log(answerCorrect);
         break;
       }
     }
     const answerButtons = document.querySelectorAll('.answer');
-    for (let j = 0; j < answerButtons.length; j++) {
-      answerButtons[j].disabled = true;
+    for (let a = 0; a < answerButtons.length; a++) {
+      answerButtons[a].disabled = true;
     }
-  
+      } 
+ }
 
-
-
-    } 
-
-
-  }
-
-
-function displayGameOver() {
+/*
+function addNickname() {
   const nickname = document.getElementById("nickname");
+  
+ 
+  if (nickname) {
+    for (let g = 0; g < highScoresArray.length; g++)
+    {
+      //highScoresArray.push(`{player: $nickname}, {playerID: 999}, {score: $score}`);
 
+      //highScoresArray
 
+      const newArray = 
+      {
+        playerID: `{$rand}`,
+        player: `{$nickname}`,
+        score: `{$score}`
+      };
+      console.log(newArray);
 
-}
+       
+    
+      
+   
+      
+    // Pushing of array into arrayTwo
+    //Obj['newNickname'].push(nickname);    
+    //console.log(Obj) ;
+      
+    //alert(Obj.arrayTwo);
+      
+    
+      //push({name: arr[i]}); 
+      //highScoresArray.player[g].innerHTML = newAnswerDataset[i];
 
+    }
+  }
+*/
 
+function passNickname() 
+  {
+        //const nickname = document.getElementById("nickname");
+        const subHighScore = score;
+        //enterHighScoreBtn.addEventListener('click', function (hscore) 
+          //{ 
+           // if (hscore.target === enterHighScoreBtn) 
+              //{
+                  //function ranNum(min, max) 
+                  //{
+                    const rand = Math.floor(Math.random() * (9999 - 1 + 1) ) + 1;
+                   // return rand;
+                  //}
+                  console.log(`Your nickname is ${username} and your score is ${score} and your player ID is ${rand} `);
+                //const playerhighScore = rand;
+                //}  console.log(`Your nickname is {$nickname}`);   
+          //});console.log(`Your nickname is {$nickname}`);
+          //console.log(`Your nickname is ${username} and your score is ${score} and your player ID is ${rand}`);
+  }
+  
 
   function retriveNextQuestion() {
     id++;
@@ -260,7 +319,7 @@ function displayGameOver() {
     if (id >= connect.results.length) {
       document.getElementById("game-over-modal").classList.remove("hidden");
       document.getElementById("quiz-section").classList.add("hidden");
-      displayGameOver();
+      
       //alert(`Quiz complete! Your score: ${score}/${connect.results.length}`);
       return;
     }
@@ -282,11 +341,6 @@ function displayGameOver() {
             break;
         }
     }
-    
-}
-  
-
-
-
+  }
   connectAPI(difficultyEasy);
   
