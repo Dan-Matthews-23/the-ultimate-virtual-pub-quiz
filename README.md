@@ -441,6 +441,9 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
  019         |  script.js / index.html    | Chrome        |  user-screen-container      | Pass       | Following test failures in Test 018, I did some research and discovered that what I wanted to do was not possible. On [Ww3 Schools] (https://www.w3schools.com/css/css3_colors.asp) I learned that I could convert the background colur to RGBA, where the 'alpha' part would determine the opacisty. The test passed all tests
 | **Before**                                          |   **After**          ||||
 | ![678px ratio](/assets/testing/test-images/test-nineteen-a.webp)  ![678px ratio](/assets/testing/test-images/test-nineteen-b.webp) |       | |             | | |
+ 020         |  script.js / index.html    | Chrome        |  showQuizSection     | Fail       | Test 009 indicated that my code was in breach of the [DRY principle ](https://www.digitalocean.com/community/tutorials/what-is-dry-development). I asked a peer to review my code (see [Acknowledgments(#Acknowledgments)]). It was suggested to me that I use event.target rather than a function for each section. While the first section worked to show/hide the quiz section, the others did not. Tests failed
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-twenty-a.webp)  ![678px ratio](/assets/testing/test-images/test-twenty-b.webp) |       | |             | | |
 
 
 
