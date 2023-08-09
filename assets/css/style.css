@@ -42,7 +42,7 @@
 
 
 .user-screen-container {
-  border-color: #1D110F;
+  
   /*background-color: #67442c;*/
   background-color: rgba(103, 68, 44, 0.7);
   /*opacity: 0.7;*/
@@ -51,7 +51,7 @@
   margin: auto auto auto auto;
   border-radius: 5px;
   border-color: yellow;
-  padding: 10px 10px 10px 10px;
+  padding: 20px 20px 20px 20px;
   
 }
 
