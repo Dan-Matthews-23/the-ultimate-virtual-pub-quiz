@@ -80,12 +80,54 @@ addEventListener('click', function (event)
 
   ];
  
+const highScoresArray = 
+[
+  { 
+    playerID: 0,
+    playerName: `Morbid Honeybun`,
+    playerHighScore: 500,
+  },
+
+  { 
+    playerID: 1,
+    playerName: `Doesthislookinfected?`,
+    playerHighScore: 400,
+  },
+
+  { 
+    playerID: 2,
+    playerName: `Gonk54`,
+    playerHighScore: 300,
+  },
+
+  { 
+    playerID: 3,
+    playerName: `Youdaddy`,
+    playerHighScore: 200,
+  },
+
+  { 
+    playerID: 4,
+    playerName: `Shamaladingdong`,
+    playerHighScore: 100,
+  },
+
+  ];
+
+
+
+
+
+
   //Global Variables
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", retriveNextQuestion);
 
 // URL for API
-const difficultyEasy = "https://opentdb.com/api.php?amount=20&type=multiple";
+//const difficultyEasy = "https://opentdb.com/api.php?amount=20&type=multiple";
+const difficultyEasy = "https://opentdb.com/api.php?amount=2&type=multiple";
+
+
 
 
 let connect = {};
@@ -202,11 +244,24 @@ function shuffle(array) {
 
   }
 
+
+function displayGameOver() {
+  const nickname = document.getElementById("nickname");
+
+
+
+}
+
+
+
   function retriveNextQuestion() {
     id++;
     
     if (id >= connect.results.length) {
-      alert(`Quiz complete! Your score: ${score}/${connect.results.length}`);
+      document.getElementById("game-over-modal").classList.remove("hidden");
+      document.getElementById("quiz-section").classList.add("hidden");
+      displayGameOver();
+      //alert(`Quiz complete! Your score: ${score}/${connect.results.length}`);
       return;
     }
     getQuestionArray();
