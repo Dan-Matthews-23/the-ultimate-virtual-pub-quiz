@@ -7,12 +7,6 @@ const showInst = document.getElementById("showInstBtn");
 const showHall = document.getElementById("showHallBtn");
 const returnHome = document.getElementById("return-btn");
 
-showQuiz.addEventListener("click", showQuizSection);
-showInst.addEventListener("click", showInstructionsSection);
-showHall.addEventListener("click", showHallofFameSection);
-returnHome.addEventListener("click", returnHomeSection);
-
-
 addEventListener('click', function (event) 
 {
   if (event.target === showQuiz) 
@@ -31,7 +25,7 @@ addEventListener('click', function (event)
   {
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
-    document.getElementById("instructions-section").classList.remove("hidden");
+    document.getElementById("hall-of-fame-section").classList.remove("hidden");
 
   } else if (event.target === returnHome) 
     {
@@ -100,28 +94,18 @@ let id = 0;
 
 
 // Function to connect to API. 
-//-----This section of code was based on a template from Chris Minnick, from JavaScript ALL-IN-ONE for dummies, although I have written the code myself. See README for more information------
+//---This section of code was based on a template from Chris Minnick, from JavaScript ALL-IN-ONE for dummies. See README for more information---//
 async function connectAPI(apiURL) {
-  //try {
     const connection = await fetch(apiURL);
     if (connection.status >= 200 && connection.status <= 299) {
       connect = await connection.json();
-      //return connection.json();
       getQuestionArray();
       getAnswerArray();
-      
-    } else {
-      //throw Error("There was an error when trying to connect. Please try again later");
-      window.location.assign("500.html");
+       } else {
+            window.location.assign("500.html");
     }
   }
-
- // } catch (error) {
-    //console.log(error);
-  //}
-  //console.log(connect.results);
-//}
-//----END OF CODE SNIPPET---------------------------------------------------------------------------------------------------------
+//----END OF CODE SNIPPET-----//
 
   // Display the question in index.html in the part with an ID of 'question'. Do this based on where we are in the array (question number)
 function getQuestionArray() {
@@ -155,14 +139,16 @@ function getQuestionArray() {
   }
   
   // Function to shuffle all answers in the array
-//------This section of code was taken from Free Code Camp and slightly modified to suit the purposes of this function-----------------
+//------This section of code was taken from Free Code Camp and slightly modified to suit the purposes of this function----//
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
-  //---END OF CODE SNIPPET----------
+  //---END OF CODE SNIPPET------//
+
+
 
   function confirmAnswer() {
     const selectedAnswer = this.innerHTML;
