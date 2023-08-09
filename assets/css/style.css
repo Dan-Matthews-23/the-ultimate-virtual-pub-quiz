@@ -5,15 +5,22 @@
   font-family: "Poppins", sans-serif;
 }
 
+.h1 {
+  color: white;
+  text-align: center;
+  font-size: 5vw;
+  font-family: inherit; 
+}
+
 .main-container {
   background-image: url("../../assets/images/background-image.webp");
   height: 100%;
   max-width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  
   background-size: cover;
-  border-color: black;
-  padding-top: 180px;
+  
+  padding-top: 150px;
+}
 
 .with-borders {
   border-style: solid;
@@ -30,21 +37,29 @@
 }
 
 /*--------------------USER SCREEN ---------------------------------------*/
+
+
+
+
+.user-screen-container {
+  border-color: #1D110F;
+  background-color: #67442c;
+  opacity: 1;
+  width: 100vw;
+  height: 70vw;
+  margin: auto auto auto auto;
+  border-radius: 5px;
+  border-color: yellow;
+  padding: 10px 10px 10px 10px;
+  
+}
+
 .user-screen {
   background-color: #67442c;
   margin: auto auto auto auto;
   max-width: 100%;
   padding: 10px 10px 10px 10px;
-}
-
-.user-screen-container {
-  border-color: #1D110F;
-  background-color: #67442c;
-  opacity: 0.5;
-  width: 85%;
-  height: 85%;
-  margin: auto auto auto auto;
-  
+  opacity: 1;
 }
 
 .main-title {
