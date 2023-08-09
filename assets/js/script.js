@@ -13,7 +13,7 @@ showHall.addEventListener("click", showHallofFameSection);
 returnHome.addEventListener("click", returnHomeSection);
 
 
-showQuiz.addEventListener('click', function (event) 
+addEventListener('click', function (event) 
 {
   if (event.target === showQuiz) 
   {

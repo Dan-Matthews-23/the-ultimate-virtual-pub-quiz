@@ -444,6 +444,9 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
  020         |  script.js / index.html    | Chrome        |  showQuizSection     | Fail       | Test 009 indicated that my code was in breach of the [DRY principle ](https://www.digitalocean.com/community/tutorials/what-is-dry-development). I asked a peer to review my code (see [Acknowledgments(#Acknowledgments)]). It was suggested to me that I use event.target rather than a function for each section. While the first section worked to show/hide the quiz section, the others did not. Tests failed
 | **Before**                                          |   **After**          ||||
 | ![678px ratio](/assets/testing/test-images/test-twenty-a.webp)  ![678px ratio](/assets/testing/test-images/test-twenty-b.webp) |       | |             | | |
+ 021         |  script.js / index.html    | Chrome        |  showQuizSection     | Pass       | I realised that my event listener was 'listening' for only the showQuiz variable. I removed this part and the function worked as planned. 
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-twenty-one-a.webp)  |       | |             | | |
 
 
 
