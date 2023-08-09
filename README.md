@@ -447,7 +447,12 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
  021         |  script.js / index.html    | Chrome        |  showQuizSection     | Pass       | I realised that my event listener was 'listening' for only the showQuiz variable. I removed this part and the function worked as planned. 
 | **Before**                                          |   **After**          ||||
 | ![678px ratio](/assets/testing/test-images/test-twenty-one-a.webp)  |       | |             | | |
-
+ 022         |  script.js / index.html    | Chrome        |  passNickname     | Fail       | Following feedback on changing the order of my 'Enter Username' modal, I asked for the username first before the game starts. However the username was not pulling through to the passNickname function. My console log declared an undefined variable. 
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-twenty-two-a.webp)  |  ![678px ratio](/assets/testing/test-images/test-twenty-two-b.webp)      | |             | | |
+ 023         |  script.js / index.html    | Chrome        |  passNickname     | Pass       | Following several more variations of Test 022 I realised that that I had included a previous 'let username' before the functions. This effectivley meant that my username value was being reset every time the script ran. I corrected the error, inserted two extra lines into the function and it passed all tests
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-twenty-three-a.webp)  |  ![678px ratio](/assets/testing/test-images/test-twenty-three-b.webp)     | |             | | |
 
 
 

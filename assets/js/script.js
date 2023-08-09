@@ -104,7 +104,7 @@ const difficultyEasy = "https://opentdb.com/api.php?amount=2&type=multiple";
 let connect = {};
 let score = 0;
 let id = 0;
-let username;
+//let username;
 
 
 
@@ -115,12 +115,11 @@ const returnHome = document.getElementById("return-btn");
 const enterUsernameBtn = document.getElementById("enter-username");
 const viewHighScoresPostGame = document.getElementById("view-high-scores");
 
-addEventListener('click', function (event, username) 
+addEventListener('click', function (event) 
 {
   if( event.target === enterUsernameBtn) 
   {
-    let username = (document.getElementById("usernameValue").value);
-    console.log(`${username}`);
+    
     document.getElementById("user-selection-section").classList.remove("hidden");
     document.getElementById("username-section").classList.add("hidden");
 
@@ -148,7 +147,7 @@ addEventListener('click', function (event, username)
   } else if  (event.target === viewHighScoresPostGame) 
   {
     
-    passNickname(username);
+    passNickname();
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
     document.getElementById("hall-of-fame-section").classList.remove("hidden");
@@ -294,7 +293,9 @@ function addNickname() {
 
 function passNickname() 
   {
-        //const nickname = document.getElementById("nickname");
+    let username = (document.getElementById("usernameValue").value);
+    console.log(`${username}`);
+    //const nickname = document.getElementById("nickname");
         const subHighScore = score;
         //enterHighScoreBtn.addEventListener('click', function (hscore) 
           //{ 
