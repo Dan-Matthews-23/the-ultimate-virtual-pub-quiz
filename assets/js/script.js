@@ -51,41 +51,16 @@
 
   ];
  
-const highScoresArray = 
-[
-  { 
-    playerID: 0,
-    playerName: `Morbid Honeybun`,
-    playerHighScore: 500,
-  },
+/*const highScoresArray = 
 
   { 
-    playerID: 1,
-    playerName: `Doesthislookinfected?`,
-    playerHighScore: 400,
-  },
-
-  { 
-    playerID: 2,
-    playerName: `Gonk54`,
-    playerHighScore: 300,
-  },
-
-  { 
-    playerID: 3,
-    playerName: `Youdaddy`,
-    playerHighScore: 200,
-  },
-
-  { 
-    playerID: 4,
-    playerName: `Shamaladingdong`,
-    playerHighScore: 100,
-  },
-
-  ];
+    playerID: [0, 1, 2, 3, 4],
+    playerName: [`Morbid Honeybun`, `Doesthislookinfected`, `Gonk54`, `Youdaddy`, `Shamaladingdong`],
+    playerHighScore: [500, 400, 300, 200, 100]
+  };*/
 
 
+  
 
 
 
@@ -96,7 +71,8 @@ nextButton.addEventListener("click", retriveNextQuestion);
 
 // URL for API
 //const difficultyEasy = "https://opentdb.com/api.php?amount=20&type=multiple";
-const difficultyEasy = "https://opentdb.com/api.php?amount=2&type=multiple";
+//const difficultyEasy = "https://opentdb.com/api.php?amount=2&type=multiple";
+const difficultyEasy = "https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple";
 
 //const enterHighScoreBtn = document.getElementById("enter-high-score");
 //enterHighScoreBtn.addEventListener('click', passNickname);
@@ -147,7 +123,7 @@ addEventListener('click', function (event)
   } else if  (event.target === viewHighScoresPostGame) 
   {
     
-    passNickname();
+    createHighScores();
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
     document.getElementById("hall-of-fame-section").classList.remove("hidden");
@@ -252,65 +228,38 @@ function shuffle(array) {
       } 
  }
 
-/*
-function addNickname() {
-  const nickname = document.getElementById("nickname");
-  
- 
-  if (nickname) {
-    for (let g = 0; g < highScoresArray.length; g++)
-    {
-      //highScoresArray.push(`{player: $nickname}, {playerID: 999}, {score: $score}`);
 
-      //highScoresArray
-
-      const newArray = 
-      {
-        playerID: `{$rand}`,
-        player: `{$nickname}`,
-        score: `{$score}`
-      };
-      console.log(newArray);
-
-       
-    
-      
-   
-      
-    // Pushing of array into arrayTwo
-    //Obj['newNickname'].push(nickname);    
-    //console.log(Obj) ;
-      
-    //alert(Obj.arrayTwo);
-      
-    
-      //push({name: arr[i]}); 
-      //highScoresArray.player[g].innerHTML = newAnswerDataset[i];
-
-    }
-  }
-*/
-
-function passNickname() 
+function createHighScores() 
   {
-    let username = (document.getElementById("usernameValue").value);
-    console.log(`${username}`);
-    //const nickname = document.getElementById("nickname");
-        const subHighScore = score;
-        //enterHighScoreBtn.addEventListener('click', function (hscore) 
-          //{ 
-           // if (hscore.target === enterHighScoreBtn) 
-              //{
-                  //function ranNum(min, max) 
-                  //{
-                    const rand = Math.floor(Math.random() * (9999 - 1 + 1) ) + 1;
-                   // return rand;
-                  //}
-                  console.log(`Your nickname is ${username} and your score is ${score} and your player ID is ${rand} `);
-                //const playerhighScore = rand;
-                //}  console.log(`Your nickname is {$nickname}`);   
-          //});console.log(`Your nickname is {$nickname}`);
-          //console.log(`Your nickname is ${username} and your score is ${score} and your player ID is ${rand}`);
+    console.log(score);
+    const username = (document.getElementById("usernameValue").value);
+    const playerID = Math.floor(Math.random() * (9999 - 1 + 1) ) + 1;
+    const existingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
+    const setHighScoreArray = 
+    {
+      playerID: [playerID],
+      playerName: [username],
+      playerHighScore: [score]      
+    }
+    
+    existingScores.push(setHighScoreArray);
+    
+  existingScores.sort((a, b) => b.score - a.score);
+  existingScores.splice(5);
+
+  localStorage.setItem('existingScores', JSON.stringify(existingScores));
+  const inDocumentHighScores = document.getElementById("high-score-table");
+  inDocumentHighScores.innerHTML = 
+  existingScores.map(existingScores => {
+  return `<ol>${existingScores.playerName}</td><td class="highscoreitem">${existingScores.score}</ol>`; }).join("");
+  
+  
+//localStorage.clear();
+  console.log(existingScores); // This is the new array
+        
+
+
+  
   }
   
 
@@ -344,4 +293,5 @@ function passNickname()
     }
   }
   connectAPI(difficultyEasy);
+  
   
