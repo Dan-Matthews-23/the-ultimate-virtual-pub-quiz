@@ -81,7 +81,7 @@ let connect = {};
 let score = 0;
 let id = 0;
 //let username;
-
+const scoreLimiter = 20;
 
 
 const showQuiz = document.getElementById("showQuizBtn");
@@ -116,6 +116,13 @@ addEventListener('click', function (event)
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
     document.getElementById("hall-of-fame-section").classList.remove("hidden");
+
+    const retriveHighScores = JSON.parse(localStorage.getItem('existingScores'));
+   // localStorage.setItem('existingScores', JSON.stringify(existingScores));
+    const inDocumentHighScores = document.getElementById("high-score-table");
+    inDocumentHighScores.innerHTML = 
+    retriveHighScores.map(retriveHighScores => {
+    return `<li>${retriveHighScores.playerName}${retriveHighScores.score}</li>`; }).join("");
 
   } else if (event.target === returnHome) 
   {
@@ -229,9 +236,27 @@ function shuffle(array) {
  }
 
 
-function createHighScores() 
+
+
+ function calculateScore(score) {
+  score++;
+  //let displayScore = (document.getElementById("score").innerHTML = `Score: ${score}`);
+  let currentScore = document.querySelectorAll(".score");
+  let scoreCalc = currentScore.length - score;
+  for (let i = currentScore.length - 1; i >= 0; i--) {
+      let playerScore = currentScore[i];
+      if (i === scoreCalc) {
+          break;
+      }
+  } //console.log(playerScore);
+  //return score;
+}
+
+
+
+function createHighScores(score) 
   {
-    console.log(score);
+    console.log(currentScore);
     const username = (document.getElementById("usernameValue").value);
     const playerID = Math.floor(Math.random() * (9999 - 1 + 1) ) + 1;
     const existingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
@@ -244,14 +269,14 @@ function createHighScores()
     
     existingScores.push(setHighScoreArray);
     
-  existingScores.sort((a, b) => b.score - a.score);
-  existingScores.splice(5);
+  existingScores.sort((a, z) => z.score - a.score);
+  existingScores.splice(scoreLimiter);
 
   localStorage.setItem('existingScores', JSON.stringify(existingScores));
   const inDocumentHighScores = document.getElementById("high-score-table");
   inDocumentHighScores.innerHTML = 
   existingScores.map(existingScores => {
-  return `<ol>${existingScores.playerName}</td><td class="highscoreitem">${existingScores.score}</ol>`; }).join("");
+  return `<li>${existingScores.playerName}${existingScores.score}</li>`; }).join("");
   
   
 //localStorage.clear();
@@ -280,18 +305,7 @@ function createHighScores()
    // this.classList.remove("incorrect-answer");
   }
 
-  function calculateScore() {
-    score++;
-    //let displayScore = (document.getElementById("score").innerHTML = `Score: ${score}`);
-    let currentScore = document.querySelectorAll(".score");
-    let scoreCalc = currentScore.length - score;
-    for (let i = currentScore.length - 1; i >= 0; i--) {
-        let playerScore = currentScore[i];
-        if (i === scoreCalc) {
-            break;
-        }
-    }
-  }
+
   connectAPI(difficultyEasy);
   
   
