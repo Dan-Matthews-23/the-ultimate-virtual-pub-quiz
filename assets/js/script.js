@@ -72,7 +72,7 @@ nextButton.addEventListener("click", retriveNextQuestion);
 // URL for API
 //const difficultyEasy = "https://opentdb.com/api.php?amount=20&type=multiple";
 //const difficultyEasy = "https://opentdb.com/api.php?amount=2&type=multiple";
-const difficultyEasy = "https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple";
+const difficultyEasy = "https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple";
 
 //const enterHighScoreBtn = document.getElementById("enter-high-score");
 //enterHighScoreBtn.addEventListener('click', passNickname);
@@ -82,6 +82,7 @@ let score = 0;
 let id = 0;
 //let username;
 const scoreLimiter = 20;
+let scoreCounter = document.getElementById("score");
 
 
 const showQuiz = document.getElementById("showQuizBtn");
@@ -117,12 +118,14 @@ addEventListener('click', function (event)
     document.getElementById("user-selection-section").classList.add("hidden");
     document.getElementById("hall-of-fame-section").classList.remove("hidden");
 
+       
     const retriveHighScores = JSON.parse(localStorage.getItem('existingScores'));
-   // localStorage.setItem('existingScores', JSON.stringify(existingScores));
+    localStorage.setItem('existingScores', JSON.stringify(existingScores));
     const inDocumentHighScores = document.getElementById("high-score-table");
     inDocumentHighScores.innerHTML = 
     retriveHighScores.map(retriveHighScores => {
-    return `<li>${retriveHighScores.playerName}${retriveHighScores.score}</li>`; }).join("");
+    return `<li>${retriveHighScores.playerName} - ${retriveHighScores.score}</li>`; }).join("");
+
 
   } else if (event.target === returnHome) 
   {
@@ -203,7 +206,8 @@ function shuffle(array) {
       for (let a = 0; a < possibleAnswers.length; a++) {
         possibleAnswers[a].disabled = true;
               }
-      calculateScore(score);
+              //calculateNewScore(score);
+              increaseScore();
          
     } else {
 
@@ -237,26 +241,26 @@ function shuffle(array) {
 
 
 
-
- function calculateScore(score) {
+/*
+ function calculateNewScore(score) {
   score++;
-  //let displayScore = (document.getElementById("score").innerHTML = `Score: ${score}`);
-  let currentScore = document.querySelectorAll(".score");
-  let scoreCalc = currentScore.length - score;
-  for (let i = currentScore.length - 1; i >= 0; i--) {
-      let playerScore = currentScore[i];
-      if (i === scoreCalc) {
-          break;
-      }
-  } //console.log(playerScore);
-  //return score;
+  const currentScores = document.querySelectorAll("score");
+  const currentIndex = currentScores.length - score;
+  const playerScore = currentScores[currentIndex];
+  console.log(score);
+  return score;
+}
+*/
+
+function increaseScore() {
+  score += 10;
+  scoreCounter.innerText = `${score}`;
 }
 
-
-
-function createHighScores(score) 
+/*
+function createHighScores() 
   {
-    console.log(currentScore);
+    //const subNewScore = score;
     const username = (document.getElementById("usernameValue").value);
     const playerID = Math.floor(Math.random() * (9999 - 1 + 1) ) + 1;
     const existingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
@@ -276,16 +280,46 @@ function createHighScores(score)
   const inDocumentHighScores = document.getElementById("high-score-table");
   inDocumentHighScores.innerHTML = 
   existingScores.map(existingScores => {
-  return `<li>${existingScores.playerName}${existingScores.score}</li>`; }).join("");
+  return `<li>${existingScores.playerName} - ${existingScores.score}</li>`; }).join("");
+  
   
   
 //localStorage.clear();
   console.log(existingScores); // This is the new array
-        
-
-
-  
+  console.log(score);
+   
   }
+*/
+
+
+  const existingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
+function createHighScores(score) {
+  const username = document.getElementById("usernameValue").value;
+  const playerID = Math.floor(Math.random() * 9999) + 1;
+  const setHighScoreArray = {
+    playerID: playerID,
+    playerName: username,
+    playerHighScore: score
+  };
+  existingScores.push(setHighScoreArray);
+  existingScores.sort((a, b) => b.playerHighScore - a.playerHighScore);
+  // const scoreLimiter = 10;
+  existingScores.splice(10);
+  localStorage.setItem('existingScores', JSON.stringify(existingScores));
+  const inDocumentHighScores = document.getElementById("high-score-table");
+  inDocumentHighScores.innerHTML = existingScores.map(entry => {
+    return `<li>${entry.playerName} ${entry.playerID} ${entry.playerHighScore}</li>`;
+  }).join("");
+  console.log(existingScores);
+}
+
+
+
+
+
+
+
+
   
 
   function retriveNextQuestion() {
