@@ -478,16 +478,12 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
 
 ### Solved Bugs
 
-|      Page   |   Feature                       | What went wrong and how you resolved it                                                                                                |
-| ------------| ------------                    | -----------                                                                                                                            |
-|  style.css  | #banner                         |  Developer Tools not updating CSS source code. Several tests failed. Deleted cache and tried again, passed on fifth attempt                        |
-          |
+Please view testing table for list of all solved bugs
 
 ### Known Bugs
 |      Page   |   Feature                       | Element | Explanation                                                                                               |
-| ------------| ------------                    | -----------  | -----------                                                                                                                           |
-|  contact-us.html / get-involved   | Chrome                        |  Form on contact-us.html / get-involved            | The form does not have a method assigned to it, so does not capture the information on the form. I tested this extensively but I kept getting a 405 error. I then contacted Tutor Support for help. They advised me to remove the 'method="POST"' part because this would not work unless I used JavaScript or a server-based language, which we have not yet covered in the modules. I have set the form to refer to the thankyou.html page instead, but this is an improvement I would like to make at a later date      |
-
+| ------------| ------------                    | -----------  | -----------                                                                                          |
+|             |                                 |              |                                                                                                      |
 
 
 ### Functions in further detail
@@ -512,13 +508,34 @@ The following section will explain in detail how each function works. All functi
 
 ### Peer Feedback
 
+I have worked closely with my peers on testing this product rigorously for any errors. The feedback is as follows:
+
+- How many questions do you have on your quiz? I've got to four and the game just stops with no errors or alerts
+
+- When you get correct answer it changes to just 40 then you click next and get score 40, might be better to keep score alongside he number when answer correct.
+
+- Your scores aren't working when I completed the quiz
+
+- On your instructions on mobile use overflow: scroll
+
+- Your back to main menu buttons are giving me a 404 error
+
+
+### Responding to Peer Feedback
+
+I have taken the following actions in response to feedback:
+
+
+
+
+
 
 ### Other Feedback
 
-My mentor - Harry - suggested that instead of creating four seperate HTML documents as planned in my wireframes, that I create one single page and then use Javascript to hide and show the sections I want. 
+My mentor - Harry - suggested that instead of creating four seperate HTML documents as planned in my wireframes, that I create one single page and then use Javascript to hide and show the sections I want. To that end, I have created a series of Event Listeners that will execute blocks of code when the correct button is clicked. In this context, it will show/hide parts of the page since the entire product exists in one document. 
 
 
-This is what I did to resolve it:
+
 
 
 
@@ -567,18 +584,9 @@ There are several improvements I would like to make to Heart Helpers in the futu
 
 The vast majority of my time spent developing this project was spent by creating code from various sources, adapting, testing and evaluating. At the start of this project I had next to no coding experience. However, one of my skills is to find relevant information from various sources and adapt it to suit my own needs. Apart from one instance, I have not used any code written by others anywhere in this project, but feel it important to note from where I've taken inspiration. 
 
-**British Heart Foundation**
-
-First and foremost, I have taken a lot of inspiration from the [British Heart Foundation](https://www.bhf.org.uk/). I have volunteered with the British Heart Foundation for almost a decade and am familiar with how they fundraise and fully support their cause. I would like to think of Heart Helpers as a tribute, rather than an imitation of the British Heart Foundation. 
-I also feel it important to note that I took away a lot of ideas on how my project would look based on how the British Heart Foundation website is set up. Notably the rounded corners, the User Choice section and the idea of two background images overlapping, it's not something I've seen before. I taught myself how to do all of this through W3 Schools and implemented it on my own project. The last thing I need to mention is that I contacted Tutor Support at the Code Institute about a concern I had around certain similarities my project had to the British Heart Foundation website. I then made a decision to change some elements of my own project so as not to be as similar. 
-
 **W3 Schools**
 
 The vast majority of coding I have learned for this project has come from [W3 Schools](https://www.w3schools.com). A few examples of this are [rounded borders](https://www.w3schools.com/css/css3_borders.asp), [media queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp) and [background properties](https://www.w3schools.com/cssref/css3_pr_background.php). The information and resources are brilliant and have been a major factor in my completing this project.
-
-**Scaler.com**
-
-It was Scaler.com that taught me how to create a line break (lines 133 - 154 in /assets/styles.css) in CSS code. I have noted in the file where the code starts and ends. This section of code is the only part of code I have not written myself, although I have adapted it for my own purposes. The code is available [here](https://www.scaler.com/topics/css-line-break/).
 
 **Code Pen**
 
@@ -611,8 +619,9 @@ Content for the website was written by Dan Matthews.
 Finally, I want to take the opportunity to thank and acknowledge the following for their support and patience in helping me create my first ever project:
 
 
-- Kera Cudmore, whose project gave me the inspiration I needed for my own project, and her useful tips and advice along the way. 
-- [Harry Dhillon](https://github.com/Harry-Leepz), who is my mentor at the Code Institute, and as always, for their continued support and guidance. 
+- Kera Cudmore, whose project gave me the inspiration I needed for my own project, and her useful tips and advice along the way.
+- Craig Hudson, who has helped me in this project with testing and for his technical troubleshooting  
+- [Harry Dhillon](https://github.com/Harry-Leepz), who is my mentor at the Code Institute, for their continued support and guidance. 
 - Kofi Afriyie, who is my facilitator from West Herts College, for their time, patience and encouragement in helping me develop this project. 
-- [The Office of National Statistics](https://style.ons.gov.uk/category/data-visualisation/using-colours/#accessibility-and-colours) for advice on colour palette.
 - Chris Minnick, who is the author of JavaScript ALL-IN-ONE for dummies (which can be found on [Amazon](https://www.amazon.co.uk/JavaScript-All-Dummies-Chris-Minnick/dp/1119906830)). It was from Chris that I learned how to connect to an API (lines 70 - 86 in script.js), and I have based my code upon that template. 
+- James Q. Quick, whose video (which can be found [here](https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=10)) taught me how to utliize local storage, which was an intregal part of this project
