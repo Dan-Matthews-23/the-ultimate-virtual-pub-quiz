@@ -72,7 +72,7 @@ nextButton.addEventListener("click", retriveNextQuestion);
 // URL for API
 //const difficultyEasy = "https://opentdb.com/api.php?amount=20&type=multiple";
 //const difficultyEasy = "https://opentdb.com/api.php?amount=2&type=multiple";
-const difficultyEasy = "https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple";
+const difficultyEasy = "https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple";
 
 //const enterHighScoreBtn = document.getElementById("enter-high-score");
 //enterHighScoreBtn.addEventListener('click', passNickname);
