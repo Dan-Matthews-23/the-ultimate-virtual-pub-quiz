@@ -27,7 +27,7 @@
          <div class="row">
             <div class="col">
                
-               <section class="username user-section" id="username-section">
+               <section class="username user-section hidden" id="username-section">
                   <div class="container user-screen username-container">
                      <div class="row">
                         <div class="col align-center"><h1>The Ultimate Pub Quiz</h1></div>
@@ -45,7 +45,7 @@
                </section>
                
                <!--Start of user selection screen section-->
-               <section class="user-section hidden" id="user-selection-section">
+               <section class="user-section" id="user-selection-section">
                   <div class="container user-screen">
                      <div class="row ">
                         <div class="col main-title align-center">
@@ -147,29 +147,32 @@
                            <table width="100%" class="hall-of-fame-table">
                               <tr>
                                  <td colspan="2">
-                                    <h1><u>Hall of Fame</u></h1>
+                                    <h1 class="hall-of-fame-table-title"><u>Hall of Fame</u></h1>
                                  </td>
                               </tr>
                               <tr>
-                                 <!--<td><h2>Position</h2></td>-->
-                                 <td><h2>Username</h2></td>
-                                 <td><h2>Score</h2></td>
+                                 <td><h2><u>Username</u></h2></td>
+                                 <td><h2><u>Score</u></h2></td>
                               </tr>
-                              <tr>
-                                 <td>
-                                    <ol id="high-score-table">
-                                       <!--High Scores List here-->
+                             <tr>
+                              <td colspan="2">
+                                 <ol class="high-scores-list" id="high-score-table">
 
-                                    </ol>
-                                 </td>
-                              </tr>
+                                 </ol>
+                              </td>
+                              <!--<td id="high-scores-player-score"><ol id="high-score-score"></ol></td>-->
+                             </tr>
+
+
+                              
                                  
+                              
                                  
-                              </tr>
-                              <tr>
+                             
+                              <!--<tr>
                                  <td colspan="2"><h2>Your position:</h2></td>
                                  <td><h2>6th</h2></td>
-                              </tr>
+                              </tr>-->
                            </table>
                         </div>
                      </div>

@@ -1,5 +1,5 @@
 "use strict";
-
+//localStorage.clear();
 // Hide 'quiz-section' on index.html
 
 
@@ -72,7 +72,7 @@ nextButton.addEventListener("click", retriveNextQuestion);
 // URL for API
 //const difficultyEasy = "https://opentdb.com/api.php?amount=20&type=multiple";
 //const difficultyEasy = "https://opentdb.com/api.php?amount=2&type=multiple";
-const difficultyEasy = "https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple";
+const difficultyEasy = "https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple";
 
 //const enterHighScoreBtn = document.getElementById("enter-high-score");
 //enterHighScoreBtn.addEventListener('click', passNickname);
@@ -94,17 +94,19 @@ const viewHighScoresPostGame = document.getElementById("view-high-scores");
 
 addEventListener('click', function (event) 
 {
-  if( event.target === enterUsernameBtn) 
+  if( event.target === showQuiz) 
   {
     
-    document.getElementById("user-selection-section").classList.remove("hidden");
-    document.getElementById("username-section").classList.add("hidden");
+    document.getElementById("user-selection-section").classList.add("hidden");
+    //document.getElementById("quiz-section").classList.add("hidden");
+    document.getElementById("username-section").classList.remove("hidden");
 
-  } else if (event.target === showQuiz) 
+  } else if (event.target === enterUsernameBtn) 
   {
     document.getElementById("quiz-section").classList.remove("hidden");
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
+    document.getElementById("username-section").classList.add("hidden");
 
   } else if (event.target === showInst) 
   {
@@ -117,14 +119,14 @@ addEventListener('click', function (event)
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
     document.getElementById("hall-of-fame-section").classList.remove("hidden");
+    displayHighScore();
+
+    
+
+    
 
        
-    const retriveHighScores = JSON.parse(localStorage.getItem('existingScores'));
-    localStorage.setItem('existingScores', JSON.stringify(existingScores));
-    const inDocumentHighScores = document.getElementById("high-score-table");
-    inDocumentHighScores.innerHTML = 
-    retriveHighScores.map(retriveHighScores => {
-    return `<li>${retriveHighScores.playerName} - ${retriveHighScores.score}</li>`; }).join("");
+    
 
 
   } else if (event.target === returnHome) 
@@ -133,7 +135,8 @@ addEventListener('click', function (event)
   } else if  (event.target === viewHighScoresPostGame) 
   {
     
-    createHighScores();
+    //createHighScores();
+    addHighScore();
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
     document.getElementById("hall-of-fame-section").classList.remove("hidden");
@@ -284,7 +287,7 @@ function createHighScores()
   
   
   
-//localStorage.clear();
+localStorage.clear();
   console.log(existingScores); // This is the new array
   console.log(score);
    
@@ -292,35 +295,43 @@ function createHighScores()
 */
 
 
+
+function addHighScore() {
+  
   const existingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
-function createHighScores(score) {
-  const username = document.getElementById("usernameValue").value;
-  const playerID = Math.floor(Math.random() * 9999) + 1;
+  const username = (document.getElementById("usernameValue").value);
   const setHighScoreArray = {
-    playerID: playerID,
+    playerID: Math.floor(Math.random() * 9999) + 1,
     playerName: username,
     playerHighScore: score
   };
   existingScores.push(setHighScoreArray);
   existingScores.sort((a, b) => b.playerHighScore - a.playerHighScore);
-  // const scoreLimiter = 10;
   existingScores.splice(10);
+  
   localStorage.setItem('existingScores', JSON.stringify(existingScores));
-  const inDocumentHighScores = document.getElementById("high-score-table");
-  inDocumentHighScores.innerHTML = existingScores.map(entry => {
-    return `<li>${entry.playerName} ${entry.playerID} ${entry.playerHighScore}</li>`;
-  }).join("");
-  console.log(existingScores);
+  const inDocumentHighScores = document.getElementById('high-score-table');
+  inDocumentHighScores.innerHTML = existingScores.map(entry => `<li>${entry.playerName}............${entry.playerHighScore}</li>`).join('');
+
+console.log(existingScores);
+console.log(score);
+//console.log(playerHighScore);
+console.log(setHighScoreArray);
+}
+
+
+
+function displayHighScore() {
+
+  const pullExistingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
+  const pullInDocumentHighScores = document.getElementById('high-score-table');
+  pullInDocumentHighScores.innerHTML = pullExistingScores.map(entry => `<li>${entry.playerName}............${entry.playerHighScore}</li>`).join('');
 }
 
 
 
 
 
-
-
-
-  
 
   function retriveNextQuestion() {
     id++;

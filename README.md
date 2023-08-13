@@ -453,6 +453,16 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
  023         |  script.js / index.html    | Chrome        |  passNickname     | Pass       | Following several more variations of Test 022 I realised that that I had included a previous 'let username' before the functions. This effectivley meant that my username value was being reset every time the script ran. I corrected the error, inserted two extra lines into the function and it passed all tests
 | **Before**                                          |   **After**          ||||
 | ![678px ratio](/assets/testing/test-images/test-twenty-three-a.webp)  |  ![678px ratio](/assets/testing/test-images/test-twenty-three-b.webp)     | |             | | |
+024         |  script.js / index.html    | Chrome        |  getHighScores     | Fail       | Upon completion of the quiz the user is presented with the High Scores section. However once back to the dashboard, if the user clicks High Scores (test-twenty-four-b), the array is not displaying. 
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-twenty-four-a.webp)  |  ![678px ratio](/assets/testing/test-images/test-twenty-four-b.webp)     | |             | | |
+025         |  script.js / index.html    | Chrome        |  getHighScores     | Fail       | I have attempted to correct the issue in Test 024 by seperating the getHighScores function into two seperate functions. However this also failed tests, as the variables were not pulled through to displayScore function
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-twenty-five-a.webp)  |  ![678px ratio](/assets/testing/test-images/test-twenty-five-b.webp)     | |             | | |
+026         |  script.js / index.html    | Chrome        |  displayHighScores     | Pass       | I tried to correct the errors in Tests 024 and 025, however I decided to try another way. I have reinstated the getHighScores function and created a seperate function called displayHighScores, but rather on rely on the variables of another functions I have replicated the last three lines from getHighScores and assigned them difference variable names. This means that I am accessing the array in exacly the same way without pushing any values or relying on other functions (see image b, replicated code is highlighted)
+| **Before**                                          |   **After**          ||||
+| ![678px ratio](/assets/testing/test-images/test-twenty-six-a.webp)  |  ![678px ratio](/assets/testing/test-images/test-twenty-six-b.webp)     | |             | | |
+
 
 
 

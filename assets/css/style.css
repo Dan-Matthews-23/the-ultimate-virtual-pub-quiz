@@ -104,6 +104,25 @@
   
 }
 
+.hall-of-fame-table-title {
+  text-align: center;
+  color: inherit;
+  font-size: inherit;
+  padding: inherit;
+  
+}
+
+.high-scores-list {
+  text-align: left;
+  color: inherit;
+  font-size: inherit;
+  padding: 30px;;
+  
+}
+
+
+
+
 #score {
     text-align: center;
     background-color: #1D110F;
