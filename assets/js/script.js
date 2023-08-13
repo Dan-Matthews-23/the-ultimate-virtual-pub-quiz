@@ -131,7 +131,7 @@ addEventListener('click', function (event)
 
   } else if (event.target === returnHome) 
   {
-      window.location.assign("index.html");
+      window.location.assign("../../index.html");
   } else if  (event.target === viewHighScoresPostGame) 
   {
     
