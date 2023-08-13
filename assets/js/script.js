@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 //localStorage.clear();
 // Hide 'quiz-section' on index.html
 
