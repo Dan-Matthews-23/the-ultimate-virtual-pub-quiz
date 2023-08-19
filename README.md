@@ -531,7 +531,7 @@ I have taken the following actions in response to feedback:
 
 3) I have re-designed the Game Over modal to include a final high score which is clear
 
-4) 
+4) I have corrected the issue with main container that was causing the content to spill out 
 
 5) I have ameded the code where ordinarily the user would be directed to ("index.html") which is designed for localhost, not for external hosting
 
