@@ -510,20 +510,24 @@ The following section will explain in detail how each function works. All functi
 
 I have worked closely with my peers on testing this product rigorously for any errors. The feedback is as follows:
 
-- How many questions do you have on your quiz? I've got to four and the game just stops with no errors or alerts
+1) How many questions do you have on your quiz? I've got to four and the game just stops with no errors or alerts
 
-- When you get correct answer it changes to just 40 then you click next and get score 40, might be better to keep score alongside he number when answer correct.
+2) When you get correct answer it changes to just 40 then you click next and get score 40, might be better to keep score alongside he number when answer correct.
 
-- Your scores aren't working when I completed the quiz
+3) Your scores aren't working when I completed the quiz
 
-- On your instructions on mobile use overflow: scroll
+4) On your instructions on mobile use overflow: scroll
 
-- Your back to main menu buttons are giving me a 404 error
+5) Your back to main menu buttons are giving me a 404 error
 
 
 ### Responding to Peer Feedback
 
 I have taken the following actions in response to feedback:
+
+1) 
+
+2) I have amended the increaseScore function output to return "Score: ${score} rather than just the value of score. 
 
 
 

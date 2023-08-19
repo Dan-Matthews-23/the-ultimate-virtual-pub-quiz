@@ -257,7 +257,7 @@ function shuffle(array) {
 
 function increaseScore() {
   score += 10;
-  scoreCounter.innerText = `${score}`;
+  scoreCounter.innerText = ` Score: ${score}`;
 }
 
 /*
