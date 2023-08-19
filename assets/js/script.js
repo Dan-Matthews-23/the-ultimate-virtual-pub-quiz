@@ -262,6 +262,7 @@ function shuffle(array) {
     
     if (selectedAnswer === answerCorrect) {
       this.style.background = "green";
+      console.log(`The correct answer is ${answerCorrect}, but you selected ${selectedAnswer}`);
       //this.classList.add("correct-answer");
       document.getElementById("next").classList.remove("hidden");
       const possibleAnswers = document.querySelectorAll(".answer");
@@ -275,6 +276,7 @@ function shuffle(array) {
 
       
       this.style.background = "red";
+      console.log(`The correct answer is ${answerCorrect}, but you selected ${selectedAnswer}`);
       /*
       document.getElementById("next").classList.remove("hidden");
       for (let j = 0; j < possibleAnswers.length; j++) {
@@ -297,6 +299,7 @@ function shuffle(array) {
     const answerButtons = document.querySelectorAll('.answer');
     for (let a = 0; a < answerButtons.length; a++) {
       answerButtons[a].disabled = true;
+      
     }
       } 
  }
