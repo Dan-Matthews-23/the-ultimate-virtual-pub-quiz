@@ -103,10 +103,11 @@ addEventListener('click', function (event)
 
   } else if (event.target === enterUsernameBtn) 
   {
-    document.getElementById("quiz-section").classList.remove("hidden");
+    checkUsermame();
+    /*document.getElementById("quiz-section").classList.remove("hidden");
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
-    document.getElementById("username-section").classList.add("hidden");
+    document.getElementById("username-section").classList.add("hidden");*/
 
   } else if (event.target === showInst) 
   {
@@ -145,6 +146,24 @@ addEventListener('click', function (event)
   }
 
 })
+
+
+function checkUsermame(){
+  const username = (document.getElementById("usernameValue").value);
+  console.log(username)
+  if (username.length === 0) { alert("Please enter a username")}
+  else if (username.length > 0 && username.length <= 5) { alert("Please enter a username with more than 5 characters")}
+  else if (username.length > 20) { alert("Please enter a username with no more than 20 characters")}
+  else 
+  { 
+    document.getElementById("quiz-section").classList.remove("hidden");
+    document.getElementById("return-section").classList.remove("hidden");
+    document.getElementById("user-selection-section").classList.add("hidden");
+    document.getElementById("username-section").classList.add("hidden");
+  }
+
+}
+
 // Function to connect to API. 
 //---This section of code was based on a template from Chris Minnick, from JavaScript ALL-IN-ONE for dummies. See README for more information---//
 async function connectAPI(apiURL) {
