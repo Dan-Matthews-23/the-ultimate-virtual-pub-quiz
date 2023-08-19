@@ -81,6 +81,24 @@
   
 }
 
+
+.hall-of-fame-container {
+  
+  /*background-color: #67442c;*/
+  background-color: rgba(103, 68, 44, 0.7);
+  /*opacity: 0.7;*/
+  
+  height:fit-content;
+  margin: auto ;
+  border-radius: 5px;
+  border-color: yellow;
+  padding: 20px;
+  text-align: center;
+  
+ }
+
+
+
 .user-screen {
   
   margin: auto auto auto auto;
@@ -147,10 +165,10 @@
 }
 
 .high-scores-list {
-  text-align: left;
+  text-align: center;
   color: inherit;
-  font-size: inherit;
-  padding: 30px;;
+  font-size: 25px;
+  padding: 15px;
   
 }
 

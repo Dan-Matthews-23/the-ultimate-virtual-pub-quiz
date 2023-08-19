@@ -373,12 +373,13 @@ function addHighScore() {
   
   localStorage.setItem('existingScores', JSON.stringify(existingScores));
   const inDocumentHighScores = document.getElementById('high-score-table');
-  inDocumentHighScores.innerHTML = existingScores.map(entry => `<li>${entry.playerName}............${entry.playerHighScore}</li>`).join('');
+  inDocumentHighScores.innerHTML = existingScores.map(entry => `<li>${entry.playerName}...${entry.playerHighScore} (room ${entry.playerRoom}) </li>`).join('');
 
 console.log(existingScores);
 console.log(score);
 //console.log(playerHighScore);
 console.log(setHighScoreArray);
+console.log(`Room code is ${roomCode}`);
 }
 
 
@@ -387,7 +388,7 @@ function displayHighScore() {
 
   const pullExistingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
   const pullInDocumentHighScores = document.getElementById('high-score-table');
-  pullInDocumentHighScores.innerHTML = pullExistingScores.map(entry => `<li>${entry.playerName}............${entry.playerHighScore}</li>`).join('');
+  pullInDocumentHighScores.innerHTML = pullExistingScores.map(entry => `<li>${entry.playerName}...${entry.playerHighScore} (room ${entry.playerRoom}) </li>`).join('');
 }
 
 
