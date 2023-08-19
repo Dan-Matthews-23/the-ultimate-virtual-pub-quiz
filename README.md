@@ -468,14 +468,6 @@ NOTE: USING RESIZER GO FOR 200PX WHEN ADDING TO TESTING
 
 ### Testing-Driven Development Testing (Red, Green, Refactor)
 
-
-    
-
-
-
-
-
-
 ### Solved Bugs
 
 Please view testing table for list of all solved bugs
@@ -485,26 +477,6 @@ Please view testing table for list of all solved bugs
 | ------------| ------------                    | -----------  | -----------                                                                                          |
 |             |                                 |              |                                                                                                      |
 
-
-### Functions in further detail
-
-The following section will explain in detail how each function works. All functions can be found in /assets/js/script.js
-
-
-|      Function   |  Code Snippet                                 | Line   | Explanation    |
-| ------------    | ------------                                  | -----  |-----------   |
-|  connectAPI()   | async function connectAPI(apiURL)             |        | The 'async' in this function is crutial as it makes the function return a 'promise' |
-|  connectAPI()   | const connection = await fetch(apiURL);       |        | This line uses the await() method, which works in conjunction with 'async'. It makes a function wait for a 'promise'. In this instance, the variable 'connection' is set as the value of await() |
-|  connectAPI()   | if (connection.status >= 200 && connection.status <= 299)      |        | This will determine the 
-
-
-
-
-
-
-
-
- |
 
 ### Peer Feedback
 
@@ -534,6 +506,49 @@ I have taken the following actions in response to feedback:
 4) I have corrected the issue with main container that was causing the content to spill out 
 
 5) I have ameded the code where ordinarily the user would be directed to ("index.html") which is designed for localhost, not for external hosting
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Functions in further detail
+
+The following section will explain in detail how each function works. All functions can be found in /assets/js/script.js
+
+
+|      Function   |  Code Snippet                                 | Line   | Explanation    |
+| ------------    | ------------                                  | -----  |-----------   |
+|  connectAPI()   | async function connectAPI(apiURL)             |        | The 'async' in this function is crutial as it makes the function return a 'promise' |
+|  connectAPI()   | const connection = await fetch(apiURL);       |        | This line uses the await() method, which works in conjunction with 'async'. It makes a function wait for a 'promise'. In this instance, the variable 'connection' is set as the value of await() |
+|  connectAPI()   | if (connection.status >= 200 && connection.status <= 299)      |        | This will determine the 
+
+
+
+
+
+
+
+
+ |
+
 
 
 

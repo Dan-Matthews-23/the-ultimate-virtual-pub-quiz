@@ -55,7 +55,15 @@
 
 /*--------------------USER SCREEN ---------------------------------------*/
 
+.s-text {
 
+  font-size: 10px;
+  padding: 10px 10px 10px 10px;
+  color: white;
+  font-family: inherit;
+  letter-spacing: 2px;
+  text-align: center;
+}
 
 
 .user-screen-container {

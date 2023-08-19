@@ -3,6 +3,15 @@
 // Hide 'quiz-section' on index.html
 
 
+//import { facUserDetails } from "/assets/js/loginDetails.js";
+
+/*
+import { getPrimes } from "/assets/js/loginDetails.js";
+console.log(getPrimes(10)); // [2, 3, 5, 7]
+*/
+
+
+
 
 
 
@@ -59,10 +68,31 @@
     playerHighScore: [500, 400, 300, 200, 100]
   };*/
 
-
+  /*
+  const facLogin = document.getElementById("fac-login");
+  facLogin.addEventListener("click", facilitatorLogin);
   
 
+  function facilitatorLogin() {
+    const facUsername = document.getElementById("facUsernameValue").value;
+    const facPassword = document.getElementById("facPasswordValue").value;
 
+    console.log(facUsername);
+    console.log(facPassword);
+
+    
+    const facExistingDetails = facUserDetails();
+    console.log(facExistingDetails.facUsernameExisting);
+
+
+    
+
+
+
+  }
+  
+
+*/
 
 
   //Global Variables
@@ -103,7 +133,7 @@ addEventListener('click', function (event)
 
   } else if (event.target === enterUsernameBtn) 
   {
-    checkUsermame();
+    checkRoomCode()
     /*document.getElementById("quiz-section").classList.remove("hidden");
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
@@ -147,8 +177,18 @@ addEventListener('click', function (event)
 
 })
 
+function checkRoomCode() {
+  const roomCode = (document.getElementById("room-code-value").value);
+  if (roomCode.isNaN) { alert("Please enter a number")}
+  else if (roomCode === "") { alert("Please enter a room code")}
+  else {
+    checkUsername()
+  }
 
-function checkUsermame(){
+}
+
+
+function checkUsername(){
   const username = (document.getElementById("usernameValue").value);
   console.log(username)
   if (username.length === 0) { alert("Please enter a username")}
@@ -319,11 +359,13 @@ localStorage.clear();
 function addHighScore() {
   
   const existingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
+  const roomCode = (document.getElementById("room-code-value").value);
   const username = (document.getElementById("usernameValue").value);
   const setHighScoreArray = {
     playerID: Math.floor(Math.random() * 9999) + 1,
     playerName: username,
-    playerHighScore: score
+    playerHighScore: score,
+    playerRoom: roomCode
   };
   existingScores.push(setHighScoreArray);
   existingScores.sort((a, b) => b.playerHighScore - a.playerHighScore);
