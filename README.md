@@ -529,6 +529,8 @@ I have taken the following actions in response to feedback:
 
 2) I have amended the increaseScore function output to return "Score: ${score} rather than just the value of score. 
 
+3) I have re-designed the Game Over modal to include a final high score which is clear
+
 
 
 

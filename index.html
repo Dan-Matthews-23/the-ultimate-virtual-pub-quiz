@@ -27,19 +27,19 @@
          <div class="row">
             <div class="col">
                
-               <section class="username user-section hidden" id="username-section">
-                  <div class="container user-screen username-container">
+               <section class="user-section hidden" id="username-section">
+                  <div class="container user-screen align-center">
                      <div class="row">
                         <div class="col align-center"><h1>The Ultimate Pub Quiz</h1></div>
                      </div>
-                     <div class="row">
+                     <div class="row align-center">
                         <div class="col align-center"><h2>Choose a username</h2></div>
                      </div>
                      <div class="row">
                         <div class="col user-screen with-borders"><input type="text" id="usernameValue" placeholder="Enter a username"></div>
                      </div>
                      <div class="row">
-                        <div class="col user-screen with-borders"><button class="sub-button" id="enter-username">Submit</button></div>
+                        <div class="col user-screen with-borders"><button type="submit"  class="sub-button" id="enter-username">Submit</button></div>
                      </div>
                   </div>
                </section>
@@ -55,19 +55,19 @@
                      <!--Let's Play button-->
                      <div class="row ">
                         <div class="col button-container">
-                           <button id="showQuizBtn" class="sub-button">Play Game</button>
+                           <button type="button"  id="showQuizBtn" class="sub-button">Play Game</button>
                         </div>
                      </div>
                      <!-- Instructions button-->
                      <div class="row ">
                         <div class="col button-container">
-                           <button id="showInstBtn" class="sub-button">How to play</button>
+                           <button type="button"  id="showInstBtn" class="sub-button">How to play</button>
                         </div>
                      </div>
                      <!-- Hall of Fame button-->
                      <div class="row ">
                         <div class="col button-container">
-                           <button id="showHallBtn" class="sub-button">Hall of Fame</button>
+                           <button type="button"  id="showHallBtn" class="sub-button">Hall of Fame</button>
                         </div>
                      </div>
                   </div>
@@ -83,16 +83,22 @@
                         <div class="col align-center" id="score"></div>
                      </div>
                      <!--Let's Play button-->
-                     <div class="row ">
+                     <!--<div class="row ">
                         <div class="col  align-center button-container">
-                           <button class="sub-button answer "></button>
-                           <button class="sub-button answer "></button>
-                           <button class="sub-button answer "></button>
-                           <button class="sub-button answer "></button>
+                           <button type="button"  class="sub-button answer "></button>
+                           <button type="button"  class="sub-button answer "></button>
+                           <button type="button"  class="sub-button answer "></button>
+                           <button type="button"  class="sub-button answer "></button>
                         </div>
-                     </div>
+                     </div>-->
+                     <div class="row"><div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div></div>
+                     <div class="row"><div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div></div>
+                     <div class="row"><div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div></div>
+                     <div class="row"><div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div></div>
+
+
                      <div class="row ">
-                        <div class="col align-center button-container"><button class="sub-button hidden button-container" id="next">Next</button></div>
+                        <div class="col align-center button-container"><button type="button"  class="sub-button hidden button-container" id="next">Next</button></div>
                      </div>
                   </div>
                </section>
@@ -188,10 +194,14 @@
                         <div class="col user-screen with-borders"><h1>Game Over</h1></div>
                      </div>
                      <div class="row">
-                        <div class="col">You Scored: THIS</div>
+                        <div class="col" id="final-score"><h2></h2></div>
                      </div>
                      <div class="row">
-                        <div class="col"><button class="sub-button" id="view-high-scores">View High Scores</button></div>
+                        <div class="col"><h3>Your score has been saved</h3></div>
+                     </div>
+                     <div class="row align-center">
+                        <div class="col"><button type="button" class="sub-button" id="post-game-scores" >View High Scores</button></div>
+                        <!--<div class="row"><div class="col"><button type="button"  class="sub-button answer" id="post-game-scores">View High Scores</button></div></div>-->
                      </div>
                      
                   </div>
@@ -205,8 +215,10 @@
                
                <!--Return Home button-->
                <section class="user-section hidden" id="return-section">
+                 <div class="container align-center">
                   <div class="row">
-                     <div class="col align-center"> <button class="sub-button button-container" id="return-btn">Back to main menu</button></div>
+                     <div class="col sm-padding"> <button type="button"  class="sub-button" id="return-btn">Back to main menu</button></div>
+                  </div>
                   </div>
                </section>
             </div>

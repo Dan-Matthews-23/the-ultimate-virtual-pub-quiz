@@ -90,7 +90,7 @@ const showInst = document.getElementById("showInstBtn");
 const showHall = document.getElementById("showHallBtn");
 const returnHome = document.getElementById("return-btn");
 const enterUsernameBtn = document.getElementById("enter-username");
-const viewHighScoresPostGame = document.getElementById("view-high-scores");
+const viewHighScoresPostGame = document.getElementById("post-game-scores");
 
 addEventListener('click', function (event) 
 {
@@ -256,6 +256,7 @@ function shuffle(array) {
 */
 
 function increaseScore() {
+  
   score += 10;
   scoreCounter.innerText = ` Score: ${score}`;
 }
@@ -338,6 +339,12 @@ function displayHighScore() {
     
     if (id >= connect.results.length) {
       document.getElementById("game-over-modal").classList.remove("hidden");
+      const finalScore = document.getElementById('final-score');
+      finalScore.innerText = (`Final score: ${score}`);
+
+
+
+
       document.getElementById("quiz-section").classList.add("hidden");
       
       //alert(`Quiz complete! Your score: ${score}/${connect.results.length}`);

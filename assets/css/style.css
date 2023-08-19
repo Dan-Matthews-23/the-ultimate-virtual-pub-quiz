@@ -22,6 +22,7 @@
   padding-top: 150px;
 }
 
+
 .with-borders {
   border-style: solid;
   border-color: black;
@@ -32,8 +33,24 @@
   margin: auto;
 }
 
-.blank-row-with-xxl-padding {
+.xxl-padding {
   padding: 100px 100px 100px 100px;
+}
+
+.xl-padding {
+  padding: 75px 75px 75px 75px;
+}
+
+.lg-padding {
+  padding: 50px 50px 50px 50px;
+}
+
+.md-padding {
+  padding: 25px 25px 25px 25px;
+}
+
+.sm-padding {
+  padding: 5px 5px 5px 5px;
 }
 
 /*--------------------USER SCREEN ---------------------------------------*/
@@ -63,6 +80,7 @@
   /*background-color: #67442c;*/
   background-color: rgba(103, 68, 44, 0.7);
   /*opacity: 0.7;*/
+  color: white;
 }
 
 .main-title {
@@ -76,7 +94,8 @@
 
 
 .sub-button,
-.answer {
+.answer
+ {
   background-color: #a37451;
   padding: 5px 5px 5px 5px;
   color: white;
@@ -118,6 +137,17 @@
   font-size: inherit;
   padding: 30px;;
   
+}
+
+#game-over-modal {
+  text-align: center;
+  background-color: #1D110F;
+  color: #a37451;
+  font-size: 30px;
+  padding: 5px 5px 5px 5px;
+  letter-spacing: 4px;
+  
+  font-weight: 700px;
 }
 
 
