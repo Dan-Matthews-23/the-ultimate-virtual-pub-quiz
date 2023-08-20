@@ -126,14 +126,17 @@ addEventListener('click', function (event)
 {
   if( event.target === showQuiz) 
   {
-    
+    document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
     //document.getElementById("quiz-section").classList.add("hidden");
     document.getElementById("username-section").classList.remove("hidden");
 
   } else if (event.target === enterUsernameBtn) 
   {
+    
+    
     checkRoomCode()
+    
     /*document.getElementById("quiz-section").classList.remove("hidden");
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
@@ -173,20 +176,26 @@ addEventListener('click', function (event)
     document.getElementById("user-selection-section").classList.add("hidden");
     document.getElementById("hall-of-fame-section").classList.remove("hidden");
     document.getElementById("game-over-modal").classList.add("hidden");
+    displayHighScore();
     
   }
 
 })
 
-function checkRoomCode() {
-  const roomCode = (document.getElementById("room-code-value").value);
-  if (roomCode.isNaN) { alert("Please enter a number")}
-  else if (roomCode === "") { alert("Please enter a room code")}
-  else {
-    checkUsername()
-  }
 
+
+
+function checkRoomCode() {
+  const roomCode = document.getElementById("room-code-value").value;
+  if (roomCode < 1 || roomCode === "" || isNaN(roomCode)) {
+    alert("Please enter a valid room code");
+  } else {
+    checkUsername();
+  }
 }
+
+
+
 
 
 function checkUsername(){
@@ -194,7 +203,7 @@ function checkUsername(){
   console.log(username)
   if (username.length === 0) { alert("Please enter a username")}
   else if (username.length > 0 && username.length < 3) { alert("Please enter a username with more than 3 characters")}
-  else if (username.length > 20) { alert("Please enter a username with no more than 20 characters")}
+  else if (username.length > 10) { alert("Please enter a username with no more than 10 characters")}
   else 
   { 
     document.getElementById("quiz-section").classList.remove("hidden");
@@ -376,8 +385,9 @@ function addHighScore() {
   existingScores.splice(10);
   
   localStorage.setItem('existingScores', JSON.stringify(existingScores));
-  const inDocumentHighScores = document.getElementById('high-score-table');
-  inDocumentHighScores.innerHTML = existingScores.map(entry => `<li>${entry.playerName}...${entry.playerHighScore} (room ${entry.playerRoom}) </li>`).join('');
+ 
+  //const inDocumentHighScores = document.getElementById('high-score-table');
+  //inDocumentHighScores.innerHTML = existingScores.map(entry => `<li>${entry.playerName}...${entry.playerHighScore} (room ${entry.playerRoom}) </li>`).join('');
 
 console.log(existingScores);
 console.log(score);
@@ -389,10 +399,32 @@ console.log(`Room code is ${roomCode}`);
 
 
 function displayHighScore() {
+  
+  //let change = "playerRoom";
+ // const changeSort = this.innerHTML;
+ // if (!changeSort) { change = `playerHighScore`; } else { change = `playerRoom`; }
 
   const pullExistingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
+  
+
+  //pullExistingScores.sort((firstItem, secondItem) => firstItem.change - secondItem.change);
+  
+  //students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);
+  
+  
   const pullInDocumentHighScores = document.getElementById('high-score-table');
-  pullInDocumentHighScores.innerHTML = pullExistingScores.map(entry => `<li>${entry.playerName}...${entry.playerHighScore} (room ${entry.playerRoom}) </li>`).join('');
+  pullInDocumentHighScores.innerHTML = 
+  pullExistingScores.map(entry => `
+  <div class="col high-scores-list with-borders">${entry.playerName}</div>
+  <div class="col high-scores-list with-borders">${entry.playerHighScore}</div>
+  <div class="col high-scores-list with-borders">${entry.playerRoom}</div>`).join('');
+  
+
+  //existingScores.sort((a, b) => b.playerHighScore - a.playerHighScore);
+  //existingScores.splice(10);
+
+
+ 
 }
 
 

@@ -167,10 +167,12 @@
 }
 
 .high-scores-list {
-  text-align: center;
+  
   color: inherit;
-  font-size: 25px;
-  padding: 15px;
+  font-size: 15px;
+  padding: 5px;
+  float: left;
+  width: 33%;
   
 }
 
@@ -222,3 +224,6 @@
   }
 }
 /*--------------------END OF MEDIA QUERIES---------------------------------------*/
+
+
+
