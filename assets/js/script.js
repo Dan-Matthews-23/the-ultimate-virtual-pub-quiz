@@ -382,7 +382,7 @@ function addHighScore() {
   };
   existingScores.push(setHighScoreArray);
   existingScores.sort((a, b) => b.playerHighScore - a.playerHighScore);
-  existingScores.splice(10);
+  //existingScores.splice(10);
   
   localStorage.setItem('existingScores', JSON.stringify(existingScores));
  
@@ -400,19 +400,11 @@ console.log(`Room code is ${roomCode}`);
 
 function displayHighScore() {
   
-  //let change = "playerRoom";
- // const changeSort = this.innerHTML;
- // if (!changeSort) { change = `playerHighScore`; } else { change = `playerRoom`; }
-
-  const pullExistingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
-  
-
-  //pullExistingScores.sort((firstItem, secondItem) => firstItem.change - secondItem.change);
-  
-  //students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);
-  
-  
+ const pullExistingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
   const pullInDocumentHighScores = document.getElementById('high-score-table');
+
+  pullExistingScores.sort((a, b) => b.playerRoom - a.playerRoom);
+
   pullInDocumentHighScores.innerHTML = 
   pullExistingScores.map(entry => `
   <div class="col high-scores-list with-borders">${entry.playerName}</div>

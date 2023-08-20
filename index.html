@@ -174,29 +174,21 @@
                         <div class="col with-borders high-scores-list"><h2>Room Number</h2></div>
                      </div>
                      <div class="row with-borders">
-                        <div class="col main-title user-screen  with-borders" id="high-score-table">
-                           <!--<ol class="high-scores-list" id="high-score-table"></ol>-->
+                        <div class="col main-title user-screen  with-borders" id="high-score-table"></div>
+                     </div>
+                     <div class="row with-borders">
+                        <div class="col-10 user-screen with-borders">
+                           <label for="select-display">Sort data:</label>
+                              <select name="select-display" id="select-display">
+                                 <option value="byScore">By score</option>
+                                 <option value="byPlayer">By username</option>
+                                 <option value="byRoom">By room no.</option>
+                              </select>
                         </div>
+                        <div class="col with-borders user-screen"><button type="button" id="conf-display">Go!</button></div>
                      </div>
 
-                           <!--<table width="100%" class="hall-of-fame-table">
-                              <tr>
-                                 <td colspan="2">
-                                    <h1 class="hall-of-fame-table-title"><u>Hall of Fame</u></h1>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td><h2><u>Username</u></h2></td>
-                                 <td><h2><u>Score</u></h2></td>
-                              </tr>
-                             <tr>
-                              <td colspan="2">
-                                 <ol class="high-scores-list" id="high-score-table">
-
-                                 </ol>
-                              </td>
-                              <td id="high-scores-player-score"><ol id="high-score-score"></ol></td>
-                             </tr>
+                           
 
 
                               
@@ -204,11 +196,7 @@
                               
                                  
                              
-                              <tr>
-                                 <td colspan="2"><h2>Your position:</h2></td>
-                                 <td><h2>6th</h2></td>
-                              </tr>
-                           </table>-->
+                              
 
                            <!--<div class="row">
                               <div class="col sm-padding"> <button type="button"  class="sub-button" id="byScore">Sort High Scores By Score</button></div>
@@ -236,6 +224,7 @@
                         <div class="col"><button type="button" class="sub-button" id="post-game-scores" >View High Scores</button></div>
                         <!--<div class="row"><div class="col"><button type="button"  class="sub-button answer" id="post-game-scores">View High Scores</button></div></div>-->
                      </div>
+                     
                      
                   </div>
                 </section>
