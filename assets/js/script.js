@@ -398,24 +398,39 @@ console.log(`Room code is ${roomCode}`);
 
 
 
+
+
+
+
+
+
+
 function displayHighScore() {
+    const pullExistingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
+    const pullInDocumentHighScores = document.getElementById('high-score-table');
+    const selectedDisplay = document.getElementById('select-display').value;
+    
+    pullExistingScores.sort((a,b)=> (b.playerRoom - a.playerRoom || b.playerHighScore - a.playerHighScore  ));
+    //pullExistingScores.sort((a, b) => b.playerRoom - a.playerRoom);
+    // objs.sort((a,b)=> (a.age - b.age || a.name.localeCompare(b.name)  ));
+    
+    pullInDocumentHighScores.innerHTML = pullExistingScores.map(entry => `
+    <div class="col high-scores-list with-borders">${entry.playerName}</div>
+    <div class="col high-scores-list with-borders">${entry.playerHighScore}</div>
+    <div class="col high-scores-list with-borders">${entry.playerRoom}</div>`).join('');
+    console.log(selectedDisplay);
+  }
 
 
-   
- const pullExistingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
-const pullInDocumentHighScores = document.getElementById('high-score-table');
- const selectedDisplay = document.getElementById('select-display').value;
-console.log(selectedDisplay);
-pullExistingScores.sort((a, b) => b.selectedDisplay - a.selectedDisplay);
-pullInDocumentHighScores.innerHTML = 
-pullExistingScores.map(entry => `
- <div class="col high-scores-list with-borders">${entry.playerName}</div>
-  <div class="col high-scores-list with-borders">${entry.playerHighScore}</div>
-  <div class="col high-scores-list with-borders">${entry.playerRoom}</div>`).join('');
-  
 
- 
-}
+
+
+
+
+
+
+
+
 
 
 
