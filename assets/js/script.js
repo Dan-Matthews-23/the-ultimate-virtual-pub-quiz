@@ -162,7 +162,8 @@ addEventListener('click', function (event)
 
   } else if (event.target === returnHome) 
   {
-      window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html");
+      //window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html"); // WHEN DEPLOYED
+      window.location.assign("index.html"); // WHEN LOCAL SITE
   } else if  (event.target === viewHighScoresPostGame) 
   {
     
@@ -192,7 +193,7 @@ function checkUsername(){
   const username = (document.getElementById("usernameValue").value);
   console.log(username)
   if (username.length === 0) { alert("Please enter a username")}
-  else if (username.length > 0 && username.length <= 5) { alert("Please enter a username with more than 5 characters")}
+  else if (username.length > 0 && username.length < 3) { alert("Please enter a username with more than 3 characters")}
   else if (username.length > 20) { alert("Please enter a username with no more than 20 characters")}
   else 
   { 
