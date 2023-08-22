@@ -268,7 +268,24 @@ function shuffle(array) {
 
   function confirmAnswer() {
     const selectedAnswer = this.innerHTML;
-    const answerCorrect = connect.results[id].correct_answer;
+    const rawCorrectAnswer = connect.results[id].correct_answer;
+
+    //----This snippet of code was taken from Go Make Things (https://gomakethings.com/decoding-html-entities-with-vanilla-javascript/)----//
+    var decodeHTML = function (html) {
+      var txt = document.createElement('textarea');
+      txt.innerHTML = html;
+      return txt.value;
+    };
+    let answerCorrect = decodeHTML(rawCorrectAnswer);
+    //----End of code snippet----
+
+
+
+
+
+
+
+
     
     if (selectedAnswer === answerCorrect) {
       this.style.background = "green";
