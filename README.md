@@ -498,7 +498,7 @@ I have worked closely with my peers on testing this product rigorously for any e
 
 I have taken the following actions in response to feedback:
 
-1) 
+1) For this particular error I have used a function I found on  [Go Make Things](https://gomakethings.com/decoding-html-entities-with-vanilla-javascript/). It puts the value of the correct answer into a blank text box then pulls it back out in order to format, or decode, the value of the variable. 
 
 2) I have amended the increaseScore function output to return "Score: ${score} rather than just the value of score. 
 
@@ -507,6 +507,45 @@ I have taken the following actions in response to feedback:
 4) I have corrected the issue with main container that was causing the content to spill out 
 
 5) I have ameded the code where ordinarily the user would be directed to ("index.html") which is designed for localhost, not for external hosting
+
+
+### Feedback from previous projects
+
+I received several peices of feedback on my Heart Helpers project from my facilitarors. These were:
+
+1)  Background and foreground are clear and easy to read however, <u>in the future contrast ratio could be cross check during the design stage. (alt text has been used in the code)</u>
+
+2) There are fewer spaces or capitalisation in the file <u>cross check for future development</u>
+
+3) Clearly evidence the testing process for both unit testing and final usability testing. Test logs are included in the readme file to access functionality, usability and responsiveness. <u>For further development do include screenshots of actual result of tests</u>
+
+4) Learners has presented code is well-organised and easy to follow. The finished project has a clear, well-defined purpose addressing the needs of a particular target audience.  <u>For further development make use of code and screen shots in readme file for development stages</u>
+
+5) Some documentation has been completed throughout development as shown in readme although further and detail documentation is required 
+
+
+I have taken the following actions in response to feedback:
+
+1) Because I am partially colour-blind, I've had to build this project using a tool called (WebAIM)[] to aid me in checking contrast ratio. I continue to use alternative text, however I have also made the following adjustments to my Coolers template. The adjustments pass all validator tests:
+
+- Answer Buttons: Background: #9A6A4C, text: #FFFFFF
+![678px ratio](/assets/testing/contrast-ratio-a.png
+
+- Game Over Modal: Background: #1D110F, text: #a37451
+![678px ratio](/assets/testing/contrast-ratio-b.png
+
+ - Score Section: Background: #1D110F, text: #a37451
+ ![678px ratio](/assets/testing/contrast-ratio-c.png
+
+
+2) I have ensured that every filename contains no numbers, capital letters or underscores. Each file has been placed in an appropiate folder, and I've ensured each file is named correctly and appropiatly. 
+
+3) I have ensured that along with details of all of my testing, I've included as many before and after screenshots as possible. In some cases it wasn't always possible to include both, but these tests are clearly marked with justification
+
+4) Throughout the testing stages I have included snippets of code along with screenshots of visual output of that code. 
+
+5)
+
 
 
 
