@@ -14,85 +14,8 @@ console.log(getPrimes(10)); // [2, 3, 5, 7]
 
 
 
-
-
-
-//selectEasy.addEventListener("click", chooseEasy);
-//selectMedium.addEventListener("click", chooseMedium);
-//selectHard.addEventListener("click", chooseHard);
-
-
-
-  // My Question Array
-  const questionArray = 
-  [
-  { 
-    ID: 0,
-    question: `Which is the biggest planet in our solar system?`,
-    correct_answer: `Jupiter`,
-    incorrect_answer: [`Venus`, `Neptune`, `Mercury`]
-     
-},
-
-{ 
-    ID: 1,
-    question: `Which is the smallest planet in our solar system?`,
-    correct_answer: `Mercury`,
-    incorrect_answer: [`Earth`, `Neptune`, `Mars`]
-     
-},
-
-{ 
-    ID: 2,
-    question: `Which is the hottest planet in our solar system?`,
-    correct_answer: `Venus`,
-    incorrect_answer: [`Earth`, `Mercury`, `Mars`]
-     
-},
-
-{ 
-    ID: 3,
-    question: `Which is the coldest planet in our solar system?`,
-    correct_answer: `Uranus`,
-    incorrect_answer: [`Earth`, `Mercury`, `Mars`]
-     
-},
-
-  ];
  
-/*const highScoresArray = 
 
-  { 
-    playerID: [0, 1, 2, 3, 4],
-    playerName: [`Morbid Honeybun`, `Doesthislookinfected`, `Gonk54`, `Youdaddy`, `Shamaladingdong`],
-    playerHighScore: [500, 400, 300, 200, 100]
-  };*/
-
-  /*
-  const facLogin = document.getElementById("fac-login");
-  facLogin.addEventListener("click", facilitatorLogin);
-  
-
-  function facilitatorLogin() {
-    const facUsername = document.getElementById("facUsernameValue").value;
-    const facPassword = document.getElementById("facPasswordValue").value;
-
-    console.log(facUsername);
-    console.log(facPassword);
-
-    
-    const facExistingDetails = facUserDetails();
-    console.log(facExistingDetails.facUsernameExisting);
-
-
-    
-
-
-
-  }
-  
-
-*/
 
 
   //Global Variables
@@ -165,8 +88,13 @@ addEventListener('click', function (event)
 
   } else if (event.target === returnHome) 
   {
-      window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html"); // WHEN DEPLOYED
+      confirmReturn();
+    
+    //window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html"); // WHEN DEPLOYED
       //window.location.assign("index.html"); // WHEN LOCAL SITE
+
+
+
   } else if  (event.target === viewHighScoresPostGame) 
   {
     
@@ -193,6 +121,48 @@ function checkRoomCode() {
     checkUsername();
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+function confirmReturn(){
+
+
+  
+  //window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html"); // WHEN DEPLOYED
+ 
+  let ConfRet = confirm("Are you sure you want to return? You will lose all progress");
+  if (ConfRet == true) { window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html"); }
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
