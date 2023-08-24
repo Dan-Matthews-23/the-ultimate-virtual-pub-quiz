@@ -241,8 +241,8 @@
   .sub-button, .answer, .user-screen { font-size: 30px; }
 }
 
-@media screen and (min-width: 450px) {
-  .user-screen-container { max-width: 100% }
+@media screen and (max-width: 450px) {
+  .user-screen-container, .hall-of-fame-container, .user-screen { padding: 0px; }
 }
 
 
