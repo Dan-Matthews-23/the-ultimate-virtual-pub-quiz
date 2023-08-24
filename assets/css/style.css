@@ -1,78 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@300&display=swap"); /* Import the title font*/
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@300;400&display=swap"); /* Import the text font*/
 
-.body {
-  /*font-family: "Poppins", sans-serif;*/
-  font-family: "Caveat", cursive;
-}
 
-.h1 {
-  color: white;
-  text-align: center;
-  font-size: 25px;
-  font-family: inherit; 
-}
+/*--------------------MAIN CONTAINER ---------------------------------------*/
+
 
 .main-container {
   background-image: url("../../assets/images/background-image.webp");
   height: 100%;
-  max-width: 100%;
-  
+  width: 100%;
   background-size: cover;
-  
   padding-top: 150px;
 }
 
-
-.with-borders {
-  border-style: solid;
-  border-color: black;
-}
-
-.align-center {
-  text-align: center;
-  margin: auto;
-}
-
-.xxl-padding {
-  padding: 100px 100px 100px 100px;
-}
-
-.xl-padding {
-  padding: 75px 75px 75px 75px;
-}
-
-.lg-padding {
-  padding: 50px 50px 50px 50px;
-}
-
-.md-padding {
-  padding: 25px 25px 25px 25px;
-}
-
-.sm-padding {
-  padding: 5px 5px 5px 5px;
-}
+/*-----------------------------------------------------------*/
 
 /*--------------------USER SCREEN ---------------------------------------*/
-
-.s-text {
-
-  font-size: 10px;
-  padding: 10px;
-  color: white;
-  font-family: inherit;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-
 .user-screen-container {
   
   /*background-color: #67442c;*/
   background-color: rgba(103, 68, 44, 0.7);
   /*opacity: 0.7;*/
-  width: 100vw;
+  width: 90%;
   height:fit-content;
   margin: auto;
   border-radius: 5px;
@@ -94,7 +43,7 @@
   margin: auto ;
   border-radius: 5px;
   border-color: yellow;
-  padding: 20px;
+  padding: 20px 20px 20px 0px;
   text-align: center;
   
  }
@@ -104,7 +53,7 @@
 .user-screen {
   margin: auto;
   max-width: 100%;
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
   /*background-color: #67442c;*/
   background-color: rgba(103, 68, 44, 0.7);
   /*opacity: 0.7;*/
@@ -124,7 +73,7 @@
   display: block;
   font-weight: 700px;
   font-family: inherit;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 
@@ -137,7 +86,7 @@
   text-align: center;
   margin: auto;
   /*font-size: 22px;*/
-  font-size: 20px;
+  font-size: 30px;
   /*border-radius: 2px;*/
   width: 90%;
   font-family: inherit;
@@ -181,7 +130,7 @@
   background-color: #1D110F;
   color: #a37451;
   font-size: 30px;
-  padding: 5px 5px 5px 5px;
+  padding: 5px;
   letter-spacing: 4px;
   
   font-weight: 700px;
@@ -201,6 +150,11 @@
     font-weight: 700px;
 }
 
+.input-box {
+  font-size: 30px;
+  width: 100%;
+}
+
 
 
 
@@ -216,10 +170,79 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+.with-borders {
+  border-style: solid;
+  border-color: black;
+}
+
+.align-center {
+  text-align: center;
+  margin: auto;
+}
+
+.xxl-padding {
+  padding: 100px 100px 100px 100px;
+}
+
+.xl-padding {
+  padding: 75px 75px 75px 75px;
+}
+
+.lg-padding {
+  padding: 50px 50px 50px 50px;
+}
+
+.md-padding {
+  padding: 25px 25px 25px 25px;
+}
+
+.sm-padding {
+  padding: 5px 5px 5px 5px;
+}
+
+.body {
+  /*font-family: "Poppins", sans-serif;*/
+  font-family: "Caveat", cursive;
+}
+
+.h1 {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-family: inherit; 
+}
+
+.s-text {
+
+  font-size: 10px;
+  padding: 10px;
+  color: white;
+  font-family: inherit;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
+
+
+
 /*--------------------MEDIA QUERIES - FOR RESPONSIVE DESIGN ---------------------------------------*/
 @media screen and (max-width: 576px) {
-  .sub-button, .answer, .user-screen { padding: 2px; font-size: 30px; }
+  .sub-button, .answer, .user-screen { font-size: 30px; }
+}
 
+@media screen and (min-width: 450px) {
+  .user-screen-container { max-width: 100% }
 }
 
 
