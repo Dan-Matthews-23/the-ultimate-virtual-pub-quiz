@@ -322,7 +322,7 @@ Referring back to my original design ideas, the end result was slightly differen
 |            |                                               |
 |                               |                                                                                 |                                                                            
 |  Version control              | Git                                                                             |
-|  IDE / file storing           | [Gitpod](https://gitpod.io/), [Code Anywhere](https://app.codeanywhere.com/)  and [VS Code](https://code.visualstudio.com/)|
+|  IDE / file storing           | [VS Code](https://code.visualstudio.com/)|
 |  Wireframes                   | [Balsamiq](https://balsamiq.com/)                                               |
 |  Code Validation              | [W3C Schools](https://validator.w3.org/)                                        |
 |  Developer Tools              | Chrome Developer Tools                                                          |
@@ -358,7 +358,7 @@ To fork the Heart Helpers repository:
 To clone the Heart Helpers repository:
 
 1. Log in (or sign up) to GitHub.
-2. Go to the repository for this project, Dan-Matthews-23/heart-helpers.
+2. Go to the repository for this project, Dan-Matthews-23/????????.
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
@@ -523,10 +523,12 @@ I received several peices of feedback on my Heart Helpers project from my facili
 
 5) Some documentation has been completed throughout development as shown in readme although further and detail documentation is required 
 
+### Responding to feedback from previous projects
+
 
 I have taken the following actions in response to feedback:
 
-1) Because I am partially colour-blind, I've had to build this project using a tool called (WebAIM)[] to aid me in checking contrast ratio. I continue to use alternative text, however I have also made the following adjustments to my Coolers template. The adjustments pass all validator tests:
+1) Because I am partially colour-blind, I've had to build this project using a tool called (WebAIM)[] to aid me in checking contrast ratio. I continue to use alternative text, however I have also made the following adjustments to my Coolers template. The adjustments pass all validator tests and can be found in the Design section:
 
 - Answer Buttons: Background: #9A6A4C, text: #FFFFFF
 ![678px ratio](/assets/testing/contrast-ratio-a.png
@@ -536,6 +538,8 @@ I have taken the following actions in response to feedback:
 
  - Score Section: Background: #1D110F, text: #a37451
  ![678px ratio](/assets/testing/contrast-ratio-c.png
+
+ I have also included a WAVE report which passes all tests
 
 
 2) I have ensured that every filename contains no numbers, capital letters or underscores. Each file has been placed in an appropiate folder, and I've ensured each file is named correctly and appropiatly. 
