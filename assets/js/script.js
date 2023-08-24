@@ -435,7 +435,7 @@ function displayHighScore() {
     <div class="col high-scores-list with-borders">${entry.playerName}</div>
     <div class="col high-scores-list with-borders">${entry.playerHighScore}</div>
     <div class="col high-scores-list with-borders">${entry.playerRoom}</div>`).join('');
-    console.log(selectedDisplay);
+    //console.log(selectedDisplay);
   }
 
 
