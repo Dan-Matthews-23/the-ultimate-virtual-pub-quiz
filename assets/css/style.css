@@ -242,7 +242,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .user-screen-container, .hall-of-fame-container, .user-screen { padding: 0px; }
+  .user-screen-container, .hall-of-fame-container, .user-screen { padding: 0px; width: 100%; }
 }
 
 
