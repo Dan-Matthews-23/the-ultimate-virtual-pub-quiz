@@ -61,7 +61,6 @@ This quiz has been developed based on a real need - a good friend who is also a 
 The quiz has several aims:
 
 - Engage pub users
-- Suitabily challenge users
 - Respond to user input
 - Provide feedback
 - Provide a final score. 
@@ -71,15 +70,15 @@ The quiz has several aims:
 
 - A 'How to play' section, which will give users instructions on how to play the game
 - A 'High Scores' section, which will display a list of the highest scores in descending order
-- The quiz itself
+- The quiz itself which will allow the users to answer questions
 
 ### About the user
 
 This project has been designed with two end users in mind:
 
-- The pub user, who is the user participating in the quiz. They will be able to access the quiz via a smart device through their own internet or Wifi of the premises, if they have it. Part of the 'How to Play' instructions will be guiding users how to switch on their device wi-fi, or hotspot to another device. They will be given a 'Room ID' that they must enter along wth their name when they join the quiz. They will be given the Room ID by the faciltator. The instructions will need to be clear. 
+- The pub user, who is the user participating in the quiz. They will be able to access the quiz via a smart device through their own internet or Wifi of the premises, if they have it. Part of the 'How to Play' instructions will be guiding users how to switch on their device wi-fi, or hotspot to another device. They will be given a 'Room Number' that they must enter along wth their name when they join the quiz. They will be given the Room ID by the faciltator. The instructions will need to be clear. 
 
-- The organiser, who is the person who will be facilitating the event. They will already have facilitator login details and will be able to create a 'room' for the users to join. They will have the option to start the quiz once a certian number of users have joined the room. The login system will need to be quick and simple, and must give the facilitator control over starting the quiz, although ending the quiz will be automated and pausing will not be an option. 
+- The facilitator, who is the person who will be facilitating the event. They will need to ensure everyone has the correct Room Code, and they need only advise the participants to begin at an alloted time. Once all participants have completed the quiz, the facilitator will be able to view the High Scores, which will be grouped and easy to identify a clear winner.  
 
 ### User Goals
 The pub user:
@@ -88,12 +87,10 @@ The pub user:
 - To read instructions that are simple to understand
 - To be challenged across a range of questions
 - To see my score once the quiz is over
-- To compare my score with other people's scores
+- To compare my score with other scores
 
 
 The facilitator:
-- To be able to log on and create a 'room'
-- To start the quiz at my discresion
 - To see the results of the users in the room once finished
 - To easily identify a winner amongst users in the room
 
@@ -106,36 +103,31 @@ The pub user:
 - To view my score at the end, and be able to compare to other scores
 
 The facilitator:
-- To create a 'room' for the users to join
-- To start the quiz
-- To collate scores of the users
+- To view scores of the users without havng to do the quiz myself
+- To be able to identify a winner
 
 
 ### Returning Visitor Goals
 
 The pub user:
 - To take part in an online virtual pub quiz
-- To be challenged in the right way (questions not too easy or too hard)
-- To not be given the same questions as I had on the last quiz, as this will present less of a challenge
+- To be challenged in the right way (questions not too easy or too hard) ((!! Will solve this by choosing range of questions from range of topics))
 - To view my score at the end, and be able to compare to other scores
 
 The facilitator:
-- To create a 'room' for the users to join
-- To start the quiz
-- To collate scores of the users
+- To view scores of the users without havng to do the quiz myself
+- To be able to identify a winner
 
 ### Frequent Visitor Goals
 
 The pub user:
 - To take part in an online virtual pub quiz
-- To be challenged in the right way (questions not too easy or too hard)
-- To not be given the same questions as I had on the last quiz, as this will present less of a challenge
+- To be challenged in the right way (questions not too easy or too hard) ((!! Will solve this by choosing range of questions from range of topics))
 - To view my score at the end, and be able to compare to other scores
 
 The facilitator:
-- To create a 'room' for the users to join
-- To start the quiz
-- To collate scores of the users
+- To view scores of the users without havng to do the quiz myself
+- To be able to identify a winner
 
 - - -
 
@@ -171,93 +163,81 @@ Wireframes were created for desktop, tablet and mobile (1200px, 758px, 476px res
 
 [Also available as Coolors palette](https://coolors.co/1d110f-a37451-0e0807-8b5f48-67442c)
 
-I have chosen the above colour palette for the Heart Helpers website because I wanted to use a palette that was easy for the users to see. I did research on what colours would be the most accessible to use. [The Office for National Statistics](https://style.ons.gov.uk/data-visualisation/using-colours/accessibility-and-colours/) suggest three helpful rules to consider when creating accessible websites:
+I have chosen the above colour palette from Coolors which was generated based on the background image I used. However I have slightly modified some of the shades in order to conform with contrast ratio (see #Feedback). 
 
-- “Get it right in black and white”
-
-- “The safest hue is blue”
-
-- “Red and green should never be seen”
-
-To that end, I have chosen a mixture of black and white font, and primarily a mixture of deep red with orange to break up sections of the pages. I've kept these colours a darker shade so that the white font would be easily seen. I did struggle with the colour set. I'm partially colour blind myself which means I don't see shades of secondary or tertiary colours well at all. I've had to get feedback consistently on how easy the colours blended. I've also had a lot of support through the paid subscription of [Coolors](https://coolors.co/), which was recommended to me by a peer at the Code Institute. The service allowed me to create a colour scheme based on the image I uploaded, which really did help. Overall, I’m confident that I have chosen a colour scheme that is accessible that meets my design specification. 
 
 ### Font
 
-The font I have chosen to use for Heart Helpers is one called Caveat. While this font type isn't considered to be the most easy to read, it serves a purpose, which is to mimic handwriting as closely as possible. It can be found [here](https://fonts.google.com/specimen/Caveat?preview.text=The%20Ultimate%20Pub%20Quiz&preview.text_type=custom). I chose the 'bold 700' weighting as I felt that it would look better for a title. 
+ 
 
 ### Images
 
-All of the images used on the Heart Helpers website are from Pexels.com, and the icons are from Font Awesome and Flaticon. The authors are noted and are available to view in the #Credits section.
+There is only one image used in the Virtual Pub Quiz which servves as a background image, relevent to the theme. The author is noted and is available to view in the #Credits section.
 
 ### Videos
 
-There is one video in this project that was added as a late addition, which is an embedded YouTube video from the British Heart Foundation regarding Heart Attacks. 
+
 
 ## Features
 
-### Header
+### Header / Footer
 
-My header will be comprised of the Heart Helpers logo (see above for images) that will also act as a hyperlink that will always bring the user back to the Home page. It will also contain the navigation bar which will change depending on the user's device.
+I have chosen not to conform to a standard navigation bar that a user would generally expect to find on a typical website. The reasoning behind this is that this project, being a quiz, was designed with the elements in mind that a user would find on almost any interactive quiz, therefore the navigation across the quiz comes from buttons that display the relevent sections. 
 
-### Footer
+### Sections
 
-My footer will contain links to LinkedIn, GitHub, Facebook and Twitter. 
+It's important to note here that the Virtual Pub Quiz is contained on a single page that is seperated out into different sections, each hidden and displayed, or toggled, by the user (see Functions Explained for detail on how the toggle works)
 
+#### User Selection Screen section
 
+![User Selection Screen]()
 
-### Home Page
+This is the first section the user is presented with. It has three buttons that, based on user input, will take the user to one of three sections: Username, Instructions or Hall of Fame. 
 
-![Homepage Snippet](/assets/images/features-index-snip.webp)
+#### Username section
 
-My Home page will begin with the Next Event with a large image (see Images) and a block of text describing what the event is, with a button just below called 'Sign Up'. If clicked, the button will take the user to the Get Involved page so that they can sign up to this event. 
+![User Selection Screen]()
 
-The next section will be a part of the Testimonies page, with part of one testimony. The user will be able to click to view more and be taken to the testimonies.html page
+This section is where the user enteres a username and a room code. Both are input boxes and subject to validation to ensure the username is between 3 and 10 characters long, and that the room code is numeric. In practise, the room code will be available from the facilitator. The user can either choose to return to the main menu, or submit the username and room code
 
+#### Quiz section
 
+![User Selection Screen]()
 
+The Quiz section is there the user is asked a question, and is given four possible answers to choose. Only one of them is correct. Guessing the correct answer will cause the score to increment by 10 and the answer being highlighted green, while guessing the incorrect answer will cause the chosen answer being highlighted red, and the correct answer highlighted yellow. Once an answer has been selected, the 'Next' button will appear. Clicking this button will cause the next question to be called from the API. This will continue until the array has reached the question limit. At any time, the user may return to the main menu.
 
-### Get Involved
+#### Game Over section
 
-![Get-Involved-Snippet](/assets/images/features-get-involved-snip.webp)
+![User Selection Screen]()
 
-Get Involved will be where the user can sign up to the next event by using a form that captures (through POST) the user's name, email address and date of birth. There is also a 'Confirm Email' address and a date selection for the date of birth, although neither of them has validation assigned to it (see Future Developments).
+Once the user has reached the question limit, the questions will no longer display. All sections will hide and the Game Over section will display that will tell the user their final score. The suer will be presented with two options: Return to the main menu, or save their score into the Hall of Fame. 
 
-There is also a checkbox with a 'I agree with the Terms of Service' label assigned to it. There will be no data validation assigned to this checkbox. The label will carry a hyperlink that will take the user to the Terms of Service page. The form once submitted will guide the user to a thank you page 
+#### Hall of Fame section
 
+![User Selection Screen]()
 
+The Hall of Fame section lists all saved scores. They are sorted first by Room Number and then by score. By grouping the scores by room number first it makes it easier for the facilitator to see who won the round. The user can then go back to the main menu by selecting the button, and they are taken back to the User Selection Screen section
 
+#### Instructions
 
-### Thank You
+![User Selection Screen]()
 
-![Thank-You-Snippet](/assets/images/features-thank-you-snip.webp)
+This section gives the user a set of instructions on how to play the quiz. The user has the option to return to the main menu. 
 
-Thank You will be a very short page confirming that the registration is being processed. I am constrained in what I can do with this because of my lack of JavaScript knowledge, however I have documented this in Future Developments. It will also have on it an embedded information video from the British Heart Foundation Youtube Channel available [here](https://www.youtube.com/watch?v=bw_Vv2WRG-A)
+#### Return to main manu
 
+![User Selection Screen]()
 
-
-### Contact Us
-
-![Contact-Us-Snippet](/assets/images/features-contact-us-snip.webp)
-
-The Contact Us page will be a form where the user inputs some of their information. The form will be a POST method and will take the user to a confirmation page. There will be a drop-down menu, checkbox, submit button and text boxes available. The form once submitted will guide the user to a confirmation page
-
-
-
-
-### Message Sent
-
-![Message-Sent-Snippet](/assets/images/features-message-sent-snip.webp)
-
-The Message Sent is a confirmation page for the user that will inform the user that the message has been sent sucessfully. It will also have on it an embedded information video from the British Heart Foundation Youtube Channel available [here](https://www.youtube.com/watch?v=bw_Vv2WRG-A)
+This option is available to the user at every section. When clicked, the suer will be presented with a confirm box, asking the user to confirm they want to go back to the main menu, and that any progress will be lost. The user can either click 'Ok' or 'cancel' to stay on the current section. 
 
 
 
 
-### Testimonies
 
-![Testimonies](/assets/images/features-testimonies-snip.webp)
 
-This page will be a collection of testimonies from previous volunteers and/or people who have benefited from Heart Helpers. 
+
+
+
 
 
 
