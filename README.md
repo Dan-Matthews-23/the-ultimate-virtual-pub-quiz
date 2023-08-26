@@ -554,7 +554,9 @@ I have taken the following actions in response to feedback:
 
 
 
+### Justifications
 
+1) Play Again: I had originally intended on creating a Play Again option to be presented ont he Game Over modal. However I decided not to include this function in the final verion of the product due to conflicts with the user story of the facilitator. This was intended to be virtual pub quiz, and in a pub quiz, the participants are not generally allowed to subit their answers twice. Therefore I have not included this option, however it should be noted here that there must be a certain level of trust that the user will not start the quiz again but with a different username, just as there is a level of trust that the participants in a face to face will not confer with one another. To mitigate this risk as much as possible, I have set the question array limit to 100, reducing the likelhood of the same user answering the same questions as before. 
 
 
 

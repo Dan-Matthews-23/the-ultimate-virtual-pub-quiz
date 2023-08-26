@@ -14,14 +14,14 @@ nextButton.addEventListener("click", retriveNextQuestion);
 // URL for API
 //const difficultyEasy = "https://opentdb.com/api.php?amount=20&type=multiple";
 //const difficultyEasy = "https://opentdb.com/api.php?amount=2&type=multiple";
-const difficultyEasy = "https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple";
+const difficultyEasy = "https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple";
 
 
 
 let connect = {};
 let score = 0;
 let id = 0;
-const scoreLimiter = 20;
+//const scoreLimiter = 20;
 let scoreCounter = document.getElementById("score");
 
 
@@ -32,6 +32,7 @@ const returnHome = document.getElementById(".return-btn");
 const enterUsernameBtn = document.getElementById("enter-username");
 const viewHighScoresPostGame = document.getElementById("post-game-scores");
 const confDisplay = document.getElementById("conf-display");
+const playAgain = document.getElementById("play-again");
 
 addEventListener('click', function (event) 
 {
@@ -39,7 +40,6 @@ addEventListener('click', function (event)
   {
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
-    
     document.getElementById("username-section").classList.remove("hidden");
 
   } else if (event.target === enterUsernameBtn) 
@@ -63,7 +63,15 @@ addEventListener('click', function (event)
     document.getElementById("hall-of-fame-section").classList.remove("hidden");
     displayHighScore();
 
-  } else if (event.target === confDisplay)
+  } else if (event.target === playAgain) 
+  {
+     window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html"); // WHEN DEPLOYED
+
+  
+  
+  }  
+  
+  else if (event.target === confDisplay)
   {
 
      //window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html"); // WHEN DEPLOYED
