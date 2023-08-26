@@ -231,26 +231,15 @@ This section gives the user a set of instructions on how to play the quiz. The u
 This option is available to the user at every section. When clicked, the suer will be presented with a confirm box, asking the user to confirm they want to go back to the main menu, and that any progress will be lost. The user can either click 'Ok' or 'cancel' to stay on the current section. 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ## Accessibility
 
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. I have achieved this by:
 
-- Using alternative text for all images throughout the Heart Helpers website
-- Using an accessible colour palette and contracts suitable for all users
-- Using an easy to access navigation bar that clearly highlights which page the user is currently viewing
-- Where possible, using screen reading tools where there is no alternative text available and the user is presented with an important feature (e.g., button, icon)
+- Using alternative text for interactive elements within the project
+- Using an accessible colour palette
+- Using a clear, accesible navigation system throughout that is guided by the user
 - Using semantic scripts
+- Using a good contrast ratio that passes contrasting tests (see Feedback on previous projects for further infoformation)
 
 
 ## Reflection
