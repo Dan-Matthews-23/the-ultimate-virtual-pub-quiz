@@ -28,11 +28,12 @@ let scoreCounter = document.getElementById("score");
 const showQuiz = document.getElementById("showQuizBtn");
 const showInst = document.getElementById("showInstBtn");
 const showHall = document.getElementById("showHallBtn");
-const returnHome = document.getElementById(".return-btn");
+const returnHome = document.getElementById("return-btn");
 const enterUsernameBtn = document.getElementById("enter-username");
 const viewHighScoresPostGame = document.getElementById("post-game-scores");
-const confDisplay = document.getElementById("conf-display");
-const playAgain = document.getElementById("play-again");
+//const confDisplay = document.getElementById("conf-display");
+//const playAgain = document.getElementById("play-again");
+const reset = document.getElementById("reset");
 
 addEventListener('click', function (event) 
 {
@@ -63,7 +64,7 @@ addEventListener('click', function (event)
     document.getElementById("hall-of-fame-section").classList.remove("hidden");
     displayHighScore();
 
-  } else if (event.target === playAgain) 
+  } else if (event.target === reset) 
   {
      window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html"); // WHEN DEPLOYED
 
@@ -71,14 +72,14 @@ addEventListener('click', function (event)
   
   }  
   
-  else if (event.target === confDisplay)
+  /*else if (event.target === confDisplay)
   {
 
      //window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html"); // WHEN DEPLOYED
     
     displayHighScore();
 
-  } else if (event.target === returnHome) 
+  }*/ else if (event.target === returnHome) 
   {
       confirmReturn();
     
@@ -373,6 +374,7 @@ function displayHighScore() {
     
     if (id >= connect.results.length) {
       document.getElementById("game-over-modal").classList.remove("hidden");
+      document.getElementById("return-section").classList.add("hidden");
       const finalScore = document.getElementById('final-score');
       finalScore.innerText = (`Final score: ${score}`);
 

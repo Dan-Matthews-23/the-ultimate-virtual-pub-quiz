@@ -19,7 +19,8 @@
                <div class="container user-screen-container ">
                   <div class="row">
                      <div class="col">
-                        <!--Start of Game Over modal-->
+
+                        <!--Start of Game Over section-->
                         <section class="user-screen hidden" id="game-over-modal">
                            <div class="container">
                               <div class="row">
@@ -37,12 +38,17 @@
                                     <h2>Your score has been saved</h2>
                                  </div>
                               </div>
-                              <div class="row align-center">
-                                 <div class="col"><button type="button" class="sub-button" id="post-game-scores">View High Scores</button></div>
-                                 <div class="col"><button type="button" class="sub-button" id="play-again">Play again!</button></div>
-                              </div>
+                              <div class="row align-center lg-padding">
+                                 <div class="col"><button type="button" class="sub-button" id="post-game-scores">Add your score to Hall of Fame</button></div>
+                               </div>
+                               <div class="row align-center lg-padding">
+                                 <div class="col sm-padding"> <button type="button"  class="sub-button" id="reset" >Back to main menu</button></div>
+                               </div>
                            </div>
                         </section>
+                        <!--End of Game Over section-->
+
+
                         <!--Start of username section-->
                         <section class="user-screen hidden" id="username-section">
                            <div class="container align-center ">
@@ -187,7 +193,7 @@
                         <section class="user-screen hidden" id="return-section">
                            <div class="container align-center">
                               <div class="row">
-                                 <div class="col sm-padding"> <button type="button"  class="sub-button return-btn" >Back to main menu</button></div>
+                                 <div class="col sm-padding"> <button type="button"  class="sub-button" id="return-btn" >Back to main menu</button></div>
                               </div>
                            </div>
                         </section>

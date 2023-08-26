@@ -558,6 +558,9 @@ I have taken the following actions in response to feedback:
 
 1) Play Again: I had originally intended on creating a Play Again option to be presented ont he Game Over modal. However I decided not to include this function in the final verion of the product due to conflicts with the user story of the facilitator. This was intended to be virtual pub quiz, and in a pub quiz, the participants are not generally allowed to subit their answers twice. Therefore I have not included this option, however it should be noted here that there must be a certain level of trust that the user will not start the quiz again but with a different username, just as there is a level of trust that the participants in a face to face will not confer with one another. To mitigate this risk as much as possible, I have set the question array limit to 100, reducing the likelhood of the same user answering the same questions as before. 
 
+2) Hall Of Fame list: In an earlier version of the project I had a function that would allow the user to display all scores either by Room Number or Score by selecting from a drop-down menu and clicking a submit button. However this proved to be complex because I have opted to hide and display sections by class all on one page rather than to use modals. Because of this I could not find a way of executing the function without a submit, and when the button was clicked and the function activated, it reset the classes of every section. Instead, I have a function that sorts the high scores by order of room, then of score automaticly. That means the facilitator user stories are still met, making it easy to see who scored the most out of the room, and the participents user stories are also met by being able to see the top player. While this method was not my preferred way, it still achieves the same thing. 
+
+
 
 
 
