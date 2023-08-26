@@ -1,14 +1,3 @@
-//"use strict";
-//localStorage.clear();
-// Hide 'quiz-section' on index.html
-
-
-//import { facUserDetails } from "/assets/js/loginDetails.js";
-
-/*
-import { getPrimes } from "/assets/js/loginDetails.js";
-console.log(getPrimes(10)); // [2, 3, 5, 7]
-*/
 
 
 
@@ -27,13 +16,11 @@ nextButton.addEventListener("click", retriveNextQuestion);
 //const difficultyEasy = "https://opentdb.com/api.php?amount=2&type=multiple";
 const difficultyEasy = "https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple";
 
-//const enterHighScoreBtn = document.getElementById("enter-high-score");
-//enterHighScoreBtn.addEventListener('click', passNickname);
+
 
 let connect = {};
 let score = 0;
 let id = 0;
-//let username;
 const scoreLimiter = 20;
 let scoreCounter = document.getElementById("score");
 
@@ -41,7 +28,7 @@ let scoreCounter = document.getElementById("score");
 const showQuiz = document.getElementById("showQuizBtn");
 const showInst = document.getElementById("showInstBtn");
 const showHall = document.getElementById("showHallBtn");
-const returnHome = document.getElementById("return-btn");
+const returnHome = document.getElementById(".return-btn");
 const enterUsernameBtn = document.getElementById("enter-username");
 const viewHighScoresPostGame = document.getElementById("post-game-scores");
 const confDisplay = document.getElementById("conf-display");
@@ -52,7 +39,7 @@ addEventListener('click', function (event)
   {
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
-    //document.getElementById("quiz-section").classList.add("hidden");
+    
     document.getElementById("username-section").classList.remove("hidden");
 
   } else if (event.target === enterUsernameBtn) 
@@ -61,10 +48,7 @@ addEventListener('click', function (event)
     
     checkRoomCode()
     
-    /*document.getElementById("quiz-section").classList.remove("hidden");
-    document.getElementById("return-section").classList.remove("hidden");
-    document.getElementById("user-selection-section").classList.add("hidden");
-    document.getElementById("username-section").classList.add("hidden");*/
+   
 
   } else if (event.target === showInst) 
   {
@@ -98,7 +82,7 @@ addEventListener('click', function (event)
   } else if  (event.target === viewHighScoresPostGame) 
   {
     
-    //createHighScores();
+    
     addHighScore();
     document.getElementById("return-section").classList.remove("hidden");
     document.getElementById("user-selection-section").classList.add("hidden");
@@ -274,14 +258,7 @@ function shuffle(array) {
       
       this.style.background = "red";
       console.log(`The correct answer is ${answerCorrect}, but you selected ${selectedAnswer}`);
-      /*
-      document.getElementById("next").classList.remove("hidden");
-      for (let j = 0; j < possibleAnswers.length; j++) {
-      console.log(answerCorrect);
-      possibleAnswers[j].disabled = true;
-      this.classList.remove("incorrect-answer");
-       
-      }*/
+     
 
       // Display the background color of the correct answer when user selects wrong answer
     const correctAnswerButtons = document.querySelectorAll('.answer');
@@ -303,16 +280,7 @@ function shuffle(array) {
 
 
 
-/*
- function calculateNewScore(score) {
-  score++;
-  const currentScores = document.querySelectorAll("score");
-  const currentIndex = currentScores.length - score;
-  const playerScore = currentScores[currentIndex];
-  console.log(score);
-  return score;
-}
-*/
+
 
 function increaseScore() {
   
@@ -320,39 +288,7 @@ function increaseScore() {
   scoreCounter.innerText = ` Score: ${score}`;
 }
 
-/*
-function createHighScores() 
-  {
-    //const subNewScore = score;
-    const username = (document.getElementById("usernameValue").value);
-    const playerID = Math.floor(Math.random() * (9999 - 1 + 1) ) + 1;
-    const existingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
-    const setHighScoreArray = 
-    {
-      playerID: [playerID],
-      playerName: [username],
-      playerHighScore: [score]      
-    }
-    
-    existingScores.push(setHighScoreArray);
-    
-  existingScores.sort((a, z) => z.score - a.score);
-  existingScores.splice(scoreLimiter);
 
-  localStorage.setItem('existingScores', JSON.stringify(existingScores));
-  const inDocumentHighScores = document.getElementById("high-score-table");
-  inDocumentHighScores.innerHTML = 
-  existingScores.map(existingScores => {
-  return `<li>${existingScores.playerName} - ${existingScores.score}</li>`; }).join("");
-  
-  
-  
-localStorage.clear();
-  console.log(existingScores); // This is the new array
-  console.log(score);
-   
-  }
-*/
 
 
 

@@ -8,7 +8,7 @@
 .main-container {
   background-image: url("../../assets/images/background-image.webp");
   height: 100%;
-  width: 100%;
+  max-width: 100%;
   background-size: cover;
   padding-top: 150px;
 }
@@ -18,47 +18,24 @@
 /*--------------------USER SCREEN ---------------------------------------*/
 .user-screen-container {
   
-  /*background-color: #67442c;*/
+  
   background-color: rgba(103, 68, 44, 0.7);
-  /*opacity: 0.7;*/
+ 
   width: 90%;
   height:fit-content;
   margin: auto;
-  border-radius: 5px;
-  border-color: yellow;
   padding: 20px;
-  font-family: inherit;
- 
-  
-}
-
-
-.hall-of-fame-container {
-  
-  /*background-color: #67442c;*/
-  background-color: rgba(103, 68, 44, 0.7);
-  /*opacity: 0.7;*/
-  
-  height:fit-content;
-  margin: auto ;
-  border-radius: 5px;
-  border-color: yellow;
-  padding: 20px 20px 20px 0px;
-  text-align: center;
-  
- }
-
-
+  }
 
 .user-screen {
   margin: auto;
   max-width: 100%;
-  padding: 10px 10px 10px 10px;
+  
   /*background-color: #67442c;*/
   background-color: rgba(103, 68, 44, 0.7);
   /*opacity: 0.7;*/
-  color: white;
-  font-family: inherit;
+  
+  padding: 20px;
   
 }
 
@@ -99,6 +76,22 @@
     
 }
 
+
+.hall-of-fame-container {
+  
+  /*background-color: #67442c;*/
+  background-color: rgba(103, 68, 44, 0.7);
+  /*opacity: 0.7;*/
+  
+  height:fit-content;
+  margin: auto ;
+  border-radius: 5px;
+  border-color: yellow;
+  padding: 20px 20px 20px 0px;
+  text-align: center;
+  
+ }
+
 .hall-of-fame-table {
   text-align: center;
   color: inherit;
@@ -115,10 +108,11 @@
   
 }
 
-.high-scores-list {
+.high-scores-list
+{
   
-  color: inherit;
-  font-size: 15px;
+  color: white;
+  font-size: 20px;
   padding: 5px;
   float: left;
   width: 33%;
@@ -144,7 +138,8 @@
     background-color: #1D110F;
     color: #a37451;
     font-size: 30px;
-    padding: 5px 5px 5px 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     letter-spacing: 4px;
     display: block;
     font-weight: 700px;
@@ -152,7 +147,18 @@
 
 .input-box {
   font-size: 30px;
-  width: 100%;
+  width: 70%;
+  height: 35px;
+}
+
+#nxt-container {
+  padding-top: 40px;
+}
+
+.final-score-mes {
+  color: white;
+  text-align: center;
+  font-size: 25px;
 }
 
 
@@ -190,37 +196,60 @@
   margin: auto;
 }
 
-.xxl-padding {
-  padding: 100px 100px 100px 100px;
-}
 
-.xl-padding {
-  padding: 75px 75px 75px 75px;
-}
 
-.lg-padding {
-  padding: 50px 50px 50px 50px;
+.sm-padding {
+  padding: 5px;
 }
 
 .md-padding {
-  padding: 25px 25px 25px 25px;
+  padding: 10px;
 }
 
-.sm-padding {
-  padding: 5px 5px 5px 5px;
+.lg-padding {
+  padding: 15px;
 }
 
-.body {
-  /*font-family: "Poppins", sans-serif;*/
-  font-family: "Caveat", cursive;
+.xl-padding {
+  padding: 20px;
 }
 
-.h1 {
+
+
+h1 {
   color: white;
   text-align: center;
-  font-size: 30px;
-  font-family: inherit; 
+  font-size: 35px;
+   
 }
+
+h2
+ {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+ }
+  
+
+  li * {
+    color: white;
+    text-align: justify;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+  }
+  
+
+
+h3 {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  
+}
+
+
 
 .s-text {
 
@@ -241,8 +270,12 @@
   .sub-button, .answer, .user-screen { font-size: 30px; }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .user-screen-container, .hall-of-fame-container, .user-screen { padding: 0px; width: 100%; }
+  .main-container { padding-top: 210px;}
+  h2 { font-size: 20px;}
+  .high-scores-list { font-size: 15px; padding: 0px;}
+  .input-box { font-size: 20px; height: 20px; width: 60%;}
 }
 
 

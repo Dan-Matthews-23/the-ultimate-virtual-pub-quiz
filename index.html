@@ -1,246 +1,201 @@
 <!<!DOCTYPE html>
 <html lang="en">
    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <link
-         rel="stylesheet"
-         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-         type="text/css"
-         />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-         rel="stylesheet"
-         />
-      <link rel="stylesheet" href="assets/css/style.css" />
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"  type="text/css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="assets/css/style.css">
       <title>Home</title>
    </head>
    <body>
       <!--Start of main container-->
       <div class="container main-container scroll-section">
-      <div class="row">
-      <div class="col">
-      <div class="container user-screen-container ">
          <div class="row">
             <div class="col">
-               
-               <section class="user-screen hidden" id="username-section">
-                  <div class="container  align-center">
-                     <div class="row">
-                        <div class="col align-center"><h1>The Ultimate Pub Quiz</h1></div>
-                     </div>
-                     <div class="row align-center">
-                        <div class="col align-center"><h2>Choose a username</h2></div>
-                     </div>
-                     <div class="row">
-                        <div class="col user-screen with-borders"><input type="text" class="input-box" id="usernameValue" placeholder="Enter a username"></div>
-                     </div>
-                     <div class="row align-center">
-                        <div class="col align-center"><h2>Enter your Room Code</h2></div>
-                     </div>
-                     <div class="row">
-                        <div class="col user-screen with-borders"><input type="text" class="input-box" id="room-code-value" placeholder="Enter a room code"></div>
-                     </div>
-                     <div class="row">
-                        <div class="col user-screen with-borders"><button type="submit"  class="sub-button" id="enter-username">Submit</button></div>
-                     </div>
-                  </div>
-               </section>
-               
-               <!--Start of user selection screen section-->
-               <section class="user-screen" id="user-selection-section">
-                  <div class="container user-screen">
-                     <div class="row ">
-                        <div class="col main-title align-center">
-                           <h1>The Ultimate Pub Quiz</h1>
-                        </div>
-                     </div>
-                     <!--Let's Play button-->
-                     <div class="row ">
-                        <div class="col button-container">
-                           <button type="button"  id="showQuizBtn" class="sub-button">Play Game</button>
-                        </div>
-                     </div>
-                     <!-- Instructions button-->
-                     <div class="row ">
-                        <div class="col button-container">
-                           <button type="button"  id="showInstBtn" class="sub-button">How to play</button>
-                        </div>
-                     </div>
-                     <!-- Hall of Fame button-->
-                     <div class="row ">
-                        <div class="col button-container">
-                           <button type="button"  id="showHallBtn" class="sub-button">Hall of Fame</button>
-                        </div>
-                     </div>
-                     <!--<div class="row ">
-                        <div class="col s-text">Are you a facilitator? Click <a href="login.html">here</a> to log in</div>
-                        
-                     </div>-->
-
-                     
-
-
-                  </div>
-               </section>
-               <!--End of user selection screen section-->
-               <!--Start of quiz section-->
-               <section class="user-screen hidden" id="quiz-section">
-                  <div class="container">
-                     <div class="row ">
-                        <div class="col  main-title user-screen align-center" id="question"></div>
-                     </div>
-                     <div class="row ">
-                        <div class="col align-center" id="score"></div>
-                     </div>
-                     <!--Let's Play button-->
-                     <!--<div class="row ">
-                        <div class="col  align-center button-container">
-                           <button type="button"  class="sub-button answer "></button>
-                           <button type="button"  class="sub-button answer "></button>
-                           <button type="button"  class="sub-button answer "></button>
-                           <button type="button"  class="sub-button answer "></button>
-                        </div>
-                     </div>-->
-                     <div class="row"><div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div></div>
-                     <div class="row"><div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div></div>
-                     <div class="row"><div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div></div>
-                     <div class="row"><div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div></div>
-
-
-                     <div class="row ">
-                        <div class="col align-center button-container"><button type="button"  class="sub-button hidden button-container" id="next">Next</button></div>
-                     </div>
-                  </div>
-               </section>
-               <!--End of quiz section-->
-               <!--Start of Instructions section-->
-               <section class="user-screen hidden " id="instructions-section">
-                  <div class="container ">
-                     <div class="row ">
-                        <div class="col main-title user-screen ">
-                           <h1><u>Instructions</u></h1>
-                           <ol>
-                              <li>
-                                 <h3>
-                                    On the main screen, click Play Game to get started (use
-                                    the back button below to return)
-                                 </h3>
-                              </li>
-                              <!--<li>You will be prompted to enter a Room Code. You can get this code from your facilitator. Enter the code and click 'Continue'</li> **To be added if I get time**-->
-                              <li>
-                                 <h3>Choose a difficulty</h3>
-                              </li>
-                              <li>
-                                 <h3>
-                                    Read the question carefully and select the correct
-                                    answer. There is only one correct answer for each
-                                    question
-                                 </h3>
-                              </li>
-                              <li>
-                                 <h3>
-                                    At the end of the quiz, you will be presented with your
-                                    final score
-                                 </h3>
-                              </li>
-                              <li>
-                                 <h3>
-                                    Want to enter the Hall of Fame? Simply add your name to
-                                    the 'Enter Hall of Fame' section and click 'Enter'
-                                 </h3>
-                              </li>
-                           </ol>
-                        </div>
-                     </div>
-                    
-                  </div>
-               </section>
-               <!--End of Instructions section-->
-               <!--Start of Hall of Fame section-->
-               <section class="user-screen hidden" id="hall-of-fame-section">
-                  <div class="container hall-of-fame-container with-borders">
-                     <div class="row  with-borders">
-                        <div class="col main-title user-screen with-borders">
-                           <h1>Hall of Fame</h1>
-                        </div>
-                     </div>
-                     <div class="row with-borders">
-                        <div class="col with-borders high-scores-list"><h2>Username</h2></div>
-                        <div class="col with-borders high-scores-list"><h2>Score</h2></div>
-                        <div class="col with-borders high-scores-list"><h2>Room Number</h2></div>
-                     </div>
-                     <div class="row with-borders">
-                        <div class="col main-title user-screen  with-borders" id="high-score-table"></div>
-                     </div>
-                     
-
-                           
-
-
-                              
-                                 
-                              
-                                 
-                             
-                              
-
-                           <!--<div class="row">
-                              <div class="col sm-padding"> <button type="button"  class="sub-button" id="byScore">Sort High Scores By Score</button></div>
-                           </div>-->
-                        </div>
-                     </div>
-                     
-                  </div>
-               </section>
-               <!--End of hall of fame section-->
-
-               <!--Start of Game Over modal-->
-               <section class="user-screen hidden" id="game-over-modal">
-                  <div class="container">
-                     <div class="row">
-                        <div class="col user-screen with-borders"><h1>Game Over</h1></div>
-                     </div>
-                     <div class="row">
-                        <div class="col" id="final-score"><h2></h2></div>
-                     </div>
-                     <div class="row">
-                        <div class="col"><h3>Your score has been saved</h3></div>
-                     </div>
-                     <div class="row align-center">
-                        <div class="col"><button type="button" class="sub-button" id="post-game-scores" >View High Scores</button></div>
-                        <!--<div class="row"><div class="col"><button type="button"  class="sub-button answer" id="post-game-scores">View High Scores</button></div></div>-->
-                     </div>
-                     
-                     
-                  </div>
-                </section>
-               
-               
-               
-               
-               
-               
-               
-               <!--Return Home button-->
-               <section class="user-screen hidden" id="return-section">
-                 <div class="container align-center">
+               <div class="container user-screen-container ">
                   <div class="row">
-                     <div class="col sm-padding"> <button type="button"  class="sub-button" id="return-btn">Back to main menu</button></div>
+                     <div class="col">
+                        <!--Start of Game Over modal-->
+                        <section class="user-screen hidden" id="game-over-modal">
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col user-screen ">
+                                    <h1>Game Over</h1>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col final-score-mes"  id="final-score">
+                                    <h2></h2>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col final-score-mes">
+                                    <h2>Your score has been saved</h2>
+                                 </div>
+                              </div>
+                              <div class="row align-center">
+                                 <div class="col"><button type="button" class="sub-button" id="post-game-scores" >View High Scores</button></div>
+                              </div>
+                           </div>
+                        </section>
+                        <!--Start of username section-->
+                        <section class="user-screen hidden" id="username-section">
+                           <div class="container align-center ">
+                              <div class="row ">
+                                 <div class="col align-center ">
+                                    <h1>Enter your details</h1>
+                                 </div>
+                              </div>
+                              
+                              <div class="container with-borders">
+                                 <div class="row">
+                                    <div class="col">
+
+                                   
+                              
+                              <div class="row align-center  ">
+                                 <div class="col-4 align-center "><h2>Choose a username</h2></div>
+                                 <div class="col-8 user-screen  "><input type="text" class="input-box" id="usernameValue" placeholder="Enter a username"></div>
+                              </div>
+                              
+                              <div class="row align-center  ">
+                                 <div class="col-4 align-center "><h2>Enter a room code</h2></div>
+                                 <div class="col-8 user-screen "><input type="text" class="input-box" id="room-code-value" placeholder="Enter a room code"></div>
+                              </div>
+                              
+                              <div class="row">
+                                 <div class="col user-screen "><button type="submit"  class="sub-button" id="enter-username">Play!</button></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
+                        </section>
+                        <!--End of username section-->
+                        <!--Start of user selection screen section-->
+                        <section class="user-screen" id="user-selection-section">
+                           <div class="container user-screen">
+                              <div class="row ">
+                                 <div class="col main-title align-center">
+                                    <h1>The Ultimate Pub Quiz</h1>
+                                 </div>
+                              </div>
+                              <!--Let's Play button-->
+                              <div class="row ">
+                                 <div class="col button-container">
+                                    <button type="button"  id="showQuizBtn" class="sub-button">Play Game</button>
+                                 </div>
+                              </div>
+                              <!-- Instructions button-->
+                              <div class="row ">
+                                 <div class="col button-container">
+                                    <button type="button"  id="showInstBtn" class="sub-button">How to play</button>
+                                 </div>
+                              </div>
+                              <!-- Hall of Fame button-->
+                              <div class="row ">
+                                 <div class="col button-container">
+                                    <button type="button"  id="showHallBtn" class="sub-button">Hall of Fame</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <!--End of user selection screen section-->
+                        <!--Start of quiz section-->
+                        <section class="user-screen hidden" id="quiz-section">
+                           <div class="container">
+                              <div class="row ">
+                                 <div class="col  main-title user-screen align-center" id="question"></div>
+                              </div>
+                              <div class="row xl-padding">
+                                 <div class="col align-center" id="score"></div>
+                              </div>
+                              <div class="row">
+                                 <div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div>
+                              </div>
+                              <div class="row">
+                                 <div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div>
+                              </div>
+                              <div class="row">
+                                 <div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div>
+                              </div>
+                              <div class="row">
+                                 <div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div>
+                              </div>
+                              <div class="row" id="nxt-container">
+                                 <div class="col align-center button-container"><button type="button"  class="sub-button hidden button-container" id="next">Next</button></div>
+                              </div>
+                           </div>
+                        </section>
+                        <!--End of quiz section-->
+                        <!--Start of Instructions section-->
+                        <section class="user-screen hidden " id="instructions-section">
+                           <div class="container ">
+                              <div class="row ">
+                                 <div class="col main-title user-screen ">
+                                    <h1><u>Instructions</u></h1>
+                                    <ol>
+                                       <li>
+                                          <h2>On the main screen, click Play Game to start the quiz</h2>
+                                       </li>
+                                       <li>
+                                          <h2>Enter a username and room code. You can get this code from your facilitator. Click 'Submit'</h2>
+                                       </li>
+                                       <li>
+                                          <h2>Read the question carefully and select the correct answer. There is only one correct answer for each question</h2>
+                                       </li>
+                                       <li>
+                                          <h2>At the end of the quiz, you will be presented with your final score</h2>
+                                       </li>
+                                    </ol>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <!--End of Instructions section-->
+                        <!--Start of Hall of Fame section-->
+                        <section class="user-screen hidden" id="hall-of-fame-section">
+                           <div class="container hall-of-fame-container ">
+                              <div class="row  ">
+                                 <div class="col main-title user-screen ">
+                                    <h1>Hall of Fame</h1>
+                                 </div>
+                              </div>
+                              <div class="row ">
+                                 <div class="col  ">
+                                    <h2>Username</h2>
+                                 </div>
+                                 <div class="col  ">
+                                    <h2>Score</h2>
+                                 </div>
+                                 <div class="col  ">
+                                    <h2>Room</h2>
+                                 </div>
+                              </div>
+                              <div class="row ">
+                                 <div class="col main-title user-screen high-scores-list " id="high-score-table"></div>
+                              </div>
+                           </div>
+                        </section>
+                        <!--End of hall of fame section-->
+                        <!--Return Home button-->
+                        <section class="user-screen hidden" id="return-section">
+                           <div class="container align-center">
+                              <div class="row">
+                                 <div class="col sm-padding"> <button type="button"  class="sub-button return-btn" >Back to main menu</button></div>
+                              </div>
+                           </div>
+                        </section>
+                     </div>
                   </div>
-               </section>
+               </div>
             </div>
          </div>
       </div>
-      <script type="module" src="assets/js/script.js"></script>
-      <!--<script
-         src="https://kit.fontawesome.com/f0126a9792.js"
-         crossorigin="anonymous"
-         ></script>-->
-      <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>-->
+      <script src="assets/js/script.js"></script>
    </body>
 </html>
