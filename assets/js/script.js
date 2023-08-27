@@ -347,9 +347,9 @@ function displayHighScore() {
     // objs.sort((a,b)=> (a.age - b.age || a.name.localeCompare(b.name)  ));
     
     pullInDocumentHighScores.innerHTML = pullExistingScores.map(entry => `
-    <div class="col high-scores-list with-borders">${entry.playerName}</div>
-    <div class="col high-scores-list with-borders">${entry.playerHighScore}</div>
-    <div class="col high-scores-list with-borders">${entry.playerRoom}</div>`).join('');
+    <div class="col high-scores-list">${entry.playerName}</div>
+    <div class="col high-scores-list">${entry.playerHighScore}</div>
+    <div class="col high-scores-list">${entry.playerRoom}</div>`).join('');
     //console.log(selectedDisplay);
   }
 
