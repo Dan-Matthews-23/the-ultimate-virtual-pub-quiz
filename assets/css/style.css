@@ -269,7 +269,7 @@ h3 {
 
 /*<!-----------------------FOOTER------------------------------------>*/
 .footer-head {
-	color: #fafafa;
+	color: white;
 	letter-spacing: 2px;
 	display: block;
 	font-size: inherit;
@@ -283,7 +283,7 @@ h3 {
 }
 
 .row-footer {
-	width: 80%;
+	width: 100%;
 	margin: auto;
 	
 }
@@ -291,7 +291,7 @@ h3 {
 .footer-style {
 	
 
-	height: 130px;
+	height: 80px;
 	margin: auto;
 }
 
@@ -307,7 +307,7 @@ h3 {
 }
 
 .footer-font {
-	color: #fafafa;
+	color: white;
 	letter-spacing: 2px;
 	display: block;
 	font-size: inherit;
