@@ -52,7 +52,7 @@ body {
   color: #fafafa;
   letter-spacing: 4px;
   display: block;
-  font-weight: 700px;
+  font-weight: bold;
   font-family: inherit;
   font-size: 30px;
 }
@@ -148,7 +148,7 @@ body {
     padding-bottom: 15px;
     letter-spacing: 4px;
     display: block;
-    font-weight: 700px;
+    font-weight: bold;
 }
 
 .input-box {

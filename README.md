@@ -255,7 +255,7 @@ This option is available to the user at every section. When clicked, the suer wi
 
 #### Footer
 
-
+The footer incorperates external links to Facebook, Twitter, GitHub and Linked In
 
 
 ## Accessibility
@@ -271,17 +271,12 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 ## Justifications and reflections
 
-### Justifications
-
 -  **Play Again** -  I had originally intended on creating a Play Again option to be presented ont he Game Over modal. However I decided not to include this function in the final verion of the product due to conflicts with the user story of the facilitator. This was intended to be virtual pub quiz, and in a pub quiz, the participants are not generally allowed to subit their answers twice. Therefore I have not included this option, however it should be noted here that there must be a certain level of trust that the user will not start the quiz again but with a different username, just as there is a level of trust that the participants in a face to face will not confer with one another. To mitigate this risk as much as possible, I have set the question array limit to 100, reducing the likelhood of the same user answering the same questions as before. 
 
 -  **Hall Of Fame list** - In an earlier version of the project I had a function that would allow the user to display all scores either by Room Number or Score by selecting from a drop-down menu and clicking a submit button. However this proved to be complex because I have opted to hide and display sections by class all on one page rather than to use modals. Because of this I could not find a way of executing the function without a submit, and when the button was clicked and the function activated, it reset the classes of every section. Instead, I have a function that sorts the high scores by order of room, then of score automaticly. That means the facilitator user stories are still met, making it easy to see who scored the most out of the room, and the participents user stories are also met by being able to see the top player. While this method was not my preferred way, it still achieves the same thing. 
 
-### Reflections
 
-#### Design
-
-- **Seperate pages for each section** - I did not include a page per section as I'd seen others do whilst doing some research, and as per my original designs. This was purely a choice of personal preference; I wanted to create something unique, and hadn't seen a quiz done on a single page in my research. In hindsight it may have been easier to create this project using seperate pages, particularly for my Hall of Fame section (as described above).
+- **Seperate pages for each section** - I did not include a page per section as I'd seen others do whilst doing some research, and as per my original designs. This was purely a choice of personal preference; I wanted to create something unique, and hadn't seen a quiz done on a single page in my research. In hindsight it may have been easier to create this project using seperate pages, particularly for my Hall of Fame section (as described above). My mentor had approved of this idea during one of our conferences. 
 
 - **Facilitator login system** - Although I did not include these in my original designs, I had hoped to create a login for the facilitator so that they could create a room, then start it when all participants were ready. However after speaking to my friend (the pub owner), they highlighted that while it was a good idea in principal, in application it could prove to cause other issues. For one, it would require that the facilitator always had a live and stable internet connection, always had login details to hand and that they would have the knowledge to create a room. In addition, they highlight concern with the fact that all particpants would need to indicate they were ready before the facilitator started the room, which again assumed that all particpants would be IT-savy and have no internet conenction issues. With all of these points in mind, I decided to ommit that function completley and instead opted for a way in which all user stories would be met and that addressed all these points
 
@@ -295,9 +290,10 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 - **Background color** - While this point is relativley minor, I feel it necessary to point out that I did not intend to use brown as a background for the user screen and user screen container, as well as the answer buttons. However the colour palette was suggested by Coolors based on the background image I'd already selected, and because my eyes don't see contrasts and shades well, I felt it important to rely on that suggestion. However it should be noted that I have also taken the advice of [WebAim](https://webaim.org/resources/contrastchecker/bookmarklet) which advised me that the Coolors palette was not accessible in its current form, and so I have modified the palette slightly so that it passed all tests (see Feedback on previous projects).
 
-- **Difficulty** - 
+- **Difficulty** - Most of the quizes I'd seen during my research incorperated a difficulty setting where the user could decide on which level they would like to be challenged. I have decided not to include this function. I wanted to keep this project as close to a atraditional pub setting as possible, and during a standard pub quiz a pub user cannot choose the difficulty. While admitadly a bit of a risk, I consulted with my friend - the end user - and they agreed that we should not include a difficulty setting due to fairness (where it would not be fair to name a winner who has completed an easier quiz than the others). 
 
 - **Navigation bar** - I have chosen not to conform to a standard navigation bar that a user would generally expect to find on a typical website. The reasoning behind this is that this project, being a quiz, was designed with the elements in mind that a user would find on almost any interactive quiz, therefore the navigation across the quiz comes from buttons that display the relevent sections. 
+
 
 - - -
 
@@ -314,6 +310,7 @@ I have been mindful during coding to ensure that the website is as accessible fr
 |  **Images**                   |                                                                                           |
 |                               |                                                                                           |
 |  *Images*                     | [Pexels](https://www.pexels.com/)                                                         |
+|  *Icons*                      | [Fontt Awesome](https://fontawesome.com/)                                                 |
 |  *Image Compression tools*    | [Image Resizer](https://imageresizer.com/)                                                |
 |  *Image editing*              | [Image Resizer](https://imageresizer.com/)                                                |
 |  *Responsiveness testing*     | [Am I Responsive?](http://ami.responsivedesign.is/)                                       |
@@ -412,7 +409,7 @@ I have taken the following actions in response to feedback:
 
 I received several peices of feedback on my Heart Helpers project from my facilitarors. These were:
 
-1)  Background and foreground are clear and easy to read however, <u>in the future contrast ratio could be cross check during the design stage. (alt text has been used in the code)</u>
+1) Background and foreground are clear and easy to read however, <u>in the future contrast ratio could be cross check during the design stage. (alt text has been used in the code)</u>
 
 2) There are fewer spaces or capitalisation in the file <u>cross check for future development</u>
 
@@ -447,7 +444,7 @@ I have taken the following actions in response to feedback:
 
 4) Throughout the testing stages I have included snippets of code along with screenshots of visual output of that code. 
 
-5)
+5) I have attempted to be as thorough as possible throughout development of this project.
 
 ### Other Feedback
 
@@ -472,7 +469,7 @@ The following section will explain in detail how each function works. All functi
 
 
 
- |
+ 
 
 
 
@@ -488,11 +485,18 @@ The following section will explain in detail how each function works. All functi
 
 
 ### Validation and formatting
+
 **Jigsaw validator**
 
-I used W3 School's Jigsaw Validator for my CSS. The validator picked up 53 errors. 25 of these were relating to Bootstrap. However the remaining 28 errors were from my style.css file, overwhelmingly relating to invalid references I'd made (e.g. .header-text-font  Property font-display doesn't exist : block). As the vast majority of my CSS was created through manipulating code and learning the end result, I expected more than a few errors during the first check. There were also 419 warnings flagged, but again these related to Bootstrap and was not something I could fix. I addressed all CSS issues, ran the validator again and it passed all validation with the output: Congratulations! No Error Found. This document validates as CSS level 3 + SVG !
+I used W3 School's Jigsaw Validator for my CSS. The validator picked up 2 errors that were relating to a font-weight issue for .main-title and #score. I corrected these errors and ran the validator again, which passed all tests
 
-I have also used Jigsaw to validate my HTML code. There were 23 errors identified which mainly covered my 'alt' tags, which I found were placed inappropriately. I resolved all HTML issues and ran the validator again. It showed no further errors. I re-ran the code after I made changes based on feedback from my peers.
+![CSS Validator](/assets/images/css-validation.png)
+
+I also used Jigsaw for my HTML that picked up 3 warnings that mainly focussed on empty headers, however the indicated points in the code are filled by JavaScript and are not empty in the deployed site, so I have not actioned these warnins. There were 9 errors however that could not be ignored and directly related to DIV closing tags. I rectified these and ran the tests again with no errors being returned. 
+
+For my JavaScript validation I used JsHint. The first test showed 66 errors of varying nature. Of these, 5 of them needed to be fixed, while 61 were warnings showing that I have used methods only available in later versions. I corrected the 5 errors and ran the code again. It passed all tests.
+
+
 
 
 **Formatting**
