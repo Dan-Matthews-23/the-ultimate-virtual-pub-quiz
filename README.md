@@ -135,27 +135,56 @@ The facilitator:
 
 ### Wireframes
 
-Wireframes were created for desktop, tablet and mobile (1200px, 758px, 476px respectively).
+Wireframes were created for desktop, tablet and mobile (1200px, 758px, 476px respectively). However please note that wireframes for Username, Game Over and Return to Main Manu sections are not available as these were later additions to the project
 
-[Home Page Wireframe in Mobile View](/assets/images/wireframes-index-mobile.webp)
+[User Selection Screen Section Wireframe in Mobile View](/assets/images/wireframes/index.html%20(mobile-version)%20(mobile-version).png)
 
-[Home Page Wireframe in Tablet View](/assets/images/wireframes-index-tablet.webp)
+[User Selection Screen Section Wireframe in Tablet View](/assets/images/wireframes/index.html%20(tablet-version)%20(tablet-version).png)
 
-[Home Page Wireframe in Desktop View](/assets/images/wireframes-index-desktop.webp)
-
-
-[About Us Page Wireframe in Mobile View](/assets/images/wireframes-aboutus-mobile.webp)
-
-[About Us Page Wireframe in Tablet View](/assets/images/wireframes-aboutus-tablet.webp)
-
-[About Us Page Wireframe in Desktop View](/assets/images/wireframes-aboutus-desktop.webp)
+[User Selection Screen Section Wireframe in Desktop View](/assets/images/wireframes/index.html.png)
 
 
-[Get Involved Page Wireframe in Mobile View](/assets/images/wireframes-getinvolved-mobile.webp)
+[Username Section Wireframe in Mobile View](/assets/)
 
-[Get Involved Page Wireframe in Tablet View](/assets/images/wireframes-getinvolved-tablet.webp)
+[Username Section Wireframe in Tablet View](/assets/)
 
-[Get Involved Page Wireframe in Desktop View](/assets/images/wireframes-getinvolved-desktop.webp)
+[Username Section Wireframe in Desktop View](/assets/i)
+
+
+[Quiz Section Wireframe in Mobile View](/assets/images/wireframes/game.html%20(mobile-version)%20(mobile-version).png)
+
+[Quiz Section Wireframe in Tablet View](/assets/images/wireframes/game.html%20(tablet-version)%20(tablet-version).pngp)
+
+[Quiz Section Wireframe in Desktop View](/assets/images/wireframes/game.html.png)
+
+
+[Game Over Section Wireframe in Mobile View](/assets/images/wireframes/)
+
+[Game Over Section Wireframe in Tablet View](/assets/)
+
+[Game Over Section Wireframe in Desktop View](/assets/i)
+
+
+[Hall of Fame Section Wireframe in Mobile View](/assets/images/wireframes/high-scores.html%20(mobile-version)%20(mobile-version).png)
+
+[Hall of Fame Section Wireframe in Tablet View](/assets/images/wireframes/high-scores.html%20(tablet-version)%20(tablet-version).png)
+
+[Hall of Fame Section Wireframe in Desktop View](/assets/images/wireframes/high-scores.html.png)
+
+
+[Instructions Section Wireframe in Mobile View](/assets/images/wireframes/instructions.html%20(mobile-version)%20(mobile-version).png)
+
+[Instructions Section Wireframe in Tablet View](/assets/images/wireframes/instructions.html%20(tablet-version)%20(tablet-version).png)
+
+[Instructions Section Wireframe in Desktop View](/assets/images/wireframes/instructions.html.png)
+
+
+[Return to Main Menu Section Wireframe in Mobile View](/assets/)
+
+[Return to Main Menu Section Wireframe in Tablet View](/assets/)
+
+[Return to Main Menu Section Wireframe in Desktop View](/assets/i)
+
 
 ### Colour
 
@@ -168,21 +197,14 @@ I have chosen the above colour palette from Coolors which was generated based on
 
 ### Font
 
- 
+ The font I have chosen to use for this project is one called Poppins, which is part of the Sans Sarif family. It can be found [here](https://fonts.google.com/specimen/Poppins). I chose the 'Light 300' weighting as I felt that it would stand out a little more than the 'thin' preset. 
 
 ### Images
 
 There is only one image used in the Virtual Pub Quiz which servves as a background image, relevent to the theme. The author is noted and is available to view in the #Credits section.
 
-### Videos
-
-
 
 ## Features
-
-### Header / Footer
-
-I have chosen not to conform to a standard navigation bar that a user would generally expect to find on a typical website. The reasoning behind this is that this project, being a quiz, was designed with the elements in mind that a user would find on almost any interactive quiz, therefore the navigation across the quiz comes from buttons that display the relevent sections. 
 
 ### Sections
 
@@ -231,6 +253,11 @@ This section gives the user a set of instructions on how to play the quiz. The u
 This option is available to the user at every section. When clicked, the suer will be presented with a confirm box, asking the user to confirm they want to go back to the main menu, and that any progress will be lost. The user can either click 'Ok' or 'cancel' to stay on the current section. 
 
 
+#### Footer
+
+
+
+
 ## Accessibility
 
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. I have achieved this by:
@@ -269,6 +296,8 @@ I have been mindful during coding to ensure that the website is as accessible fr
 - **Background color** - While this point is relativley minor, I feel it necessary to point out that I did not intend to use brown as a background for the user screen and user screen container, as well as the answer buttons. However the colour palette was suggested by Coolors based on the background image I'd already selected, and because my eyes don't see contrasts and shades well, I felt it important to rely on that suggestion. However it should be noted that I have also taken the advice of [WebAim](https://webaim.org/resources/contrastchecker/bookmarklet) which advised me that the Coolors palette was not accessible in its current form, and so I have modified the palette slightly so that it passed all tests (see Feedback on previous projects).
 
 - **Difficulty** - 
+
+- **Navigation bar** - I have chosen not to conform to a standard navigation bar that a user would generally expect to find on a typical website. The reasoning behind this is that this project, being a quiz, was designed with the elements in mind that a user would find on almost any interactive quiz, therefore the navigation across the quiz comes from buttons that display the relevent sections. 
 
 - - -
 

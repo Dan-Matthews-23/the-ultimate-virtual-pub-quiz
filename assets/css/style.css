@@ -237,9 +237,9 @@ h2
  }
   
 
-  li * {
+  .instructions li {
     color: white;
-    text-align: justify;
+    text-align: left;
     font-size: 25px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -267,7 +267,54 @@ h3 {
   text-align: center;
 }
 
+/*<!-----------------------FOOTER------------------------------------>*/
+.footer-head {
+	color: #fafafa;
+	letter-spacing: 2px;
+	display: block;
+	font-size: inherit;
+	font-weight: bold;
+	
+}
 
+
+.contact-us {
+	text-align: center;
+}
+
+.row-footer {
+	width: 80%;
+	margin: auto;
+	
+}
+
+.footer-style {
+	
+
+	height: 130px;
+	margin: auto;
+}
+
+.footer-links li {
+	display: inline;
+}
+
+.footer-links i {
+	font-size: 160%;
+	margin: auto;
+	padding: 30px;
+	color: white;
+}
+
+.footer-font {
+	color: #fafafa;
+	letter-spacing: 2px;
+	display: block;
+	font-size: inherit;
+	text-align: justify;
+}
+
+/*<!-------------------------------END OF FOOTER SECTION ---------------------------------->*/
 
 
 
