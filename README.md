@@ -268,6 +268,8 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 - **Background color** - While this point is relativley minor, I feel it necessary to point out that I did not intend to use brown as a background for the user screen and user screen container, as well as the answer buttons. However the colour palette was suggested by Coolors based on the background image I'd already selected, and because my eyes don't see contrasts and shades well, I felt it important to rely on that suggestion. However it should be noted that I have also taken the advice of [WebAim](https://webaim.org/resources/contrastchecker/bookmarklet) which advised me that the Coolors palette was not accessible in its current form, and so I have modified the palette slightly so that it passed all tests (see Feedback on previous projects).
 
+- **Difficulty** - 
+
 - - -
 
 ## Technologies Used
