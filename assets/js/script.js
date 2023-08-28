@@ -7,8 +7,11 @@ const difficultyEasy = "https://opentdb.com/api.php?amount=20&type=multiple";
 
 let connect = {};
 let score = 0;
+
 let id = 0;
+let qID = 1;
 const scoreCounter = document.getElementById("score");
+const questionCounter = document.getElementById("question-number");
 
 const showQuiz = document.getElementById("showQuizBtn");
 const showInst = document.getElementById("showInstBtn");
@@ -106,7 +109,8 @@ async function connectAPI(apiURL) {
 function getQuestionArray() {
    const question = (document.getElementById("question").innerHTML = connect.results[id].question);
    const displayScore = (document.getElementById("score").innerHTML = `Score: ${score}`);
-   getAnswerArray(question, displayScore);
+   const setRawQuestionNumber = (document.getElementById("question-number").innerHTML = `Q: ${qID}`);
+   getAnswerArray(question, displayScore, setRawQuestionNumber);
 }
 
 // Get the list of answers to the question we just called. 
@@ -173,8 +177,10 @@ function confirmAnswer() {
       }
 
       increaseScore();
+     
 
    } else {
+    
 
       this.style.background = "red";
       console.log(`The correct answer is ${answerCorrect}, but you selected ${selectedAnswer}`);
@@ -202,6 +208,19 @@ function increaseScore() {
 
    score += 10;
    scoreCounter.innerText = ` Score: ${score}`;
+  
+   
+   
+}
+
+function increaseQuestionNumber() {
+
+  
+   qID += 1;
+   questionCounter.innerText = ` Q) ${qID}`;
+  
+  
+  
 }
 
 function addHighScore() {
@@ -254,7 +273,11 @@ function retriveNextQuestion() {
 
       return;
    }
+   increaseQuestionNumber();
    getQuestionArray();
+   
+   
+   
    document.getElementById("next").classList.add("hidden");
    getAnswerArray();
 

@@ -9,27 +9,27 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="assets/css/style.css">
-      <title>Home</title>
+      <title>The Ultimate Virtual Pub Quiz</title>
    </head>
    <body>
       <!--Start of main container-->
-      <div class="container main-container scroll-section">
+      <div class="container  main-container ">
          <div class="row">
             <div class="col">
-               <div class="container user-screen-container ">
+
+               <div class="container  user-screen-container">
                   <div class="row">
                      <div class="col">
                         <!--Start of Game Over section-->
                         <section class="user-screen hidden" id="game-over-modal">
-                           <div class="container">
+                           <div class="container ">
                               <div class="row">
                                  <div class="col user-screen ">
                                     <h1>Game Over</h1>
                                  </div>
                               </div>
                               <div class="row">
-                                 <div class="col final-score-mes" id="final-score">
-                                 </div>
+                                 <div class="col final-score-mes" id="final-score"></div>
                               </div>
                               <div class="row align-center lg-padding">
                                  <div class="col"><button aria-label="Add your score to the Hall of Fame" type="button" class="sub-button" id="post-game-scores">Add your score to Hall of Fame</button></div>
@@ -42,39 +42,51 @@
                         <!--End of Game Over section-->
                         <!--Start of username section-->
                         <section class="user-screen hidden" id="username-section">
-                           <div class="container align-center ">
+                           <div class="container username-container  align-center">
                               <div class="row ">
-                                 <div class="col align-center ">
+                                 <div class="col  align-center">
                                     <h1>Enter your details</h1>
                                  </div>
                               </div>
-                              <div class="container with-borders">
-                                 <div class="row">
-                                    <div class="col">
-                                       <div class="row align-center  ">
-                                          <div class="col-4 align-center ">
-                                             <h2>Choose a username</h2>
+                              <!--<div class="container  ">
+                                 <div class="row ">
+                                    <div class="col ">-->
+                                       
+                                       
+                                       
+                                       
+                                       <div class="row align-center  lg-padding-bottom">
+                                          <div class="align-center ">
+                                             <label for="usernameValue">Enter Username</label>
                                           </div>
-                                          <div class="col-8 user-screen  "><input type="text" class="input-box" id="usernameValue" placeholder="Enter a username"></div>
+                                          <div class="user-screen  "><input type="text" class="input-box" id="usernameValue" placeholder="Enter a username"></div>
                                        </div>
-                                       <div class="row align-center  ">
-                                          <div class="col-4 align-center ">
-                                             <h2>Enter a room code</h2>
+                                       
+                                       
+                                       
+                                       
+                                       <div class="row align-center  lg-padding-bottom">
+                                          <div class="align-center ">
+                                             <label for="room-code-value">Enter Room Code</label>
                                           </div>
-                                          <div class="col-8 user-screen "><input type="text" class="input-box" id="room-code-value" placeholder="Enter a room code"></div>
+                                          <div class="col user-screen "><input type="text" class="input-box" id="room-code-value" placeholder="Enter a room code"></div>
                                        </div>
+
+
+
+                                       
                                        <div class="row">
-                                          <div class="col user-screen "><button type="submit" aria-label="Play" class="sub-button" id="enter-username">Play!</button></div>
+                                          <div class="col user-screen"><button type="submit" aria-label="Play" class="sub-button" id="enter-username">Play!</button></div>
                                        </div>
-                                    </div>
+                                    <!--</div>
                                  </div>
-                              </div>
+                              </div>-->
                            </div>
                         </section>
                         <!--End of username section-->
                         <!--Start of user selection screen section-->
                         <section class="user-screen" id="user-selection-section">
-                           <div class="container user-screen">
+                           <div class="container  user-screen">
                               <div class="row ">
                                  <div class="col main-title align-center">
                                     <h1>The Ultimate Pub Quiz</h1>
@@ -103,12 +115,13 @@
                         <!--End of user selection screen section-->
                         <!--Start of quiz section-->
                         <section class="user-screen hidden" id="quiz-section">
-                           <div class="container">
+                           <div class="container ">
                               <div class="row ">
                                  <div class="col  main-title user-screen align-center" id="question"></div>
                               </div>
                               <div class="row xl-padding">
-                                 <div class="col align-center" id="score"></div>
+                                 <div class="col-4 align-center" id="question-number"></div>
+                                 <div class="col-8 align-center" id="score"></div>
                               </div>
                               <div class="row">
                                  <div class="col align-center button-container"><button type="button"  class="sub-button answer "></button></div>
@@ -130,7 +143,7 @@
                         <!--End of quiz section-->
                         <!--Start of Instructions section-->
                         <section class="user-screen hidden " id="instructions-section">
-                           <div class="container ">
+                           <div class="container  ">
                               <div class="row ">
                                  <div class="col main-title user-screen ">
                                     <h1><u>Instructions</u></h1>
@@ -155,7 +168,7 @@
                         <!--End of Instructions section-->
                         <!--Start of Hall of Fame section-->
                         <section class="user-screen hidden" id="hall-of-fame-section">
-                           <div class="container hall-of-fame-container ">
+                           <div class="container  hall-of-fame-container ">
                               <div class="row  ">
                                  <div class="col main-title user-screen ">
                                     <h1>Hall of Fame</h1>
@@ -180,7 +193,7 @@
                         <!--End of hall of fame section-->
                         <!--Return Home button-->
                         <section class="user-screen hidden" id="return-section">
-                           <div class="container align-center">
+                           <div class="container  align-center">
                               <div class="row">
                                  <div class="col sm-padding"> <button type="button" aria-label="Return to Main Menu"  class="sub-button" id="return-btn" >Back to main menu</button></div>
                               </div>
@@ -188,7 +201,7 @@
                         </section>
                         <!--FOOTER-->
                         <footer class="footer-style">
-                           <div class="container">
+                           <div class="container ">
                               <div class="row">
                                  <div class="col align-center footer-head">Contact us on</div>
                               </div>
