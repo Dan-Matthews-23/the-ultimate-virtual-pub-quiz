@@ -123,8 +123,10 @@ function retriveNextQuestion() {
    if (id >= connect.results.length) {
       document.getElementById("game-over-modal").classList.remove("hidden");
       document.getElementById("return-section").classList.add("hidden");
+      //document.getElementById("return-section-no-alert").classList.remove("hidden");
+
       const finalScore = document.getElementById('final-score');
-      finalScore.innerText = (`<h2>Final score: ${score}</h2>`);
+      finalScore.innerHTML = (`<h2>Final score: ${score}</h2>`);
       document.getElementById("quiz-section").classList.add("hidden");
       return;
    }
