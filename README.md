@@ -448,7 +448,7 @@ I have taken the following actions in response to feedback:
 
 ### Other Feedback
 
-My mentor - Harry - suggested that instead of creating four seperate HTML documents as planned in my wireframes, that I create one single page and then use Javascript to hide and show the sections I want. To that end, I have created a series of Event Listeners that will execute blocks of code when the correct button is clicked. In this context, it will show/hide parts of the page since the entire product exists in one document. 
+My mentor - Harry - suggested that instead of creating four seperate HTML documents as planned in my wireframes, that I create one single page and then use Javascript to hide and show the sections I want. To that end, I have created a series of Event Listeners that will execute blocks of code when the correct button is clicked. In this context, it will show/hide parts of the page since the entire product exists in one document. It was also suggested that I add a second Return to Main Menu button that did not form an alert once it was clicked on pages such as Instructions (where the user is informed they will lose progress if clicked, but there is no progress to lose on this page). I have added this button as one of the last additions to this project
 
 
 
@@ -513,7 +513,7 @@ For my JavaScript validation I used JsHint. The first test showed 66 errors of v
 
 
 **Formatting**
-I've used [Formatter.com](https://www.freeformatter.com/html-formatter.html) to format my HTML and CSS code. 
+I've used [Formatter.com](https://www.freeformatter.com/html-formatter.html) to format all of my code
 - - -
 
  ## Future Developments
@@ -528,28 +528,21 @@ There are several improvements I would like to make to Heart Helpers in the futu
 
 ## Credits
 
-The vast majority of my time spent developing this project was spent by creating code from various sources, adapting, testing and evaluating. At the start of this project I had next to no coding experience. However, one of my skills is to find relevant information from various sources and adapt it to suit my own needs. Apart from one instance, I have not used any code written by others anywhere in this project, but feel it important to note from where I've taken inspiration. 
+I've spent a long time researching different quizes and websites for inspiration for my own project. Ultimetly, I decided to create a pub quiz after taking inbspiration from that of [Kera Cudmore](https://github.com/kera-cudmore/TheQuizArms). I reached out to my friend who is the manager of a pub to consult on what should be the aims and user stories of this project, and to align it with as much of a real-life application as possible. It is my intention to share this product with the pub manager for use so that they might feedback for future developments. 
 
-**W3 Schools**
 
-The vast majority of coding I have learned for this project has come from [W3 Schools](https://www.w3schools.com). A few examples of this are [rounded borders](https://www.w3schools.com/css/css3_borders.asp), [media queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp) and [background properties](https://www.w3schools.com/cssref/css3_pr_background.php). The information and resources are brilliant and have been a major factor in my completing this project.
+### W3 Schools
 
-**Code Pen**
+The vast majority of coding I have learned for this project has come from [W3 Schools](https://www.w3schools.com). A few examples of this are [local storage](https://www.w3schools.com/jsref/prop_win_localstorage.asp), the theory behind [async functions](https://www.w3schools.com/js/js_async.asp) and [innerHTML](https://www.w3schools.com/jsref/prop_html_innerhtml.asp).
+
+### Code Pen
 
 After my mentor advised me to use EventListeners I studied online material to learn how to do this. Code Pen taught me how to sucessfully use EventListners. The article can be found [here](https://codepen.io/mohdizz/pen/VweZBQO)
 
 
-**Pexels**
+### Pexels
 
-All of the images on this website come from Pexels, and can be found via the following links:
-
-[Photo by Marcus Herzberg](https://www.pexels.com/photo/group-of-people-gathering-inside-bar-1058277/)
-
-**Flaticon**
-
-Some of the icons on this website come from [Flaticon](https://flaticon.com). 
-
-
+I have used one image in this project which can be found at Pexels, credits to [Marcus Herzberg](https://www.pexels.com/photo/group-of-people-gathering-inside-bar-1058277/)
 
 ### Content
 
@@ -557,16 +550,28 @@ Content for the website was written by Dan Matthews.
 
 ### Code Used
 
+There are two sections of this project where the code has been taken directly from other sources. These have been clearly identified in the script. 
 
+#### function shuffle()
+
+![shuffle function](/assets/images/shuffle-function-code-used.png)
+
+This function can be found at its source [here](https://www.freecodecamp.org/news/how-to-shuffle-an-array-of-items-using-javascript-or-typescript/)
+
+#### async function connectAPI()
+
+![connectapi function](/assets/images/api-connect-function-code-used.png)
+
+The source of this code is a book. See below in Ackowledgments for further details
 
 
 ## Acknowledgments
 
 Finally, I want to take the opportunity to thank and acknowledge the following for their support and patience in helping me create my first ever project:
 
-
 - Kera Cudmore, whose project gave me the inspiration I needed for my own project, and her useful tips and advice along the way.
-- Craig Hudson, who has helped me in this project with testing and for his technical troubleshooting  
+- Craig Hudson, who has helped me in this project with testing and for his technical troubleshooting
+- Ross Epsley, who has provided me with technical troubleshooting along the way  
 - [Harry Dhillon](https://github.com/Harry-Leepz), who is my mentor at the Code Institute, for their continued support and guidance. 
 - Kofi Afriyie, who is my facilitator from West Herts College, for their time, patience and encouragement in helping me develop this project. 
 - Chris Minnick, who is the author of JavaScript ALL-IN-ONE for dummies (which can be found on [Amazon](https://www.amazon.co.uk/JavaScript-All-Dummies-Chris-Minnick/dp/1119906830)). It was from Chris that I learned how to connect to an API (lines 70 - 86 in script.js), and I have based my code upon that template. 
