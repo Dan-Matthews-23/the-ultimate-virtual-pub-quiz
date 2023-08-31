@@ -7,7 +7,6 @@
 
 The project was built using Google Chrome and tested through Chrome Developer Tools. All elements were then tested with Firefox, Microsoft Edge and Safari (from my personal device). I have not tested the features using Internet Explorer as support ended for this browser on some operating systems in June 2022.
 
-### Behaviour-Driven Development Testing (Manual testing)
 
 | Test Number|      Page     |   Browser      |   Feature (by class/ ID / name)       | Result     |  Comments |  
 |------------ | ------------  | ------------  | ------------                          |------------| ------------             | 

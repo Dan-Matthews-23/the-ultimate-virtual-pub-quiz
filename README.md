@@ -45,7 +45,7 @@
 
   ## The Ultimate Pub Quiz
 
-![Am I responsive](/assets/images/responsive.png)
+![Am I responsive](/assets/images/responsive.webp)
 
 [View The Ultimate Pub Quiz on Github](https://dan-matthews-23.github.io/java-project/)
 
@@ -135,41 +135,41 @@ The facilitator:
 
 Wireframes were created for desktop, tablet and mobile (1200px, 758px, and 476px respectively). 
 
-[User Selection Screen Section Wireframe in Mobile View](/assets/images/wireframes/index.html-mobile.png)
+[User Selection Screen Section Wireframe in Mobile View](/assets/images/wireframes/index.html-mobile.webp)
 
-[User Selection Screen Section Wireframe in Tablet View](/assets/images/wireframes/index.html-tablet.png)
+[User Selection Screen Section Wireframe in Tablet View](/assets/images/wireframes/index.html-tablet.webp)
 
-[User Selection Screen Section Wireframe in Desktop View](/assets/images/wireframes/index.html.png)
+[User Selection Screen Section Wireframe in Desktop View](/assets/images/wireframes/index.html.webp)
 
-[Username Section Wireframe in Mobile View](/assets/images/wireframes/username.html-mobile.png)
+[Username Section Wireframe in Mobile View](/assets/images/wireframes/username.html-mobile.webp)
 
-[Username Section Wireframe in Tablet View](/assets/images/wireframes/username.html-tablet.png)
+[Username Section Wireframe in Tablet View](/assets/images/wireframes/username.html-tablet.webp)
 
-[Username Section Wireframe in Desktop View](/assets/images/wireframes/username.html.png)
+[Username Section Wireframe in Desktop View](/assets/images/wireframes/username.html.webp)
 
-[Quiz Section Wireframe in Mobile View](/assets/images/wireframes/game.html-mobile.png)
+[Quiz Section Wireframe in Mobile View](/assets/images/wireframes/game.html-mobile.webp)
 
-[Quiz Section Wireframe in Tablet View](/assets/images/wireframes/game.html-tablet.png)
+[Quiz Section Wireframe in Tablet View](/assets/images/wireframes/game.html-tablet.webp)
 
-[Quiz Section Wireframe in Desktop View](/assets/images/wireframes/game.html.png)
+[Quiz Section Wireframe in Desktop View](/assets/images/wireframes/game.html.webp)
 
-[Game Over Section Wireframe in Mobile View](/assets/images/wireframes/game.html-mobile.png)
+[Game Over Section Wireframe in Mobile View](/assets/images/wireframes/game.html-mobile.webp)
 
-[Game Over Section Wireframe in Tablet View](/assets/images/wireframes/game-over.html-tablet.png)
+[Game Over Section Wireframe in Tablet View](/assets/images/wireframes/game-over.html-tablet.webp)
 
-[Game Over Section Wireframe in Desktop View](/assets//images/wireframes/game-over.html.png)
+[Game Over Section Wireframe in Desktop View](/assets//images/wireframes/game-over.html.webp)
 
-[Hall of Fame Section Wireframe in Mobile View](/assets/images/wireframes/high-scores.html-mobile.png)
+[Hall of Fame Section Wireframe in Mobile View](/assets/images/wireframes/high-scores.html-mobile.webp)
 
-[Hall of Fame Section Wireframe in Tablet View](/assets/images/wireframes/high-scores.html-tablet.png)
+[Hall of Fame Section Wireframe in Tablet View](/assets/images/wireframes/high-scores.html-tablet.webp)
 
-[Hall of Fame Section Wireframe in Desktop View](/assets/images/wireframes/high-scores.html.png)
+[Hall of Fame Section Wireframe in Desktop View](/assets/images/wireframes/high-scores.html.webp)
 
-[Instructions Section Wireframe in Mobile View](/assets/images/wireframes/instructions.html-mobile.png)
+[Instructions Section Wireframe in Mobile View](/assets/images/wireframes/instructions.html-mobile.webp)
 
-[Instructions Section Wireframe in Tablet View](/assets/images/wireframes/instructions.html-tablet.png)
+[Instructions Section Wireframe in Tablet View](/assets/images/wireframes/instructions.html-tablet.webp)
 
-[Instructions Section Wireframe in Desktop View](/assets/images/wireframes/instructions.html.png)
+[Instructions Section Wireframe in Desktop View](/assets/images/wireframes/instructions.html.webp)
 
 
 
@@ -197,37 +197,37 @@ It's important to note here that the Virtual Pub Quiz is contained on a single p
 
 #### User Selection Screen section
 
-![User Selection Screen](/assets/images/am-i-responsive-index.png)
+![User Selection Screen](/assets/images/am-i-responsive-index.webp)
 
 This is the first section the user is presented with. It has three buttons that, based on user input, will take the user to one of three sections: Username, Instructions or Hall of Fame. 
 
 #### Username section
 
-![Username Screen](/assets/images/am-i-responsive-username.png)
+![Username Screen](/assets/images/am-i-responsive-username.webp)
 
 This section is where the user enters a username and a room code. Both are input boxes and subject to Validation to ensure the username is between 3 and 10 characters long and that the room code is numeric. In practice, the room code will be available from the facilitator. The user can either choose to return to the main menu or submit the username and room code.
 
 #### Quiz section
 
-![Quiz Screen](/assets/images/am-i-responsive-quiz.png)
+![Quiz Screen](/assets/images/am-i-responsive-quiz.webp)
 
 The Quiz section is where the user is asked a question and is given four possible answers to choose from. Only one of them is correct. Guessing the correct answer will cause the score to increment by 10 and the answer to be highlighted green while guessing the incorrect answer will cause the chosen answer to be highlighted red and the correct answer to be highlighted yellow. Once an answer has been selected, the 'Next' button will appear. Clicking this button will cause the next question to be called from the API. This will continue until the array has reached the question limit. At any time, the user may return to the main menu.
 
 #### Game Over section
 
-![Game Over Screen](/assets/images/am-i-responsive-game-over.png)
+![Game Over Screen](/assets/images/am-i-responsive-game-over.webp)
 
 Once the user has reached the question limit, the questions will no longer be displayed. All sections will hide, and the game Over section will display that will tell the user their final score. The user will be presented with two options: Return to the main menu or save their score into the Hall of Fame. 
 
 #### Hall of Fame section
 
-![Hall Of Fame Screen](/assets/images/am-i-responsive-scores.png)
+![Hall Of Fame Screen](/assets/images/am-i-responsive-scores.webp)
 
 The Hall of Fame section lists all saved scores. They are sorted first by Room Number and then by score. Grouping the scores by room number first makes it easier for the facilitator to see who won the round. The user can then go back to the main menu by selecting the button, and they are taken back to the User Selection Screen section.
 
 #### Instructions
 
-![Instructions Screen](/assets/images/am-i-responsive-instructions.png)
+![Instructions Screen](/assets/images/am-i-responsive-instructions.webp)
 
 This section gives the user a set of instructions on how to play the quiz. The user has the option to return to the main menu. 
 
@@ -245,15 +245,15 @@ I have been mindful during coding to ensure that the website is as accessible an
 
 I have used [WebAIM's WAVE report](https://wave.webaim.org/) to assess the accessibility of my project against set guidelines. There were no errors and was deemed accessible with two alerts, one relating to no detection of a navigation bar (which I did not include, see Justifications) and that I had underlined the word 'Instructions' on the Instructions section. I have removed this underline from the final version. For reference please see the WAVE report below:
 
-![Summary](/assets/images/accessibility/wave-report-summary.png)
+![Summary](/assets/images/accessibility/wave-report-summary.webp)
 
-![Details](/assets/images/accessibility/wave-report-details.png)
+![Details](/assets/images/accessibility/wave-report-details.webp)
 
-![Structure](/assets/images/accessibility/wave-report-structure.png)
+![Structure](/assets/images/accessibility/wave-report-structure.webp)
 
-![Underline](/assets/images/accessibility/wave-report-underline.png)
+![Underline](/assets/images/accessibility/wave-report-underline.webp)
 
-![Contrast](/assets/images/accessibility/wave-report-contrast.png)
+![Contrast](/assets/images/accessibility/wave-report-contrast.webp)
 
 ### Contrast Ratio
 
@@ -414,15 +414,15 @@ I have taken the following actions in response to feedback:
 
 - Answer Buttons: Background: #9A6A4C, text: #FFFFFF
 
-![678px ratio](/assets/testing/contrast-ratio-a.png)
+![678px ratio](/assets/testing/contrast-ratio-a.webp)
 
 - Game Over Modal: Background: #1D110F, text: #a37451
 
-![678px ratio](/assets/testing/contrast-ratio-b.png)
+![678px ratio](/assets/testing/contrast-ratio-b.webp)
 
  - Score Section: Background: #1D110F, text: #a37451
 
- ![678px ratio](/assets/testing/contrast-ratio-c.png)
+ ![678px ratio](/assets/testing/contrast-ratio-c.webp)
 
  I have also included a WAVE report, which passes all tests.
 
@@ -466,7 +466,7 @@ The following section will explain in detail how each function works. All functi
 
 I used W3 School's Jigsaw Validator for my CSS. The validator picked up 2 errors that were related to a font-weight issue for .main-title and #score. I corrected these errors and ran the validator again, which passed all tests.
 
-![CSS Validator](/assets/images/css-validation.png)
+![CSS Validator](/assets/images/css-validation.webp)
 
 I also used Jigsaw for my HTML, which picked up 3 warnings that mainly focussed on empty headers. However, the indicated points in the code are filled by JavaScript and are not empty in the deployed site, so I have not actioned these warnings. There were 9 errors, however, that could not be ignored and were directly related to DIV closing tags. I rectified these and ran the tests again with no errors being returned. 
 
@@ -510,13 +510,13 @@ There are two sections of this project where the code has been taken directly fr
 
 #### function shuffle()
 
-![shuffle function](/assets/images/shuffle-function-code-used.png)
+![shuffle function](/assets/images/shuffle-function-code-used.webp)
 
 This function can be found at its source [here](https://www.freecodecamp.org/news/how-to-shuffle-an-array-of-items-using-javascript-or-typescript/)
 
 #### async function connectAPI()
 
-![connectapi function](/assets/images/api-connect-function-code-used.png)
+![connectapi function](/assets/images/api-connect-function-code-used.webp)
 
 The source of this code is a book. See below in the Acknowledgements for further details.
 
