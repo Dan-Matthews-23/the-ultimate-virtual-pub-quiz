@@ -257,7 +257,7 @@ I have used [WebAIM's WAVE report](https://wave.webaim.org/) to assess the acces
 
 ### Contrast Ratio
 
-As part of my drive to make sure this project is as accessible as possible, and to act upon feedback from previous project, I have used [WebAIM's contrast checker](https://webaim.org/resources/contrastchecker/bookmarklet). I have 
+As part of my drive to make sure this project is as accessible as possible, and to act upon feedback from previous project, I have used [WebAIM's contrast checker](https://webaim.org/resources/contrastchecker/bookmarklet). I have used this tool to test the Coolers template I used after it failed the contrast ratio tests to improve upon the contrast of background/foreground colours and ran the test again, which passed (see Justifications > Background Colour)
 
 
 
