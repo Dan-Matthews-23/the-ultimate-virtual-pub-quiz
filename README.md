@@ -133,7 +133,7 @@ The facilitator:
 
 ### Wireframes
 
-Wireframes were created for desktop, tablet and mobile (1200px, 758px, and 476px respectively). However, please note that wireframes for Username, Game Over and Return to Main Manu sections are not available as these were later additions to the project.
+Wireframes were created for desktop, tablet and mobile (1200px, 758px, and 476px respectively). 
 
 [User Selection Screen Section Wireframe in Mobile View](/assets/images/wireframes/index.html-mobile.png)
 
@@ -263,13 +263,13 @@ As part of my drive to make sure this project is as accessible as possible, and 
 
 ## Justifications and reflections
 
--  **Play Again** -  I had originally intended on creating a Play Again option to be presented on the game Over modal. However, I decided not to include this function in the final version of the product due to conflicts with the user story of the facilitator. This was intended to be a virtual pub quiz, and in a pub quiz, the participants are not generally allowed to submit their answers twice. Therefore, I have not included this option. However, it should be noted here that there must be a certain level of trust that the user will not start the quiz again but with a different username, just as there is a level of trust that the participants in a face-to-face will not confer with one another. To mitigate this risk as much as possible, I have set the question array limit to 100, reducing the likelihood of the same user answering the same questions as before. 
+-  **Play Again** -  I had originally intended on creating a Play Again option to be presented on the game Over modal. However, I decided not to include this function in the final version of the product due to conflicts with the user story of the facilitator. This was intended to be a virtual pub quiz, and in a pub quiz, the participants are not generally allowed to submit their answers twice. Therefore, I have not included this option. However, it should be noted here that there must be a certain level of trust that the user will not start the quiz again but with a different username, just as there is a level of trust that the participants in a face-to-face will not confer with one another. There is no way to mitigate this risk further.  
 
--  **Hall Of Fame list** - In an earlier version of the project, I had a function that would allow the user to display all scores either by Room Number or Score by selecting from a drop-down menu and clicking a submit button. However, this proved to be complex because I opted to hide and display sections by class all on one page rather than use modals. Because of this, I could not find a way of executing the function without a submit, and when the button was clicked and the function activated, it reset the classes of every section. Instead, I have a function that sorts the high scores by order of room and then by score automatically. That means the facilitator user stories are still met, making it easy to see who scored the most out of the room, and the participant user stories are also met by being able to see the top player. While this method was not my preferred way, it still achieves the same thing. 
+-  **Hall Of Fame list** - In an earlier version of the project, I had a function that would allow the user to display all scores either by Room Number or Score by selecting from a drop-down menu and clicking a submit button. However, this proved to be complex because I opted to hide and display sections by class all on one page rather than use modals or other scripts. Because of this, I could not find a way of executing the function without a submit, and when the button was clicked and the function activated, it reset the classes of every section. To resolve this, I have created a function that groups the high scores by room and then sorts by score automatically in descending order. That means that both the facilitator and user stories are still met;  easy to see who scored the most out of the room for the facilitator, and the players being able to see the top player easily which also meets their user stories. While this method was not my preferred way, it still achieves the same thing. 
 
 - **Separate pages for each section** - I did not include a page per section as I'd seen others do whilst doing some research and as per my original designs. This was purely a choice of personal preference; I wanted to create something unique and hadn't seen a quiz done on a single page in my research. In hindsight, it may have been easier to create this project using separate pages, particularly for my Hall of Fame section (as described above). My mentor had approved of this idea during one of our conferences. 
 
-- **Facilitator login system** - Although I did not include these in my original designs, I had hoped to create a login for the facilitator so that they could create a room and then start it when all participants were ready. However, after speaking to my friend (the pub owner), they highlighted that while it was a good idea in principle, in application, it could prove to cause other issues. For one, it would require that the facilitator always had a live and stable internet connection, always had login details to hand and that they would have the knowledge to create a room. In addition, they highlight concern with the fact that all participants would need to indicate they were ready before the facilitator started the room, which again assumed that all participants would be IT-savvy and have no internet connection issues. With all of these points in mind, I decided to omit that function completely and instead opted for a way in which all user stories would be met and that addressed all these points
+- **Facilitator login system** - Although I did not include these in my original designs, I had hoped to create a login for the facilitator so that they could create a room and then start it when all participants were ready. However, after speaking to my friend (the pub owner), they highlighted that while it was a good idea in principle, in application, it could prove to cause other issues. For one, it would require that the facilitator always had a live and stable internet connection, always had login details to hand and that they would have the knowledge to create a room. In addition, they highlighted concern with the fact that all participants would need to indicate they were ready before the facilitator started the room, which again assumed that all participants would be IT-savvy and have no internet connection issues. With all of these points in mind, I decided to omit that function completely and instead opted for a way in which all user stories would be met and that addressed all these points.
 
 - **Lack of multimedia** - I have intentionally omitted any additional media from this project for several reasons:
 
@@ -311,11 +311,11 @@ As part of my drive to make sure this project is as accessible as possible, and 
 |  Wireframes                   | [Balsamiq](https://balsamiq.com/)                                                         |
 |  HTML Code Validation         | [W3C Schools](https://validator.w3.org/)                                                  |
 |  CSS Code Validation          | [W3C Schools](https://validator.w3.org/)                                                  |
-|  JavaScript Code Validation   |                                                   |
+|  JavaScript Code Validation   | [JS Hint](https://jshint.com/)                                                            |
 |  Developer Tools              | Chrome Developer Tools                                                                    |
 |  HTML Formatting              | [Free Formater](https://www.freeformatter.com/html-formatter.html)                        |
-|  CSS Formatting               |                        |
-|  JavaScript Formatting        |                        |
+|  CSS Formatting               | [Free Formater](https://www.freeformatter.com/html-formatter.html)                       |
+|  JavaScript Formatting        | [Free Formater](https://www.freeformatter.com/html-formatter.html)                       |
 
 - - -
 
@@ -410,16 +410,19 @@ I received several pieces of feedback on my Heart Helpers project from my facili
 
 I have taken the following actions in response to feedback:
 
-1) Because I am partially colour-blind, I've had to build this project using a tool called (WebAIM)[] to aid me in checking the contrast ratio. I continue to use alternative text. However, I have also made the following adjustments to my Coolers template. The adjustments pass all validator tests and can be found in the Design section:
+1) Because I am partially colour-blind, I've had to build this project using a tool called [WebAIM](https://webaim.org/resources/contrastchecker/bookmarklet) to aid me in checking the contrast ratio. I continue to use alternative text. However, I have also made the following adjustments to my Coolers template. The adjustments pass all validator tests and can be found in the Design section:
 
 - Answer Buttons: Background: #9A6A4C, text: #FFFFFF
-![678px ratio](/assets/testing/contrast-ratio-a.png
+
+![678px ratio](/assets/testing/contrast-ratio-a.png)
 
 - Game Over Modal: Background: #1D110F, text: #a37451
-![678px ratio](/assets/testing/contrast-ratio-b.png
+
+![678px ratio](/assets/testing/contrast-ratio-b.png)
 
  - Score Section: Background: #1D110F, text: #a37451
- ![678px ratio](/assets/testing/contrast-ratio-c.png
+
+ ![678px ratio](/assets/testing/contrast-ratio-c.png)
 
  I have also included a WAVE report, which passes all tests.
 
@@ -457,29 +460,6 @@ The following section will explain in detail how each function works. All functi
 | displayHighScore()    |  The JavaScript function displayHighScore() is used to display the high scores in the DOM. The function takes no input and returns nothing. The function works by first getting the existing high scores from local storage. If there are no existing high scores, the function creates an empty array. Next, the function sorts the existing high scores array in descending order based on the player room or player high score if the player rooms are the same. The function then gets the element that will contain the high scores table. Finally, the function uses the map() method to iterate through the existing high scores array and create a string of HTML code for each high score. The function then sets the inner HTML of the high scores table element to the string of HTML code.   |
 
 
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Validation and formatting
 
 **Jigsaw validator**
@@ -488,7 +468,7 @@ I used W3 School's Jigsaw Validator for my CSS. The validator picked up 2 errors
 
 ![CSS Validator](/assets/images/css-validation.png)
 
-I also used Jigsaw for my HTML, which picked up 3 warnings that mainly focussed on empty headers. However, the indicated points in the code are filled by JavaScript and are not empty in the deployed site, so I have not actioned these warnings. There were 9 errors. However, that could not be ignored and is directly related to DIV closing tags. I rectified these and ran the tests again with no errors being returned. 
+I also used Jigsaw for my HTML, which picked up 3 warnings that mainly focussed on empty headers. However, the indicated points in the code are filled by JavaScript and are not empty in the deployed site, so I have not actioned these warnings. There were 9 errors, however, that could not be ignored and were directly related to DIV closing tags. I rectified these and ran the tests again with no errors being returned. 
 
 For my JavaScript validation, I used JsHint. The first test showed 66 errors of varying nature. Of these, 5 of them needed to be fixed, while 61 were warnings showing that I have used methods only available in later versions. I corrected the 5 errors and ran the code again. It passed all tests.
 
