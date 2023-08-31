@@ -215,31 +215,21 @@ The Quiz section is where the user is asked a question and is given four possibl
 
 #### Game Over section
 
-![Game Over Screen]()
+![Game Over Screen](/assets/images/am-i-responsive-game-over.png)
 
 Once the user has reached the question limit, the questions will no longer be displayed. All sections will hide, and the game Over section will display that will tell the user their final score. The user will be presented with two options: Return to the main menu or save their score into the Hall of Fame. 
 
 #### Hall of Fame section
 
-![User Selection Screen]()
+![Hall Of Fame Screen](/assets/images/am-i-responsive-scores.png)
 
 The Hall of Fame section lists all saved scores. They are sorted first by Room Number and then by score. Grouping the scores by room number first makes it easier for the facilitator to see who won the round. The user can then go back to the main menu by selecting the button, and they are taken back to the User Selection Screen section.
 
 #### Instructions
 
-![User Selection Screen]()
+![Instructions Screen](/assets/images/am-i-responsive-instructions.png)
 
 This section gives the user a set of instructions on how to play the quiz. The user has the option to return to the main menu. 
-
-#### Return to the main menu
-
-![User Selection Screen]()
-
-This option is available to the user in every section. When clicked, the user will be presented with a confirm box, asking the user to confirm they want to go back to the main menu and that any progress will be lost. The user can either click 'OK' or 'cancel' to stay in the current section. 
-
-#### Footer
-
-The footer incorporates external links to Facebook, Twitter, GitHub and Linked In
 
 ## Accessibility
 
@@ -250,6 +240,26 @@ I have been mindful during coding to ensure that the website is as accessible an
 - Using a clear, accessible navigation system throughout that is guided by the user
 - Using semantic scripts
 - Using a good contrast ratio that passes contrasting tests (see feedback on previous projects for further information)
+
+### WAVE Report
+
+I have used [WebAIM's WAVE report](https://wave.webaim.org/) to assess the accessibility of my project against set guidelines. There were no errors and was deemed accessible with two alerts, one relating to no detection of a navigation bar (which I did not include, see Justifications) and that I had underlined the word 'Instructions' on the Instructions section. I have removed this underline from the final version. For reference please see the WAVE report below:
+
+![Summary](/assets/images/accessibility/wave-report-summary.png)
+
+![Details](/assets/images/accessibility/wave-report-details.png)
+
+![Structure](/assets/images/accessibility/wave-report-structure.png)
+
+![Underline](/assets/images/accessibility/wave-report-underline.png)
+
+![Contrast](/assets/images/accessibility/wave-report-contrast.png)
+
+### Contrast Ratio
+
+As part of my drive to make sure this project is as accessible as possible, and to act upon feedback from previous project, I have used [WebAIM's contrast checker](https://webaim.org/resources/contrastchecker/bookmarklet). I have 
+
+
 
 ## Justifications and reflections
 
