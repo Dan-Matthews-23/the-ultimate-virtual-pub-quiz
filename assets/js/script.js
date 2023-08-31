@@ -31,11 +31,11 @@ addEventListener('click', function (event) {
    } else if (event.target === enterUsernameBtn) {
       checkRoomCode();
    } else if (event.target === showInst) {
-      document.getElementById("return-section-no-alert").classList.remove("hidden");
+      document.getElementById("return-no-alert").classList.remove("hidden");
       document.getElementById("user-selection-section").classList.add("hidden");
       document.getElementById("instructions-section").classList.remove("hidden");
    } else if (event.target === showHall) {
-      document.getElementById("return-section-no-alert").classList.remove("hidden");
+      document.getElementById("return-no-alert").classList.remove("hidden");
       document.getElementById("user-selection-section").classList.add("hidden");
       document.getElementById("hall-of-fame-section").classList.remove("hidden");
       displayHighScore();
@@ -47,7 +47,7 @@ addEventListener('click', function (event) {
       window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html");
    } else if (event.target === viewHighScoresPostGame) {
       addHighScore();
-      document.getElementById("return-section-no-alert").classList.remove("hidden");
+      document.getElementById("return-no-alert").classList.remove("hidden");
       document.getElementById("user-selection-section").classList.add("hidden");
       document.getElementById("hall-of-fame-section").classList.remove("hidden");
       document.getElementById("game-over-modal").classList.add("hidden");
