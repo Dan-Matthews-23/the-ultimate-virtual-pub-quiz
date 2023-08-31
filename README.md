@@ -197,25 +197,25 @@ It's important to note here that the Virtual Pub Quiz is contained on a single p
 
 #### User Selection Screen section
 
-![User Selection Screen]()
+![User Selection Screen](/assets/images/am-i-responsive-index.png)
 
 This is the first section the user is presented with. It has three buttons that, based on user input, will take the user to one of three sections: Username, Instructions or Hall of Fame. 
 
 #### Username section
 
-![User Selection Screen]()
+![Username Screen](/assets/images/am-i-responsive-username.png)
 
 This section is where the user enters a username and a room code. Both are input boxes and subject to Validation to ensure the username is between 3 and 10 characters long and that the room code is numeric. In practice, the room code will be available from the facilitator. The user can either choose to return to the main menu or submit the username and room code.
 
 #### Quiz section
 
-![User Selection Screen]()
+![Quiz Screen](/assets/images/am-i-responsive-quiz.png)
 
 The Quiz section is where the user is asked a question and is given four possible answers to choose from. Only one of them is correct. Guessing the correct answer will cause the score to increment by 10 and the answer to be highlighted green while guessing the incorrect answer will cause the chosen answer to be highlighted red and the correct answer to be highlighted yellow. Once an answer has been selected, the 'Next' button will appear. Clicking this button will cause the next question to be called from the API. This will continue until the array has reached the question limit. At any time, the user may return to the main menu.
 
 #### Game Over section
 
-![User Selection Screen]()
+![Game Over Screen]()
 
 Once the user has reached the question limit, the questions will no longer be displayed. All sections will hide, and the game Over section will display that will tell the user their final score. The user will be presented with two options: Return to the main menu or save their score into the Hall of Fame. 
 

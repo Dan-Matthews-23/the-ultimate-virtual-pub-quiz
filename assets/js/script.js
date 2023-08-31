@@ -1,5 +1,5 @@
 // URL for API
-const apiURL = "https://opentdb.com/api.php?amount=20&type=multiple";
+const apiURL = "https://opentdb.com/api.php?amount=1&type=multiple";
 
 //---Set default variable values---//
 let connect = {};
