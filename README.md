@@ -1,47 +1,79 @@
 # Contents
+
 - [The Ultimate Pub Quiz](#the-ultimate-pub-quiz)
-  - [User Experience (UX)](#user-experience)
-    - [Background](#background)
-    - [Key information](#key-information-for-the-site)
-    - [User Goals](#user-goals)
-    - [First Time Visitor Goals](#first-time-visitor-goals)
-    - [Returning Visitor Goals](#returning-visitor-goals)
-    - [Frequent Visitor Goals](#frequent-visitor-goals)
-  - [Design](#design)
-    - [Wireframes](#wireframes)
-    - [Colour](#colour)
-    - [Font](#font)
-    - [Images](#videos)
-  - [Features](#features)
-    - [Header](#header)
-    - [Footer](#footer)
-    - [Home Page](#home-page)
-    - [Get Involved](#get-involved)
-    - [Contact Us](#contact-us)
-    - [Thank you](#thank-you)
-    - [Testimonies](#testimonies)
-  - [Accessibility](#accessibility)
-  - [Reflection](#reflection)
-    - [Design](#design)
-  - [Technologies Used](#technologies-used)
-  - [Deployment and Local Development](#deployment--local-development)
-    - [Deployment](#deployment)
-    - [Local Development](#local-development)
-    - [How to fork](#how-to-fork)
-    - [How to clone](#how-to-clone)
-  - [Testing](#testing)
-    - [Solved Bugs](#solved-bugs)
-    - [Known Bugs](#known-bugs)
-    - [Peer Feedback](#peer-feedback)
-    - [Validation and formatting](#validation-and-formatting)
-    - [Testing User Stories](#testing-user-stories)
-  - [Future Developments](#future-developments)
-  - [Credits](#credits)
-    - [Content](#content)
-    - [Code Used](#code-used)
-  - [Acknowledgments](#acknowledgments)
+- [User Experience](#user-experience)
+  - [Background](#background)
+  - [Key information](#key-information)
+  - [About the user](#about-the-user)
+  - [User Goals](#user-goals)
+  - [First Time Visitor Goals](#first-time-visitor-goals)
+  - [Returning Visitor Goals](#returning-visitor-goals)
+  - [Frequent Visitor Goals](#frequent-visitor-goals)
+- [Design](#design)
+  - [Wireframes](#wireframes)
+  - [Colour](#colour)
+  - [Font](#font)
+  - [Images](#images)
+- [Features](#features)
+  - [Sections](#sections)
+    - [User Selection Screen section](#user-selection-screen-section)
+    - [Quiz section](#quiz-section)
+    - [Game Over section](#game-over-section)
+    - [Hall of Fame section](#hall-of-fame-section)
+    - [Instructions](#instructions)
+  - [WAVE Report](#wave-report)
+  - [Contrast Ratio](#contrast-ratio)
+- [Justifications and reflections](#justifications-and-reflections)
+- [Technologies Used](#technologies-used)
+- [Deployment & Local Development](#deployment--local-development)
+  - [Deployment](#deployment)
+  - [Local Development](#local-development)
+  - [How to Fork](#how-to-fork)
+  - [How to Clone](#how-to-clone)
+- [Testing](#testing)
+- [Feedback](#feedback)
+  - [Peer Feedback](#peer-feedback)
+  - [Responding to Peer Feedback](#responding-to-peer-feedback)
+  - [Feedback from previous projects](#feedback-from-previous-projects)
+  - [Responding to feedback from previous projects](#responding-to-feedback-from-previous-projects)
+  - [Other Feedback](#other-feedback)
+- [Functions Explained](#functions-explained)
+- [Future Developments](#future-developments)
+- [Credits](#contrast-ratio)
+  - [W3 Schools](#w3-schools)
+  - [Code Pen](#code-pen)
+  - [Pexels](#pexels)
+  - [Content](#content)
+  - [Code Used](#code-used)
+    - [function shuffle()](#function-shuffle)
+    - [async function connectAPI()](#async-function-connectapi)
+- [Acknowledgments](#acknowledgments)
+
+
+
+
+
+
+
+
 
   - - -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   ## The Ultimate Pub Quiz
 
