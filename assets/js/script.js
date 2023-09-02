@@ -1,5 +1,5 @@
 // URL for API
-const apiURL = "https://opentdb.com/api.php?amount=20&type=multiple";
+const apiURL = "https://opentdb.com/api.php?amount=100&type=multiple";
 
 //---Set default variable values---//
 let connect = {};
@@ -165,6 +165,23 @@ function shuffle(array) {
 //---End of code snippet------//
 //---End of shuffle answers array---//
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //---Function to check the chosen answer matches the correct answer in the API---//
 function confirmAnswer() {
    const rawselectedAnswer = this.innerHTML;
@@ -181,9 +198,28 @@ function confirmAnswer() {
       txtSelectedAnswer.innerHTML = html;
       return txtSelectedAnswer.value;
    };
-   const answerCorrect = decodeHTMLCorrect(`${rawCorrectAnswer}`);
-   const selectedAnswer = decodeHTMLSelected(`${rawselectedAnswer}`);
+   const answerCorrectTemp = decodeHTMLCorrect(`${rawCorrectAnswer}`);
+   const selectedAnswerTemp = decodeHTMLSelected(`${rawselectedAnswer}`);
    //----End of code snippet----//
+
+   function correctAnswerChatEscape (answer) {
+      const escapeCorrectAnswer = document.createElement('textarea'); escapeCorrectAnswer.innerHTML = answer; 
+            return escapeCorrectAnswer.textContent.replace(/[\u2018\u2019]/g, "'");       
+    }
+
+    function selectedAnswerChatEscape (answer) {
+      const escapeSelectedAnswer = document.createElement('textarea'); escapeSelectedAnswer.innerHTML = answer; 
+            return escapeSelectedAnswer.textContent.replace(/[\u2018\u2019]/g, "'");       
+    }
+
+    answerCorrect = correctAnswerChatEscape(answerCorrectTemp);
+    selectedAnswer = selectedAnswerChatEscape(selectedAnswerTemp);
+
+
+
+
+
+
 
    if (selectedAnswer === answerCorrect) {
       this.style.background = "green";
@@ -194,22 +230,25 @@ function confirmAnswer() {
          possibleAnswers[a].disabled = true;
       }
       increaseScore();
+      //setTimeout(retriveNextQuestion, 1500);
       } else {
         this.style.background = "red";
       console.log(`The correct answer is ${answerCorrect}, but you selected ${selectedAnswer}`);
       // Display the background color of the correct answer when user selects wrong answer
       const correctAnswerButtons = document.querySelectorAll('.answer');
+      //setTimeout(retriveNextQuestion, 1000);
       for (let a = 0; a < correctAnswerButtons.length; a++) {
          if (correctAnswerButtons[a].innerHTML === answerCorrect) {
             correctAnswerButtons[a].style.background = 'orange';
             document.getElementById("next").classList.remove("hidden");
-            break;
+            //break;
          }
       }
       const answerButtons = document.querySelectorAll('.answer');
       for (let a = 0; a < answerButtons.length; a++) {
          answerButtons[a].disabled = true;
       }
+      
    }
 }
 //---End of check answer function---//

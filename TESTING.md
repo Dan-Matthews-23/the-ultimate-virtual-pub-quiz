@@ -12,83 +12,83 @@ The project was built using Google Chrome and tested through Chrome Developer To
 |------------ | ------------  | ------------  | ------------                          |------------| ------------             | 
 | 001         |  style.css    | Chrome        |  Media Query / user-screen title      | Fail       | The title font size did not reduce with screen size. Tested on two viewports: 1500px and 480px. However all media query tests failed despite several attempts 
 | **Before**                                          |   **After**          ||||
-| ![1500px ratio](/assets/testing/test-images/test-one-a.webp)      |![15480px ratio](/assets/testing/test-images/test-one-b.webp) |             | | |
+| ![1500px ratio](/assets/testing/testing-images/test-one-a.webp)      |![15480px ratio](/assets/testing/testing-images/test-one-b.webp) |             | | |
 | 002         |  style.css    | Chrome        |  Media Query / user-screen title      | Pass       | Following the result in Test 001 I decided to use a ViewPort method rather than Media Query and set this to '5VW'. This resolved the issue I had in Test 001. 
 | **Before**                                          |   **After**          ||||
-| ![1500px ratio](/assets/testing/test-images/test-two-a.webp)      |![480px ratio](/assets/testing/test-images/test-two-b.webp) |             | | |
+| ![1500px ratio](/assets/testing/testing-images/test-two-a.webp)      |![480px ratio](/assets/testing/testing-images/test-two-b.webp) |             | | |
 | 003         |  script.js / index.html    | Chrome        |  function hideQuizSection() / div.quiz-section      | Fail       | A function built to hide the div.quiz-section on HTML when not active after studying the code on [W3 Schools](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp). I tried to send the output to console.log to find out why it wasn't working, however all tests failed
 | **Before**                                          |   **After**          ||||
-| ![1500px ratio](/assets/testing/test-images/test-three-a.webp) ![480px ratio](/assets/testing/test-images/test-three-b.webp)      | |             | | |
+| ![1500px ratio](/assets/testing/testing-images/test-three-a.webp) ![480px ratio](/assets/testing/testing-images/test-three-b.webp)      | |             | | |
 | 004         |  script.js / index.html    | Chrome        |  function hideQuizSection() / section.quiz-section      | Pass       | After test failures in Test 003 I researched other ways to make the function work. I added an 'OnClick()' element to the button to call the function once it was clicked. It passed all tests. However after speaking to my mentor, I decided to use an Event Listener instead (see Other Feedback, test 005)
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-four-a.webp) ![678px ratio](/assets/testing/test-images/test-four-b.webp) ![678px ratio](/assets/testing/test-images/test-four-c.webp)      | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-four-a.webp) ![678px ratio](/assets/testing/testing-images/test-four-b.webp) ![678px ratio](/assets/testing/testing-images/test-four-c.webp)      | |             | | |
 | 005         |  script.js / index.html    | Chrome        |  function hideQuizSection() / section.quiz-section      | Fail       | After following advice from me mentor I attemped to create an EventListener() function in place of the OnClick() function. The quiz-section displayed as expected but the other sections (specifically the user-selection-section) did not hide. Tests failed. 
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-five-a.webp) ![678px ratio](/assets/testing/test-images/test-five-b.webp) ![678px ratio](/assets/testing/test-images/test-five-c.webp)      | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-five-a.webp) ![678px ratio](/assets/testing/testing-images/test-five-b.webp) ![678px ratio](/assets/testing/testing-images/test-five-c.webp)      | |             | | |
 | 006         |  script.js / index.html    | Chrome        |  function showQuizSection() / section.quiz-section      | Pass       | After test failures in Test 005 I realised that .style.display="hide" is not a valid instruction. This should have been .style.display="none". After correcting, tests passed. 
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-six-a.webp) ![678px ratio](/assets/testing/test-images/test-six-b.webp) ![678px ratio](/assets/testing/test-images/test-six-c.webp)      | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-six-a.webp) ![678px ratio](/assets/testing/testing-images/test-six-b.webp) ![678px ratio](/assets/testing/testing-images/test-six-c.webp)      | |             | | |
 | 007         |  script.js / index.html    | Chrome        |  showQuizSection / showInstructions / showHallOfFame      | Pass       | Following from successful results in Tests 005 and 006 I have replicated the code for each of the three sections: quiz-section, instructions-section and Hall-of-fame-section. The code passed all tests 
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-seven-a.webp) ![678px ratio](/assets/testing/test-images/test-seven-b.webp) ![678px ratio](/assets/testing/test-images/test-seven-c.webp) ![678px ratio](/assets/testing/test-images/test-seven-d.webp)      | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-seven-a.webp) ![678px ratio](/assets/testing/testing-images/test-seven-b.webp) ![678px ratio](/assets/testing/testing-images/test-seven-c.webp) ![678px ratio](/assets/testing/testing-images/test-seven-d.webp)      | |             | | |
 | 008         |  script.js / index.html    | Chrome        |  showQuizSection / showInstructions / showHallOfFame      | Pass       | I asked my mentor if it was conventional to use the code from Test 007 to change the display of a HTML section in a JavaScript file. They said it was, but ideally I should be calliing a class and changing that rather than CSS. I researched how to do this on [W3 Schools](https://www.w3schools.com/howto/howto_js_remove_class.asp) and implemented it. The test passed first time. 
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-eight-a.webp) | ![678px ratio](/assets/testing/test-images/test-eight-b.webp)   ![678px ratio](/assets/testing/test-images/test-eight-c.webp)      | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-eight-a.webp) | ![678px ratio](/assets/testing/testing-images/test-eight-b.webp)   ![678px ratio](/assets/testing/testing-images/test-eight-c.webp)      | |             | | |
 | 009         |  script.js / index.html    | Chrome        |  showQuizSection / showInstructions / showHallOfFame      | Pass       | I made amendments to the code from Test 008 to incorperate the user-selection and return-home sections. Below are the screenshots of each section as they are clicked. Note how other sections are hidden when the user has not selected them. However I am aware that these functions repeat, which is in breach of the [DRY principle ](https://www.digitalocean.com/community/tutorials/what-is-dry-development). I will further develop this at a later date
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-nine-a.webp) | ![678px ratio](/assets/testing/test-images/test-nine-b.webp)   ![678px ratio](/assets/testing/test-images/test-nine-c.webp) ![678px ratio](/assets/testing/test-images/test-nine-d.webp) ![678px ratio](/assets/testing/test-images/test-nine-e.webp)     | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-nine-a.webp) | ![678px ratio](/assets/testing/testing-images/test-nine-b.webp)   ![678px ratio](/assets/testing/testing-images/test-nine-c.webp) ![678px ratio](/assets/testing/testing-images/test-nine-d.webp) ![678px ratio](/assets/testing/testing-images/test-nine-e.webp)     | |             | | |
 | 010         |  script.js / index.html    | Chrome        |  showQuiz section      | Fail       | I have created my own question array, however the function seems to be calling the last question in the data set rather than the first, and the buttons are not populating with the one correct and three incorrect answers. I have spent quite a bit of time researching this but still can't figure it out.
 | **Before**                                          |   **After**          ||||
 
-| ![678px ratio](/assets/testing/test-images/test-ten-a.webp) | ![678px ratio](/assets/testing/test-images/test-ten-b.webp)       | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-ten-a.webp) | ![678px ratio](/assets/testing/testing-images/test-ten-b.webp)       | |             | | |
 | 011         |  script.js / index.html    | Chrome        |  getQuestionArray      | Fail       | After trying to fix test 010, I tried to create a new function and call the question section to populate a new question. However the answers did not populate at all, and the question dissapeared. 
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-eleven-a.webp) | ![678px ratio](/assets/testing/test-images/test-eleven-b.webp)       | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-eleven-a.webp) | ![678px ratio](/assets/testing/testing-images/test-eleven-b.webp)       | |             | | |
 | 012         |  script.js / index.html    | Chrome        |  getQuestionArray      | Pass       | I realised that I was calling for the class, not the ID on question from index.html. Made changes and it worked.  
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-twelve-a.webp) |       | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-twelve-a.webp) |       | |             | | |
 | 013         |  script.js / index.html    | Chrome        |  getQuestionArray      | Fail       | In an attempt to refine my code for calling the questions and to correct a long-standing error from Test 010, I attempted to re-write the function. However the questions did not populate, and the automated testing (via console) gave an error
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-thirteen-a.webp) |   ![678px ratio](/assets/testing/test-images/test-thirteen-b.webp) ![678px ratio](/assets/testing/test-images/test-thirteen-c.webp)    | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-thirteen-a.webp) |   ![678px ratio](/assets/testing/testing-images/test-thirteen-b.webp) ![678px ratio](/assets/testing/testing-images/test-thirteen-c.webp)    | |             | | |
 | 014         |  script.js / index.html    | Chrome        |  getQuestionArray      | Pass       | After case conferencing with a peer I realised that I was not correctly indexing the questions from the array. I should have been using 'connect.results[id].correct_answer;' instead of 'connect.results.correct_answer'. Made adjustments and passed all tests. Questions are now working
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-fourteen-a.webp) |       | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-fourteen-a.webp) |       | |             | | |
 | 015         |  script.js / index.html    | Chrome        |  getScore      | Fail       | From console logs and alert boses I know that my score is compiling as planned, but I can't get a static score to show on index.html. Attempts to push the score value through via innerHTML are failing. 
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-fourteen-a.webp) |       | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-fourteen-a.webp) |       | |             | | |
 | 016         |  script.js / index.html    | Chrome        |  getScore      | Pass       | After rewriting the calculaeScore function I have the score now working. I intentially made the text large and red at the top of the page so I could see when it was working properly. 
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-sixteen-a.webp)  ![678px ratio](/assets/testing/test-images/test-sixteen-b.webp) |       | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-sixteen-a.webp)  ![678px ratio](/assets/testing/testing-images/test-sixteen-b.webp) |       | |             | | |
 | 017         |  script.js / index.html    | Chrome        |  confirmAnswer      | Pass       | After almost twenty attempts, I have managed to get the function working so that it highlights the correct answer if the user selects an incorrect answer.  
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-seventeen-a.webp)  ![678px ratio](/assets/testing/test-images/test-seventeen-b.webp) |       | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-seventeen-a.webp)  ![678px ratio](/assets/testing/testing-images/test-seventeen-b.webp) |       | |             | | |
 | 018         |  script.js / index.html    | Chrome        |  user-screen-container      | Fail       | I wanted to set the background to a transparent brown. I used the opaque CSS setting, but it did not work as planned, as this was applied to all child elements even though I'd redeclared it in the other classes. Failed tests  
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-eighteen-a.webp)  ![678px ratio](/assets/testing/test-images/test-eighteen-b.webp) |       | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-eighteen-a.webp)  ![678px ratio](/assets/testing/testing-images/test-eighteen-b.webp) |       | |             | | |
 | 019         |  script.js / index.html    | Chrome        |  user-screen-container      | Pass       | Following test failures in Test 018, I did some research and discovered that what I wanted to do was not possible. On [Ww3 Schools] (https://www.w3schools.com/css/css3_colors.asp) I learned that I could convert the background colur to RGBA, where the 'alpha' part would determine the opacisty. The test passed all tests
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-nineteen-a.webp)  ![678px ratio](/assets/testing/test-images/test-nineteen-b.webp) |       | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-nineteen-a.webp)  ![678px ratio](/assets/testing/testing-images/test-nineteen-b.webp) |       | |             | | |
 | 020         |  script.js / index.html    | Chrome        |  showQuizSection     | Fail       | Test 009 indicated that my code was in breach of the [DRY principle ](https://www.digitalocean.com/community/tutorials/what-is-dry-development). I asked a peer to review my code (see [Acknowledgments(#Acknowledgments)]). It was suggested to me that I use event.target rather than a function for each section. While the first section worked to show/hide the quiz section, the others did not. Tests failed
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-twenty-a.webp)  ![678px ratio](/assets/testing/test-images/test-twenty-b.webp) |       | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-twenty-a.webp)  ![678px ratio](/assets/testing/testing-images/test-twenty-b.webp) |       | |             | | |
 | 021         |  script.js / index.html    | Chrome        |  showQuizSection     | Pass       | I realised that my event listener was 'listening' for only the showQuiz variable. I removed this part and the function worked as planned. 
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-twenty-one-a.webp)  |       | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-twenty-one-a.webp)  |       | |             | | |
 | 022         |  script.js / index.html    | Chrome        |  passNickname     | Fail       | Following feedback on changing the order of my 'Enter Username' modal, I asked for the username first before the game starts. However the username was not pulling through to the passNickname function. My console log declared an undefined variable. 
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-twenty-two-a.webp)  |  ![678px ratio](/assets/testing/test-images/test-twenty-two-b.webp)      | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-twenty-two-a.webp)  |  ![678px ratio](/assets/testing/testing-images/test-twenty-two-b.webp)      | |             | | |
  | 023         |  script.js / index.html    | Chrome        |  passNickname     | Pass       | Following several more variations of Test 022 I realised that that I had included a previous 'let username' before the functions. This effectivley meant that my username value was being reset every time the script ran. I corrected the error, inserted two extra lines into the function and it passed all tests
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-twenty-three-a.webp)  |  ![678px ratio](/assets/testing/test-images/test-twenty-three-b.webp)     | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-twenty-three-a.webp)  |  ![678px ratio](/assets/testing/testing-images/test-twenty-three-b.webp)     | |             | | |
 | 024         |  script.js / index.html    | Chrome        |  getHighScores     | Fail       | Upon completion of the quiz the user is presented with the High Scores section. However once back to the dashboard, if the user clicks High Scores (test-twenty-four-b), the array is not displaying. 
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-twenty-four-a.webp)  |  ![678px ratio](/assets/testing/test-images/test-twenty-four-b.webp)     | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-twenty-four-a.webp)  |  ![678px ratio](/assets/testing/testing-images/test-twenty-four-b.webp)     | |             | | |
 | 025         |  script.js / index.html    | Chrome        |  getHighScores     | Fail       | I have attempted to correct the issue in Test 024 by seperating the getHighScores function into two seperate functions. However this also failed tests, as the variables were not pulled through to displayScore function
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-twenty-five-a.webp)  |  ![678px ratio](/assets/testing/test-images/test-twenty-five-b.webp)     | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-twenty-five-a.webp)  |  ![678px ratio](/assets/testing/testing-images/test-twenty-five-b.webp)     | |             | | |
 | 026         |  script.js / index.html    | Chrome        |  displayHighScores     | Pass       | I tried to correct the errors in Tests 024 and 025, however I decided to try another way. I have reinstated the getHighScores function and created a seperate function called displayHighScores, but rather on rely on the variables of another functions I have replicated the last three lines from getHighScores and assigned them difference variable names. This means that I am accessing the array in exacly the same way without pushing any values or relying on other functions (see image b, replicated code is highlighted)
 | **Before**                                          |   **After**          ||||
-| ![678px ratio](/assets/testing/test-images/test-twenty-six-a.webp)  |  ![678px ratio](/assets/testing/test-images/test-twenty-six-b.webp)     | |             | | |
+| ![678px ratio](/assets/testing/testing-images/test-twenty-six-a.webp)  |  ![678px ratio](/assets/testing/testing-images/test-twenty-six-b.webp)     | |             | | |
 
 
 
@@ -137,5 +137,5 @@ Please view testing table for list of all solved bugs
 ### Known Bugs
 |      Page   |   Feature                       | Element | Explanation                                                                                               |
 | ------------| ------------                    | -----------  | -----------                                                                                          |
-|             |                                 |              |                                                                                                      |
+| inex.html   |   Quiz section                  |  .answer button            |                                                                                                      |
 
