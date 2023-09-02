@@ -22,6 +22,11 @@ const viewHighScoresPostGame = document.getElementById("post-game-scores");
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", retriveNextQuestion);
 
+
+
+
+
+
 //---Event Listeners---//
 addEventListener('click', function (event) {
    if (event.target === showQuiz) {
@@ -39,10 +44,14 @@ addEventListener('click', function (event) {
       document.getElementById("user-selection-section").classList.add("hidden");
       document.getElementById("hall-of-fame-section").classList.remove("hidden");
       displayHighScore();
-   //} else if (event.target === reset) {
-      //window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html"); // WHEN DEPLOYED
+   
+  // } else if (event.target === connectErrButton) {
+     // window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html");
+
    } else if (event.target === returnHome) {
       confirmReturn();
+
+
    } else if (event.target === returnHomeNoAlert) {
       window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html");
    } else if (event.target === viewHighScoresPostGame) {
