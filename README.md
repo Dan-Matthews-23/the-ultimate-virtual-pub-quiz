@@ -460,20 +460,7 @@ The following section will explain in detail how each function works. All functi
 | displayHighScore()    |  The JavaScript function displayHighScore() is used to display the high scores in the DOM. The function takes no input and returns nothing. The function works by first getting the existing high scores from local storage. If there are no existing high scores, the function creates an empty array. Next, the function sorts the existing high scores array in descending order based on the player room or player high score if the player rooms are the same. The function then gets the element that will contain the high scores table. Finally, the function uses the map() method to iterate through the existing high scores array and create a string of HTML code for each high score. The function then sets the inner HTML of the high scores table element to the string of HTML code.   |
 
 
-### Validation and formatting
 
-**Jigsaw validator**
-
-I used W3 School's Jigsaw Validator for my CSS. The validator picked up 2 errors that were related to a font-weight issue for .main-title and #score. I corrected these errors and ran the validator again, which passed all tests.
-
-![CSS Validator](/assets/images/css-validation.webp)
-
-I also used Jigsaw for my HTML, which picked up 3 warnings that mainly focussed on empty headers. However, the indicated points in the code are filled by JavaScript and are not empty in the deployed site, so I have not actioned these warnings. There were 9 errors, however, that could not be ignored and were directly related to DIV closing tags. I rectified these and ran the tests again with no errors being returned. 
-
-For my JavaScript validation, I used JsHint. The first test showed 66 errors of varying nature. Of these, 5 of them needed to be fixed, while 61 were warnings showing that I have used methods only available in later versions. I corrected the 5 errors and ran the code again. It passed all tests.
-
-**Formatting**
-I've used [Formatter.com](https://www.freeformatter.com/html-formatter.html) to format all of my code
 - - -
 
  ## Future Developments
