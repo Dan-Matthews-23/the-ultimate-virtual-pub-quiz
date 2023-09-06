@@ -1,5 +1,5 @@
 // URL for API
-const apiURL = "https://opentdb.com/api.php?amount=1&type=multiple";
+const apiURL = "https://opentdb.com/api.php?amount=20&type=multiple";
 
 //---Set default variable values---//
 let connect = {};
@@ -17,20 +17,13 @@ const showHall = document.getElementById("showHallBtn");
 const returnHome = document.getElementById("return-btn");
 const returnHomeNoAlert = document.getElementById("return-btn-no-alert");
 const gameOverReturnBtn = document.getElementById("gameOverReturnBtn");
-
 const enterUsernameBtn = document.getElementById("enter-username");
 const viewHighScoresPostGame = document.getElementById("post-game-scores");
-//const reset = document.getElementById("reset");
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", retriveNextQuestion);
 
-
-
-
-
-
 //---Event Listeners---//
-addEventListener('click', function (event) {
+addEventListener("click", function (event) {
    if (event.target === showQuiz) {
       document.getElementById("return-section").classList.remove("hidden");
       document.getElementById("user-selection-section").classList.add("hidden");
@@ -46,19 +39,12 @@ addEventListener('click', function (event) {
       document.getElementById("user-selection-section").classList.add("hidden");
       document.getElementById("hall-of-fame-section").classList.remove("hidden");
       displayHighScore();
-   
-  // } else if (event.target === connectErrButton) {
-     // window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html");
-
-   } else if (event.target === returnHome) {
+      } else if (event.target === returnHome) {
       confirmReturn();
-
-
    } else if (event.target === returnHomeNoAlert || event.target === gameOverReturnBtn) {
       window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html");
    } else if (event.target === viewHighScoresPostGame) {
       addHighScore();
-      //document.getElementById("return-no-alert").classList.remove("hidden");
       document.getElementById("user-selection-section").classList.add("hidden");
       document.getElementById("hall-of-fame-section").classList.remove("hidden");
       document.getElementById("game-over-modal").classList.add("hidden");
@@ -81,15 +67,34 @@ async function connectAPI(apiURL) {
 //----End of code snippet-----//
 //----End of connect to API --- //
 
+// ---Data validation for Room Code--- //
+function checkRoomCode() {
+   // Get the value of room code input field
+   const roomCode = document.getElementById("room-code-value").value;
+   // If the value of room code is blank or anything but a number, or a number less than 1, display alert box
+   if (roomCode < 1 || roomCode === "" || isNaN(roomCode)) {
+      alert("Please enter a valid room code");
+   // If the value of room code is valid, run checkUsername function to check the username validation
+   } else {
+      checkUsername();
+   }
+}
+//----End of Room Code validation --- //
+
 // ---Data validation for Username--- //
 function checkUsername() {
+   // Get the value of username input field
    const username = (document.getElementById("usernameValue").value);
+   // If username is blank display alert box
    if (username.length === 0) {
       alert("Please enter a username");
+   // If username is less than 3 characters display alert box
    } else if (username.length > 0 && username.length < 3) {
       alert("Please enter a username with more than 3 characters");
+   // If username is more than 10 characters display alert box
    } else if (username.length > 10) {
       alert("Please enter a username with no more than 10 characters");
+   // If none of these apply (the username input value is valid), set these classes which shows/hides these sections
    } else {
       document.getElementById("quiz-section").classList.remove("hidden");
       document.getElementById("return-section").classList.remove("hidden");
@@ -98,17 +103,6 @@ function checkUsername() {
    }
 }
 //----End of username validation --- //
-
-// ---Data validation for Room Code--- //
-function checkRoomCode() {
-   const roomCode = document.getElementById("room-code-value").value;
-   if (roomCode < 1 || roomCode === "" || isNaN(roomCode)) {
-      alert("Please enter a valid room code");
-   } else {
-      checkUsername();
-   }
-}
-//----End of Room Code validation --- //
 
 // ---Alert Box on clicking Return to Main Menu--- //
 function confirmReturn() {
@@ -131,17 +125,17 @@ function getQuestionArray() {
 //---Function to call the next question, or end the game if reached the question limit---//
 function retriveNextQuestion() {
    id++;
+   // If the ID of the question has reached the length of the question array (i.e. reached 20/20)
    if (id >= connect.results.length) {
+      // Display the Game Over section and hide everything else
       document.getElementById("game-over-modal").classList.remove("hidden");
       document.getElementById("return-btn").classList.add("hidden");
-      //document.getElementById("return-section").classList.add("hidden");
-      //document.getElementById("return-no-alert").classList.remove("hidden");
-
       const finalScore = document.getElementById('final-score');
       finalScore.innerHTML = (`<h1>Final score: ${score}</h1>`);
       document.getElementById("quiz-section").classList.add("hidden");
       return;
    }
+   // Or if the question ID has not reached 20, call the next question, increase the score and get call the next set of answers
    increaseQuestionNumber();
    getQuestionArray();
    document.getElementById("next").classList.add("hidden");
@@ -151,9 +145,13 @@ function retriveNextQuestion() {
 
 //---Function to get the array of answers---//
 function getAnswerArray() {
+   // Set the set of answer buttons to a variable
    const possibleAnswers = document.querySelectorAll(".answer");
+   // Set the correct answer to a variable
    const answerCorrect = connect.results[id].correct_answer;
+   // Set the incorrect answers to a variable
    const answerIncorrect = connect.results[id].incorrect_answers;
+   // Set the incorrect answers to a data set so they can be shuffled
    const newAnswerDataset = answerIncorrect.concat(answerCorrect);
    shuffle(newAnswerDataset);
    for (let i = 0; i < possibleAnswers.length; i++) {
@@ -177,63 +175,37 @@ function shuffle(array) {
 //---End of code snippet------//
 //---End of shuffle answers array---//
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //---Function to check the chosen answer matches the correct answer in the API---//
 function confirmAnswer() {
    const rawselectedAnswer = this.innerHTML;
    const rawCorrectAnswer = connect.results[id].correct_answer;
 
    //----This snippet of code was taken from Go Make Things (https://gomakethings.com/decoding-html-entities-with-vanilla-javascript/)----//
-   const decodeHTMLCorrect = function (html) {
+      const decodeHTMLCorrect = function (html) {
       const txtCorrectAnswer = document.createElement('textarea');
       txtCorrectAnswer.innerHTML = html;
       return txtCorrectAnswer.value;
-   };
-   const decodeHTMLSelected = function (html) {
+      };
+      const decodeHTMLSelected = function (html) {
       const txtSelectedAnswer = document.createElement('textarea');
       txtSelectedAnswer.innerHTML = html;
       return txtSelectedAnswer.value;
-   };
-   const answerCorrectTemp = decodeHTMLCorrect(`${rawCorrectAnswer}`);
-   const selectedAnswerTemp = decodeHTMLSelected(`${rawselectedAnswer}`);
+      };
+      const answerCorrectTemp = decodeHTMLCorrect(`${rawCorrectAnswer}`);
+      const selectedAnswerTemp = decodeHTMLSelected(`${rawselectedAnswer}`);
    //----End of code snippet----//
 
    function correctAnswerChatEscape (answer) {
       const escapeCorrectAnswer = document.createElement('textarea'); escapeCorrectAnswer.innerHTML = answer; 
             return escapeCorrectAnswer.textContent.replace(/[\u2018\u2019]/g, "'");       
     }
-
     function selectedAnswerChatEscape (answer) {
       const escapeSelectedAnswer = document.createElement('textarea'); escapeSelectedAnswer.innerHTML = answer; 
             return escapeSelectedAnswer.textContent.replace(/[\u2018\u2019]/g, "'");       
     }
-
     answerCorrect = correctAnswerChatEscape(answerCorrectTemp);
     selectedAnswer = selectedAnswerChatEscape(selectedAnswerTemp);
-
-
-
-
-
-
-
-   if (selectedAnswer === answerCorrect) {
+    if (selectedAnswer === answerCorrect) {
       this.style.background = "green";
       console.log(`The correct answer is ${answerCorrect}, but you selected ${selectedAnswer}`);
       document.getElementById("next").classList.remove("hidden");
@@ -242,25 +214,22 @@ function confirmAnswer() {
          possibleAnswers[a].disabled = true;
       }
       increaseScore();
-      //setTimeout(retriveNextQuestion, 1500);
       } else {
         this.style.background = "red";
       console.log(`The correct answer is ${answerCorrect}, but you selected ${selectedAnswer}`);
       // Display the background color of the correct answer when user selects wrong answer
       const correctAnswerButtons = document.querySelectorAll('.answer');
-      //setTimeout(retriveNextQuestion, 1000);
       for (let a = 0; a < correctAnswerButtons.length; a++) {
          if (correctAnswerButtons[a].innerHTML === answerCorrect) {
             correctAnswerButtons[a].style.background = 'orange';
             document.getElementById("next").classList.remove("hidden");
-            //break;
+            break;
          }
       }
       const answerButtons = document.querySelectorAll('.answer');
       for (let a = 0; a < answerButtons.length; a++) {
          answerButtons[a].disabled = true;
       }
-      
    }
 }
 //---End of check answer function---//
