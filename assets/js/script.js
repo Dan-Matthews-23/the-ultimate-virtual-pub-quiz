@@ -1,5 +1,5 @@
 // URL for API
-const apiURL = "https://opentdb.com/api.php?amount=100&type=multiple";
+const apiURL = "https://opentdb.com/api.php?amount=1&type=multiple";
 
 //---Set default variable values---//
 let connect = {};
@@ -16,6 +16,8 @@ const showInst = document.getElementById("showInstBtn");
 const showHall = document.getElementById("showHallBtn");
 const returnHome = document.getElementById("return-btn");
 const returnHomeNoAlert = document.getElementById("return-btn-no-alert");
+const gameOverReturnBtn = document.getElementById("gameOverReturnBtn");
+
 const enterUsernameBtn = document.getElementById("enter-username");
 const viewHighScoresPostGame = document.getElementById("post-game-scores");
 //const reset = document.getElementById("reset");
@@ -52,11 +54,11 @@ addEventListener('click', function (event) {
       confirmReturn();
 
 
-   } else if (event.target === returnHomeNoAlert) {
+   } else if (event.target === returnHomeNoAlert || event.target === gameOverReturnBtn) {
       window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html");
    } else if (event.target === viewHighScoresPostGame) {
       addHighScore();
-      document.getElementById("return-no-alert").classList.remove("hidden");
+      //document.getElementById("return-no-alert").classList.remove("hidden");
       document.getElementById("user-selection-section").classList.add("hidden");
       document.getElementById("hall-of-fame-section").classList.remove("hidden");
       document.getElementById("game-over-modal").classList.add("hidden");
@@ -131,11 +133,12 @@ function retriveNextQuestion() {
    id++;
    if (id >= connect.results.length) {
       document.getElementById("game-over-modal").classList.remove("hidden");
-      document.getElementById("return-section").classList.add("hidden");
-      //document.getElementById("return-section-no-alert").classList.remove("hidden");
+      document.getElementById("return-btn").classList.add("hidden");
+      //document.getElementById("return-section").classList.add("hidden");
+      //document.getElementById("return-no-alert").classList.remove("hidden");
 
       const finalScore = document.getElementById('final-score');
-      finalScore.innerHTML = (`<h2>Final score: ${score}</h2>`);
+      finalScore.innerHTML = (`<h1>Final score: ${score}</h1>`);
       document.getElementById("quiz-section").classList.add("hidden");
       return;
    }
