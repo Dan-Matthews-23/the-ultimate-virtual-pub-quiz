@@ -129,8 +129,8 @@ function retriveNextQuestion() {
    if (id >= connect.results.length) {
       // Display the Game Over section and hide everything else
       document.getElementById("game-over-modal").classList.remove("hidden");
-      document.getElementById("return-btn").classList.add("hidden");
-      const finalScore = document.getElementById('final-score');
+      document.getElementById("return-section").classList.add("hidden");
+      const finalScore = document.getElementById("final-score");
       finalScore.innerHTML = (`<h1>Final score: ${score}</h1>`);
       document.getElementById("quiz-section").classList.add("hidden");
       return;
@@ -182,12 +182,12 @@ function confirmAnswer() {
 
    //----This snippet of code was taken from Go Make Things (https://gomakethings.com/decoding-html-entities-with-vanilla-javascript/)----//
       const decodeHTMLCorrect = function (html) {
-      const txtCorrectAnswer = document.createElement('textarea');
+      const txtCorrectAnswer = document.createElement("textarea");
       txtCorrectAnswer.innerHTML = html;
       return txtCorrectAnswer.value;
       };
       const decodeHTMLSelected = function (html) {
-      const txtSelectedAnswer = document.createElement('textarea');
+      const txtSelectedAnswer = document.createElement("textarea");
       txtSelectedAnswer.innerHTML = html;
       return txtSelectedAnswer.value;
       };
@@ -195,38 +195,40 @@ function confirmAnswer() {
       const selectedAnswerTemp = decodeHTMLSelected(`${rawselectedAnswer}`);
    //----End of code snippet----//
 
+   // Function within a function (1/2)
    function correctAnswerChatEscape (answer) {
-      const escapeCorrectAnswer = document.createElement('textarea'); escapeCorrectAnswer.innerHTML = answer; 
+      const escapeCorrectAnswer = document.createElement("textarea"); escapeCorrectAnswer.innerHTML = answer; 
             return escapeCorrectAnswer.textContent.replace(/[\u2018\u2019]/g, "'");       
     }
+     // Function within a function (2/2)
     function selectedAnswerChatEscape (answer) {
-      const escapeSelectedAnswer = document.createElement('textarea'); escapeSelectedAnswer.innerHTML = answer; 
+      const escapeSelectedAnswer = document.createElement("textarea"); escapeSelectedAnswer.innerHTML = answer; 
             return escapeSelectedAnswer.textContent.replace(/[\u2018\u2019]/g, "'");       
     }
-    answerCorrect = correctAnswerChatEscape(answerCorrectTemp);
-    selectedAnswer = selectedAnswerChatEscape(selectedAnswerTemp);
+    // Assign the escaped values to variables
+    let answerCorrect = correctAnswerChatEscape(answerCorrectTemp);
+    let selectedAnswer = selectedAnswerChatEscape(selectedAnswerTemp);
+    // If user chooses the correct answer
     if (selectedAnswer === answerCorrect) {
       this.style.background = "green";
-      console.log(`The correct answer is ${answerCorrect}, but you selected ${selectedAnswer}`);
       document.getElementById("next").classList.remove("hidden");
       const possibleAnswers = document.querySelectorAll(".answer");
       for (let a = 0; a < possibleAnswers.length; a++) {
          possibleAnswers[a].disabled = true;
       }
       increaseScore();
+      // If the user chooses the wrong answer
       } else {
         this.style.background = "red";
-      console.log(`The correct answer is ${answerCorrect}, but you selected ${selectedAnswer}`);
-      // Display the background color of the correct answer when user selects wrong answer
-      const correctAnswerButtons = document.querySelectorAll('.answer');
+      const correctAnswerButtons = document.querySelectorAll(".answer");
       for (let a = 0; a < correctAnswerButtons.length; a++) {
          if (correctAnswerButtons[a].innerHTML === answerCorrect) {
-            correctAnswerButtons[a].style.background = 'orange';
+            correctAnswerButtons[a].style.background = "orange";
             document.getElementById("next").classList.remove("hidden");
             break;
          }
       }
-      const answerButtons = document.querySelectorAll('.answer');
+      const answerButtons = document.querySelectorAll(".answer");
       for (let a = 0; a < answerButtons.length; a++) {
          answerButtons[a].disabled = true;
       }
@@ -250,27 +252,36 @@ function increaseQuestionNumber() {
 
 //---Function to add score to Hall of Fame---//
 function addHighScore() {
-   const existingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
+   // Get the values of the input fields and pull data from local storage
+   const existingScores = JSON.parse(localStorage.getItem("existingScores")) || [];
    const roomCode = (document.getElementById("room-code-value").value);
    const username = (document.getElementById("usernameValue").value);
+   document.getElementById("return-no-alert").classList.remove("hidden");
    const insertID = (existingScores.length + 1);
+   // Create an array and assign values to each field
    const setHighScoreArray = {
       playerID: insertID,
       playerName: username,
       playerHighScore: score,
       playerRoom: roomCode
    };
+   // Push the values to the array
    existingScores.push(setHighScoreArray);
+   // Sort the values by score, highest to lowest
    existingScores.sort((a, b) => b.playerHighScore - a.playerHighScore);
-   localStorage.setItem('existingScores', JSON.stringify(existingScores));
+   // Save array in local storage
+   localStorage.setItem("existingScores", JSON.stringify(existingScores));
 }
 //---End of function to add to hall of fame---//
 
 //---Function to display high scores from hall of fame---//
 function displayHighScore() {
-   const pullExistingScores = JSON.parse(localStorage.getItem('existingScores')) || [];
-   const pullInDocumentHighScores = document.getElementById('high-score-table');
+   // Pull the array out of local storage and assign them to variables
+   const pullExistingScores = JSON.parse(localStorage.getItem("existingScores")) || [];
+   const pullInDocumentHighScores = document.getElementById("high-score-table");
+   // Do this by sorting by room code, then score, highest to lowest
    pullExistingScores.sort((a, b) => (b.playerRoom - a.playerRoom || b.playerHighScore - a.playerHighScore));
+   // Seperate out the array into a MAP ENTITY, and push into seperate divs
    pullInDocumentHighScores.innerHTML = pullExistingScores.map(entry => `
       <div class="col high-scores-list">${entry.playerName}</div>
       <div class="col high-scores-list">${entry.playerHighScore}</div>
