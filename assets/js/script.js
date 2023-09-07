@@ -39,7 +39,7 @@ addEventListener("click", function (event) {
       document.getElementById("user-selection-section").classList.add("hidden");
       document.getElementById("hall-of-fame-section").classList.remove("hidden");
       displayHighScore();
-      } else if (event.target === returnHome) {
+   } else if (event.target === returnHome) {
       confirmReturn();
    } else if (event.target === returnHomeNoAlert || event.target === gameOverReturnBtn) {
       window.location.assign("https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/index.html");
@@ -60,7 +60,7 @@ async function connectAPI(apiURL) {
    if (connection.status >= 200 && connection.status <= 299) {
       connect = await connection.json();
       getQuestionArray();
-         } else {
+   } else {
       window.location.assign("500.html");
    }
 }
@@ -74,7 +74,7 @@ function checkRoomCode() {
    // If the value of room code is blank or anything but a number, or a number less than 1, display alert box
    if (roomCode < 1 || roomCode === "" || isNaN(roomCode)) {
       alert("Please enter a valid room code");
-   // If the value of room code is valid, run checkUsername function to check the username validation
+      // If the value of room code is valid, run checkUsername function to check the username validation
    } else {
       checkUsername();
    }
@@ -88,13 +88,13 @@ function checkUsername() {
    // If username is blank display alert box
    if (username.length === 0) {
       alert("Please enter a username");
-   // If username is less than 3 characters display alert box
+      // If username is less than 3 characters display alert box
    } else if (username.length > 0 && username.length < 3) {
       alert("Please enter a username with more than 3 characters");
-   // If username is more than 10 characters display alert box
+      // If username is more than 10 characters display alert box
    } else if (username.length > 10) {
       alert("Please enter a username with no more than 10 characters");
-   // If none of these apply (the username input value is valid), set these classes which shows/hides these sections
+      // If none of these apply (the username input value is valid), set these classes which shows/hides these sections
    } else {
       document.getElementById("quiz-section").classList.remove("hidden");
       document.getElementById("return-section").classList.remove("hidden");
@@ -181,35 +181,37 @@ function confirmAnswer() {
    const rawCorrectAnswer = connect.results[id].correct_answer;
 
    //----This snippet of code was taken from Go Make Things (https://gomakethings.com/decoding-html-entities-with-vanilla-javascript/)----//
-      const decodeHTMLCorrect = function (html) {
+   const decodeHTMLCorrect = function (html) {
       const txtCorrectAnswer = document.createElement("textarea");
       txtCorrectAnswer.innerHTML = html;
       return txtCorrectAnswer.value;
-      };
-      const decodeHTMLSelected = function (html) {
+   };
+   const decodeHTMLSelected = function (html) {
       const txtSelectedAnswer = document.createElement("textarea");
       txtSelectedAnswer.innerHTML = html;
       return txtSelectedAnswer.value;
-      };
-      const answerCorrectTemp = decodeHTMLCorrect(`${rawCorrectAnswer}`);
-      const selectedAnswerTemp = decodeHTMLSelected(`${rawselectedAnswer}`);
+   };
+   const answerCorrectTemp = decodeHTMLCorrect(`${rawCorrectAnswer}`);
+   const selectedAnswerTemp = decodeHTMLSelected(`${rawselectedAnswer}`);
    //----End of code snippet----//
 
    // Function within a function (1/2)
-   function correctAnswerChatEscape (answer) {
-      const escapeCorrectAnswer = document.createElement("textarea"); escapeCorrectAnswer.innerHTML = answer; 
-            return escapeCorrectAnswer.textContent.replace(/[\u2018\u2019]/g, "'");       
-    }
-     // Function within a function (2/2)
-    function selectedAnswerChatEscape (answer) {
-      const escapeSelectedAnswer = document.createElement("textarea"); escapeSelectedAnswer.innerHTML = answer; 
-            return escapeSelectedAnswer.textContent.replace(/[\u2018\u2019]/g, "'");       
-    }
-    // Assign the escaped values to variables
-    let answerCorrect = correctAnswerChatEscape(answerCorrectTemp);
-    let selectedAnswer = selectedAnswerChatEscape(selectedAnswerTemp);
-    // If user chooses the correct answer
-    if (selectedAnswer === answerCorrect) {
+   function correctAnswerChatEscape(answer) {
+      const escapeCorrectAnswer = document.createElement("textarea");
+      escapeCorrectAnswer.innerHTML = answer;
+      return escapeCorrectAnswer.textContent.replace(/[\u2018\u2019]/g, "'");
+   }
+   // Function within a function (2/2)
+   function selectedAnswerChatEscape(answer) {
+      const escapeSelectedAnswer = document.createElement("textarea");
+      escapeSelectedAnswer.innerHTML = answer;
+      return escapeSelectedAnswer.textContent.replace(/[\u2018\u2019]/g, "'");
+   }
+   // Assign the escaped values to variables
+   let answerCorrect = correctAnswerChatEscape(answerCorrectTemp);
+   let selectedAnswer = selectedAnswerChatEscape(selectedAnswerTemp);
+   // If user chooses the correct answer
+   if (selectedAnswer === answerCorrect) {
       this.style.background = "green";
       document.getElementById("next").classList.remove("hidden");
       const possibleAnswers = document.querySelectorAll(".answer");
@@ -218,8 +220,8 @@ function confirmAnswer() {
       }
       increaseScore();
       // If the user chooses the wrong answer
-      } else {
-        this.style.background = "red";
+   } else {
+      this.style.background = "red";
       const correctAnswerButtons = document.querySelectorAll(".answer");
       for (let a = 0; a < correctAnswerButtons.length; a++) {
          if (correctAnswerButtons[a].innerHTML === answerCorrect) {
