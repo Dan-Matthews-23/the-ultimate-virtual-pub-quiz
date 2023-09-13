@@ -21,6 +21,8 @@
     - [Game Over section](#game-over-section)
     - [Hall of Fame section](#hall-of-fame-section)
     - [Instructions](#instructions)
+    - [500 page](#500-page)
+    - [404 page](#404-page)
   - [WAVE Report](#wave-report)
   - [Contrast Ratio](#contrast-ratio)
 - [Justifications and reflections](#justifications-and-reflections)
@@ -49,37 +51,13 @@
     - [async function connectAPI()](#async-function-connectapi)
 - [Acknowledgments](#acknowledgments)
 
-
-
-
-
-
-
-
-
   - - -
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   ## The Ultimate Pub Quiz
 
 ![Am I responsive](/assets/images/responsive.webp)
 
-[View The Ultimate Pub Quiz on Github](https://dan-matthews-23.github.io/java-project/)
+[View The Ultimate Pub Quiz on Github](https://dan-matthews-23.github.io/the-ultimate-virtual-pub-quiz/)
 
 The Ultimate Pub Quiz is an exciting development designed specifically for pub users and activity coordinators. Based on the principles of a "traditional Friday night pub quiz", the Ultimate Pub quiz is a way of having that same fun, only without the hassle of organising it. 
 
@@ -87,31 +65,29 @@ The Ultimate Pub Quiz is an exciting development designed specifically for pub u
 
 ### Background
 
-The Ultimate Pub Quiz is designed for pub users and activity coordinators and is a way for all participants to enjoy the same experience of a traditional pub quiz. It's an online quiz that users can access by using a range of devices, although they will be limited to smart devices (e.g. laptops. tablets, smartphones).
-
-This quiz has been developed based on a real need - a good friend who is also a pub landlord  - for an exciting experience without the hassle of having someone try to organise it. 
+The Ultimate Virtual Pub Quiz is designed for pub users and activity coordinators and is a way for all participants to enjoy the same experience of a traditional pub quiz. Designed with a 'mobile-first' principle, this project is perfect for pub users to enjoy the same experience across a range of devices. This quiz has been developed based on a real need - a good friend who is also a pub landlord  - for an exciting experience without the hassle of having someone organise it. 
 
 The quiz has several aims:
 
-- Engage pub users
-- Respond to user input
-- Provide feedback
+- Engage pub users.
+- Respond to user input.
+- Provide feedback.
 - Provide a final score. 
-- Display record of previous high scores 
+- Display record of previous high scores .
 
 ### Key information
 
-- A 'How to play section, which will give users instructions on how to play the game
-- A 'High Scores' section, which will display a list of the highest scores in descending order
-- The quiz itself, which will allow the users to answer questions
+- A 'How to play section, which will give users instructions on how to play the game.
+- A 'Hall of Fame' section, which will display a list of the highest scores in descending order.
+- The quiz itself, which will allow the users to answer questions.
 
 ### About the user
 
 This project has been designed with two end users in mind:
 
-- The pub user, who is the user participating in the quiz. They will be able to access the quiz via a smart device through their own internet or Wi-Fi of the premises if they have it. Part of the 'How to Play' instructions will be guiding users on how to switch on their device, Wi-Fi, or hotspot to another device. They will be given a 'Room Number' that they must enter along with their name when they join the quiz. They will be given the Room ID by the facilitator. The instructions will need to be clear. 
+- The pub user, who is the user participating in the quiz. They will be able to access the quiz via a smart device through their own internet or Wi-Fi of the premises if they have it. They will be given a 'Room Number' that they must enter along with their username when they join the quiz. They will be given the Room ID by the facilitator. The instructions will need to be clear. 
 
-- The facilitator, who is the person who will be facilitating the event. They will need to ensure everyone has the correct Room Code, and they need only advise the participants to begin at an allotted time. Once all participants have completed the quiz, the facilitator will be able to view the High Scores, which will be grouped and easy to identify a clear winner.  
+- The facilitator, who is the person who will be facilitating the event. They will need to ensure everyone has the correct Room Code, and they need only advise the participants to begin at an allotted time. Once all participants have completed the quiz, the facilitator will be able to view the Hallf of Fame, which will be grouped and easy to identify a clear winner.  
 
 ### User Goals
 The pub user:
@@ -130,7 +106,7 @@ The facilitator:
 
 The pub user:
 - To take part in an online virtual pub quiz
-- To be challenged in the right way (questions not too easy or too hard) ((!! Will solve this by choosing a range of questions from a range of topics))
+- To be challenged
 - To view my score at the end and be able to compare it to other scores
 
 The facilitator:
@@ -141,7 +117,7 @@ The facilitator:
 
 The pub user:
 - To take part in an online virtual pub quiz
-- To be challenged in the right way (questions not too easy or too hard) ((!! Will solve this by choosing a range of questions from a range of topics))
+- To be challenged
 - To view my score at the end and be able to compare it to other scores
 
 The facilitator:
@@ -152,7 +128,7 @@ The facilitator:
 
 The pub user:
 - To take part in an online virtual pub quiz
-- To be challenged in the right way (questions not too easy or too hard) ((!! Will solve this by choosing a range of questions from a range of topics))
+- To be challenged
 - To view my score at the end and be able to compare it to other scores
 
 The facilitator:
@@ -211,7 +187,7 @@ Wireframes were created for desktop, tablet and mobile (1200px, 758px, and 476px
 
 [Also available as Coolors palette](https://coolors.co/1d110f-a37451-0e0807-8b5f48-67442c)
 
-I have chosen the above colour palette from Coolors, which was generated based on the background image I used. However, I have slightly modified some of the shades in order to conform with the contrast ratio (see #Feedback). 
+I have chosen the above colour palette from Coolors, which was generated based on the background image I used. However, I have slightly modified some of the shades in order to conform with the contrast ratio (see [Feedback](#feedback)). 
 
 ### Font
 
@@ -219,13 +195,13 @@ I have chosen the above colour palette from Coolors, which was generated based o
 
 ### Images
 
-There is only one image used in the Virtual Pub Quiz, which serves as a background image relevant to the theme. The author is noted and is available to view in the #Credits section.
+There is only one image used in the Virtual Pub Quiz, which serves as a background image relevant to the theme. The author is noted and is available to view in the [Credits](#credits) section.
 
 ## Features
 
 ### Sections
 
-It's important to note here that the Virtual Pub Quiz is contained on a single page that is separated into different sections, each hidden and displayed, or toggled, by the user (see Functions Explained for details on how the toggle works)
+It's important to note here that the Virtual Pub Quiz is contained on a single page that is separated into different sections, each hidden and displayed, or toggled, by the user (see [Functions Explained](#functions-explained) for details on how the toggle works).
 
 #### User Selection Screen section
 
@@ -237,7 +213,7 @@ This is the first section the user is presented with. It has three buttons that,
 
 ![Username Screen](/assets/images/am-i-responsive-username.webp)
 
-This section is where the user enters a username and a room code. Both are input boxes and subject to Validation to ensure the username is between 3 and 10 characters long and that the room code is numeric. In practice, the room code will be available from the facilitator. The user can either choose to return to the main menu or submit the username and room code.
+This section is where the user enters a username and a room code. Both are input boxes and subject to validation to ensure the username is between 3 and 10 characters long and that the room code is numeric. In practice, the room code will be available from the facilitator. The user can either choose to return to the main menu or submit the username and room code.
 
 #### Quiz section
 
@@ -263,6 +239,22 @@ The Hall of Fame section lists all saved scores. They are sorted first by Room N
 
 This section gives the user a set of instructions on how to play the quiz. The user has the option to return to the main menu. 
 
+#### 500 page
+
+![500 page](/assets/images/five-hundred-error.webp)
+
+This is a seperate script to index.html. It should only be shown to the user if and when the connection to the API fails or times out. The user is presented with a button that directs back to the homepage.
+
+#### 404 page
+
+![404 page](/assets/images/four-hundred-four-error.webp)
+
+This is a seperate script to index.html. It should only be shown to the user if and when they are directed to a page that does not exist, although I do not expect this tp occur even accidentally since the project is only on one page. The user is presented with a button that directs back to the homepage.
+
+
+
+
+
 ## Accessibility
 
 I have been mindful during coding to ensure that the website is as accessible and friendly as possible. I have achieved this by:
@@ -275,7 +267,7 @@ I have been mindful during coding to ensure that the website is as accessible an
 
 ### WAVE Report
 
-I have used [WebAIM's WAVE report](https://wave.webaim.org/) to assess the accessibility of my project against set guidelines. There were no errors and was deemed accessible with two alerts, one relating to no detection of a navigation bar (which I did not include, see Justifications) and that I had underlined the word 'Instructions' on the Instructions section. I have removed this underline from the final version. For reference please see the WAVE report below:
+I have used [WebAIM's WAVE report](https://wave.webaim.org/) to assess the accessibility of my project against set guidelines. There were no errors and was deemed accessible with two alerts, one relating to no detection of a navigation bar (which I did not include, see [Justifications and reflections](#justifications-and-reflections)) and that I had underlined the word 'Instructions' on the Instructions section. I have removed this underline from the final version. For reference please see the WAVE report below:
 
 ![Summary](/assets/images/accessibility/wave-report-summary.webp)
 
@@ -297,7 +289,7 @@ As part of my drive to make sure this project is as accessible as possible, and 
 
 -  **Play Again** -  I had originally intended on creating a Play Again option to be presented on the game Over modal. However, I decided not to include this function in the final version of the product due to conflicts with the user story of the facilitator. This was intended to be a virtual pub quiz, and in a pub quiz, the participants are not generally allowed to submit their answers twice. Therefore, I have not included this option. However, it should be noted here that there must be a certain level of trust that the user will not start the quiz again but with a different username, just as there is a level of trust that the participants in a face-to-face will not confer with one another. There is no way to mitigate this risk further.  
 
--  **Hall Of Fame list** - In an earlier version of the project, I had a function that would allow the user to display all scores either by Room Number or Score by selecting from a drop-down menu and clicking a submit button. However, this proved to be complex because I opted to hide and display sections by class all on one page rather than use modals or other scripts. Because of this, I could not find a way of executing the function without a submit, and when the button was clicked and the function activated, it reset the classes of every section. To resolve this, I have created a function that groups the high scores by room and then sorts by score automatically in descending order. That means that both the facilitator and user stories are still met;  easy to see who scored the most out of the room for the facilitator, and the players being able to see the top player easily which also meets their user stories. While this method was not my preferred way, it still achieves the same thing. 
+-  **Hall Of Fame list** - In an earlier version of the project, I had a function that would allow the user to display all scores either by Room Number or Score by selecting from a drop-down menu and clicking a submit button. However, I later opted, out of personal preference and simplicity for the user, to create a function that groups the high scores by room and then sorts by score automatically in descending order. That means that both the facilitator and user stories are still met; easy to see who scored the most out of the room for the facilitator, and the players being able to see the top player easily which also meets their user stories. 
 
 - **Separate pages for each section** - I did not include a page per section as I'd seen others do whilst doing some research and as per my original designs. This was purely a choice of personal preference; I wanted to create something unique and hadn't seen a quiz done on a single page in my research. In hindsight, it may have been easier to create this project using separate pages, particularly for my Hall of Fame section (as described above). My mentor had approved of this idea during one of our conferences. 
 
@@ -307,15 +299,15 @@ As part of my drive to make sure this project is as accessible as possible, and 
 
 1) As this quiz was designed for a real purpose with a real-world application, I had to take into account the environment in which it would be used. With that in mind, it's very unlikely that the pub user would be able to hear any background sounds due to the background noise generally associated with a pub setting.
 
-2) It would be unreasonable to expect a pub user, who may be sharing an internet connection with all other pub users or on a limited data plan, to watch a video or have a background sound that would increase the bandwidth needed, however small
+2) It would be unreasonable to expect a pub user, who may be sharing an internet connection with all other pub users or on a limited data plan, to watch a video or have a background sound that would increase the bandwidth needed / date used, however small.
 
 3) I did not find there was a need for any multimedia since the user stories were all met without and were not part of any of the assessment criteria. 
 
-- **Background colour** - While this point is relatively minor, I feel it necessary to point out that I did not intend to use brown as a background for the user screen and user screen container, as well as the answer buttons. However, the colour palette was suggested by Coolors based on the background image I'd already selected, and because my eyes don't see contrasts and shades well, I felt it important to rely on that suggestion. However, it should be noted that I have also taken the advice of [WebAim](https://webaim.org/resources/contrastchecker/bookmarklet), which advised me that the Coolors palette was not accessible in its current form, and so I have modified the palette slightly so that it passed all tests (see feedback on previous projects).
+- **Background colour** - While this point is relatively minor, I feel it necessary to point out that I did not intend to use brown as a background for the user screen and user screen container, as well as the answer buttons. However, the colour palette was suggested by Coolors based on the background image I'd already selected, and because my eyes don't see contrasts and shades well, I felt it important to rely on that suggestion. However, it should be noted that I have also taken the advice of [WebAim](https://webaim.org/resources/contrastchecker/bookmarklet), which advised me that the Coolors palette was not accessible in its current form, and so I have modified the palette slightly so that it passed all tests (see [Feedback from previous projects](#feedback-from-previous-projects)).
 
-- **Difficulty** - Most of the quizzes I'd seen during my research incorporated a difficulty setting where the user could decide on which level they would like to be challenged. I have decided not to include this function. I wanted to keep this project as close to a traditional pub setting as possible, and during a standard pub quiz, a pub user cannot choose the difficulty. While admittedly a bit of a risk, I consulted with my friend - the end user - and they agreed that we should not include a difficulty setting due to fairness (where it would not be fair to name a winner who has completed an easier quiz than the others). 
+- **Difficulty** - Most of the quizzes I'd seen during my research incorporated a difficulty setting where the user could decide on which level they would like to be challenged. I have decided not to include this function. I wanted to keep this project as close to a traditional pub setting as possible, and during a standard pub quiz, a pub user cannot choose the difficulty. While admittedly a bit of a risk, I consulted with my friend - the end user - and they agreed that we should not include a difficulty setting due to fairness (where it would not be fair to name a winner who has completed an easier quiz than the others). Instead, the questions would be of varying difficulty across all twenty questions. 
 
-- **Navigation bar** - I have chosen not to conform to a standard navigation bar that a user would generally expect to find on a typical website. The reasoning behind this is that this project, being a quiz, was designed with the elements in mind that a user would find on almost any interactive quiz. Therefore, the navigation across the quiz comes from buttons that display the relevant sections. 
+- **Navigation bar** - I have chosen not to conform to a standard navigation bar that a user would generally expect to find on a typical website, the reason being that this project, as a quiz, was designed with the elements in mind that a user would find on almost any interactive quiz. Therefore, the navigation across the quiz comes from buttons that display the relevant sections. So in essence, the buttons are the navigation.
 
 - - -
 
@@ -332,12 +324,10 @@ As part of my drive to make sure this project is as accessible as possible, and 
 |  **Images**                   |                                                                                           |
 |                               |                                                                                           |
 |  *Images*                     | [Pexels](https://www.pexels.com/)                                                         |
-|  *Icons*                      | [Fontt Awesome](https://fontawesome.com/)                                                 |
 |  *Image Compression tools*    | [Image Resizer](https://imageresizer.com/)                                                |
 |  *Image editing*              | [Image Resizer](https://imageresizer.com/)                                                |
 |  *Responsiveness testing*     | [Am I Responsive?](http://ami.responsivedesign.is/)                                       |
 |                               |                                                                                           |
-|                               |                                                                                           |                                                                            
 |  Version control              | Git                                                                                       |
 |  IDE / file storing           | [VS Code](https://code.visualstudio.com/)                                                 |
 |  Wireframes                   | [Balsamiq](https://balsamiq.com/)                                                         |
@@ -345,9 +335,9 @@ As part of my drive to make sure this project is as accessible as possible, and 
 |  CSS Code Validation          | [W3C Schools](https://validator.w3.org/)                                                  |
 |  JavaScript Code Validation   | [JS Hint](https://jshint.com/)                                                            |
 |  Developer Tools              | Chrome Developer Tools                                                                    |
-|  HTML Formatting              | [Free Formater](https://www.freeformatter.com/html-formatter.html)                        |
-|  CSS Formatting               | [Free Formater](https://www.freeformatter.com/html-formatter.html)                       |
-|  JavaScript Formatting        | [Free Formater](https://www.freeformatter.com/html-formatter.html)                       |
+|  HTML Formatting              | [Free Formater](https://www.freeformatter.com)                                            |
+|  CSS Formatting               | [Free Formater](https://www.freeformatter.com)                                            |
+|  JavaScript Formatting        | [Free Formater](https://www.freeformatter.com)                                            |
 
 - - -
 
@@ -355,7 +345,7 @@ As part of my drive to make sure this project is as accessible as possible, and 
 
 ### Deployment
 
-The Ultimate Virtual Pub Quiz was made live through GitHub. This is how to deploy Heart Helpers again:
+The Ultimate Virtual Pub Quiz was made live through GitHub. This is how to deploy:
 
 1. Log in (or sign up) to GitHub.
 2. Find the repository for this project, Dan-Matthews-23/the-ultimate-virtual-pub-quiz.
@@ -470,6 +460,7 @@ I have taken the following actions in response to feedback:
 
 My mentor - Harry - suggested that instead of creating four separate HTML documents as planned in my wireframes, I create one single page and then use Javascript to hide and show the sections I want. To that end, I have created a series of Event Listeners that will execute blocks of code when the correct button is clicked. In this context, it will show/hide parts of the page since the entire product exists in one document. It was also suggested that I add a second Return to Main Menu button that did not form an alert once it was clicked on pages such as Instructions (where the user is informed they will lose progress if clicked, but there is no progress to lose on this page). I have added this button as one of the last additions to this project.
 
+- - -
 
 ## Functions Explained
 
@@ -491,8 +482,6 @@ The following section will explain in detail how each function works. All functi
 | addHighScore()    | The JavaScript function addHighScore() is used to add a high score to the local storage. The function takes the username, room code, and score as input and returns nothing. The function works by first getting the existing high scores from local storage. If there are no existing high scores, the function creates an empty array. Next, the function generates a unique player ID by incrementing the length of the existing high scores array by 1. The function then creates an object with the following properties: playerID, The unique player ID, playerName: The username of the player, playerHighScore: The score of the player and then playerRoom: The room code of the quiz. The function then pushes the object into the existing high-score array. Finally, the function sorts the existing high scores array in descending order based on the player's high scores. The function then saves the sorted high scores array to local storage.    |
 | displayHighScore()    |  The JavaScript function displayHighScore() is used to display the high scores in the DOM. The function takes no input and returns nothing. The function works by first getting the existing high scores from local storage. If there are no existing high scores, the function creates an empty array. Next, the function sorts the existing high scores array in descending order based on the player room or player high score if the player rooms are the same. The function then gets the element that will contain the high scores table. Finally, the function uses the map() method to iterate through the existing high scores array and create a string of HTML code for each high score. The function then sets the inner HTML of the high scores table element to the string of HTML code.   |
 
-
-
 - - -
 
  ## Future Developments
@@ -502,6 +491,8 @@ There are several improvements I would like to make to Heart Helpers in the futu
 |      Page     |   Future Development Ideas  | Reason not added in this release  |
 | ------------  | ------------                |                                   |
 | index.html    |  Facilitator Login System   | I would like to see a login system for the facilitator in future development, although this can only work by using a server-side script, probably Python, in conjunction with SQL. It would not work on this project in its current form, and I don't believe there is a way to do this using only client-side scripts.                                  |
+
+- - -
 
 ## Credits
 
@@ -539,6 +530,8 @@ This function can be found at its source [here](https://www.freecodecamp.org/new
 
 The source of this code is a book. See below in the Acknowledgements for further details.
 
+- - -
+
 ## Acknowledgments
 
 Finally, I want to take the opportunity to thank and acknowledge the following for their support and patience in helping me create my first-ever project:
@@ -551,3 +544,4 @@ Finally, I want to take the opportunity to thank and acknowledge the following f
 - Chris Minnick, who is the author of JavaScript ALL-IN-ONE for dummies (which can be found on [Amazon](https://www.amazon.co.uk/JavaScript-All-Dummies-Chris-Minnick/dp/1119906830)). It was from Chris that I learned how to connect to an API (lines 70 - 86 in script.js), and I have based my code upon that template. 
 - James Q. Quick, whose video (which can be found [here](https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=10)) taught me how to utilise local storage, which was an integral part of this project
 
+- - -
