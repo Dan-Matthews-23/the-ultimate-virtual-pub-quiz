@@ -20,98 +20,174 @@
 
 The project was built using Google Chrome and tested through Chrome Developer Tools. All elements were tested with Firefox, Microsoft Edge and Safari (from my personal device). I have not tested the features using Internet Explorer, as support ended for this browser on some operating systems in June 2022.
 
-| Test Number|      Page     |   Browser      |   Feature (by class/ ID / name)       | Result     |  Comments |  
-|------------ | ------------  | ------------  | ------------                          |------------| ------------             | 
-| 001         |  style.css    | Chrome        |  Media Query / user-screen title      | Fail       | The title font size did not reduce with screen size. Tested on two viewports: 1500px and 480px. However, all media query tests failed despite several attempts 
-| **Before**                                          |   **After**          ||||
-| ![001](/assets/testing/testing-images/test-one-b.webp)      |![001](/assets/testing/testing-images/test-one-a.webp) |             | | |
-| 002         |  style.css    | Chrome        |  Media Query / user-screen title      | Pass       | Following the result in Test 001, I decided to use a ViewPort method rather than Media Query and set this to '5VW'. This resolved the issue I had in Test 001. 
-| **Before**                                          |   **After**          ||||
-| ![002](/assets/testing/testing-images/test-two-a.webp)      |![002](/assets/testing/testing-images/test-two-b.webp) |             | | |
+| Test Number         |      Page         |   Browser           |   Feature (by class/ ID / name)       | Result     |  Comments |  
+|------------         | ------------      | ------------        | ------------                          |------------| ------------             | 
+| 001                 |  style.css        | Chrome              |  Media Query / user-screen title      | Fail       | The title font size did not reduce with screen size. Tested on two viewports: 1500px and 480px. However, all media query tests failed despite several attempts |
+| **Image One**       |   **Image Two**   |**Image Three**      |**Image Four**                         |**Image Five**  |**Image Six**  |
+| ![001](/assets/testing/testing-images/test-one-a.webp)        | ![001](/assets/testing/testing-images/test-one-b.webp) | N/A            | N/A| N/A| N/A|
+| 002         |  style.css    | Chrome        |  Media Query / user-screen title      | Pass       | Following the result in Test 001, I decided to use a ViewPort method rather than Media Query and set this to '5VW'. This resolved the issue I had in Test 001. |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**        |**Image Six**  |
+| ![002](/assets/testing/testing-images/test-two-a.webp)      |![002](/assets/testing/testing-images/test-two-b.webp) | N/A            | N/A| N/A| N/A|
 | 003         |  script.js / index.html    | Chrome        |  function hideQuizSection() / div.quiz-section      | Fail       | A function built to hide the div.quiz-section on HTML when not active after studying the code on [W3 Schools](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp). I tried to send the output to console.log to find out why it wasn't working. However, all tests failed
-| **Before**                                          |   **After**          ||||
-| ![003](/assets/testing/testing-images/test-three-a.webp) ![003](/assets/testing/testing-images/test-three-b.webp)      | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![003](/assets/testing/testing-images/test-three-a.webp) |      ![003](/assets/testing/testing-images/test-three-b.webp)   | N/A            | N/A| N/A| N/A|
 | 004         |  script.js / index.html    | Chrome        |  function hideQuizSection() / section.quiz-section      | Pass       | After test failures in Test 003 I researched other ways to make the function work. I added an 'OnClick()' element to the button to call the function once clicked. It passed all tests. However, after speaking to my mentor, I decided to use an Event Listener instead (see Other Feedback, test 005)
-| **Before**                                          |   **After**          ||||
-| ![004](/assets/testing/testing-images/test-four-a.webp) ![004](/assets/testing/testing-images/test-four-b.webp) ![678px](/assets/testing/testing-images/test-four-c.webp)      | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![004](/assets/testing/testing-images/test-four-a.webp) |![004](/assets/testing/testing-images/test-four-b.webp) |![678px](/assets/testing/testing-images/test-four-c.webp)   | N/A            | N/A| N/A|  
 | 005         |  script.js / index.html    | Chrome        |  function hideQuizSection() / section.quiz-section      | Fail       | After following advice from my mentor, I attempted to create an EventListener() function in place of the OnClick() function. The quiz-section displayed as expected, but the other sections (specifically the user-selection-section) did not hide. Tests failed. 
-| **Before**                                          |   **After**          ||||
-| ![005](/assets/testing/testing-images/test-five-a.webp) ![005](/assets/testing/testing-images/test-five-b.webp) ![005](/assets/testing/testing-images/test-five-c.webp)      | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![005](/assets/testing/testing-images/test-five-a.webp)|![005](/assets/testing/testing-images/test-five-b.webp)| ![005](/assets/testing/testing-images/test-five-c.webp) | N/A            | N/A| N/A| 
 | 006         |  script.js / index.html    | Chrome        |  function showQuizSection() / section.quiz-section      | Pass       | After test failures in Test 005, I realised that .style.display="hide" is not a valid instruction. This should have been .style.display="none". After correcting, tests passed. 
-| **Before**                                          |   **After**          ||||
-| ![006](/assets/testing/testing-images/test-six-a.webp) ![006](/assets/testing/testing-images/test-six-b.webp) ![006](/assets/testing/testing-images/test-six-c.webp)      | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![006](/assets/testing/testing-images/test-six-a.webp) | ![006](/assets/testing/testing-images/test-six-b.webp) | ![006](/assets/testing/testing-images/test-six-c.webp)   | N/A            | N/A| N/A|
 | 007         |  script.js / index.html    | Chrome        |  showQuizSection / showInstructions / showHallOfFame      | Pass       | Following from successful results in Tests 005 and 006, I have replicated the code for each of the three sections: quiz-section, instructions-section and Hall-of-fame-section. The code passed all tests 
-| **Before**                                          |   **After**          ||||
-| ![007](/assets/testing/testing-images/test-seven-a.webp) ![007](/assets/testing/testing-images/test-seven-b.webp) ![007](/assets/testing/testing-images/test-seven-c.webp) ![007](/assets/testing/testing-images/test-seven-d.webp)      | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![007](/assets/testing/testing-images/test-seven-a.webp) | ![007](/assets/testing/testing-images/test-seven-b.webp) | ![007](/assets/testing/testing-images/test-seven-c.webp) | ![007](/assets/testing/testing-images/test-seven-d.webp)      | N/A| N/A|
 | 008         |  script.js / index.html    | Chrome        |  showQuizSection / showInstructions / showHallOfFame      | Pass       | I asked my mentor if it was conventional to use the code from Test 007 to change the display of a HTML section in a JavaScript file. They said it was, but ideally, I should be calling a class and changing that rather than CSS. I researched how to do this on [W3 Schools](https://www.w3schools.com/howto/howto_js_remove_class.asp) and implemented it. The test passed the first time. 
-| **Before**                                          |   **After**          ||||
-| ![008](/assets/testing/testing-images/test-eight-a.webp) | ![008](/assets/testing/testing-images/test-eight-b.webp)   ![008](/assets/testing/testing-images/test-eight-c.webp)      | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![008](/assets/testing/testing-images/test-eight-a.webp) | ![008](/assets/testing/testing-images/test-eight-b.webp) |  ![008](/assets/testing/testing-images/test-eight-c.webp)     | N/A            | N/A| N/A|
 | 009         |  script.js / index.html    | Chrome        |  showQuizSection / showInstructions / showHallOfFame      | Pass       | I amended the code from Test 008 to incorporate the user-selection and return-home sections. Below are the screenshots of each section as they are clicked. Note how other sections are hidden when the user has not selected them. However, I know these functions repeat, which breaches the [DRY principle ](https://www.digitalocean.com/community/tutorials/what-is-dry-development). I will further develop this at a later date
-| **Before**                                          |   **After**          ||||
-| ![009](/assets/testing/testing-images/test-nine-a.webp) | ![009](/assets/testing/testing-images/test-nine-b.webp)   ![009](/assets/testing/testing-images/test-nine-c.webp) ![009](/assets/testing/testing-images/test-nine-d.webp) ![009](/assets/testing/testing-images/test-nine-e.webp)     | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![009](/assets/testing/testing-images/test-nine-a.webp) | ![009](/assets/testing/testing-images/test-nine-b.webp)  | ![009](/assets/testing/testing-images/test-nine-c.webp) |![009](/assets/testing/testing-images/test-nine-d.webp) |![009](/assets/testing/testing-images/test-nine-e.webp)     | N/A            | N/A|
 | 010         |  script.js / index.html    | Chrome        |  showQuiz section     | Fail       |  I have created my own question array; however, the function seems to be calling the last question in the data set rather than the first, and the buttons are not populating with the one correct and three incorrect answers. I have spent much time researching this but still can't figure it out.
-| **Before**                                          |   **After**          ||||
-| ![010](/assets/testing/testing-images/test-ten-a.webp) | ![010](/assets/testing/testing-images/test-ten-b.webp)       | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**      |**Image Six**  |
+| ![010](/assets/testing/testing-images/test-ten-a.webp) | ![010](/assets/testing/testing-images/test-ten-b.webp)   | N/A            | N/A| N/A| N/A|
 | 011         |  script.js / index.html    | Chrome        |  getQuestionArray      | Fail       | After trying to fix test 010, I created a new function. I called the question section to populate a new question. However, the answers did not populate, and the question disappeared. 
-| **Before**                                          |   **After**          ||||
-| ![011](/assets/testing/testing-images/test-eleven-a.webp) | ![011](/assets/testing/testing-images/test-eleven-b.webp)       | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**      |**Image Six**  |
+| ![011](/assets/testing/testing-images/test-eleven-a.webp) | ![011](/assets/testing/testing-images/test-eleven-b.webp)       | N/A            | N/A| N/A| N/A|
 | 012         |  script.js / index.html    | Chrome        |  getQuestionArray      | Pass       | I realised that I was calling for the class, not the ID on question from index.html. Made changes, and it worked.  
-| **Before**                                          |   **After**          ||||
-| ![012](/assets/testing/testing-images/test-twelve-a.webp) |       | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![012](/assets/testing/testing-images/test-twelve-a.webp)  | N/A            | N/A| N/A| N/A| N/A |
 | 013         |  script.js / index.html    | Chrome        |  getQuestionArray      | Fail       | To refine my code for calling the questions and correcting a long-standing error from Test 010, I attempted to rewrite the function. However, the questions did not populate, and the automated testing (via console) gave an error
-| **Before**                                          |   **After**          ||||
-| ![013](/assets/testing/testing-images/test-thirteen-a.webp) |   ![013](/assets/testing/testing-images/test-thirteen-b.webp) ![013](/assets/testing/testing-images/test-thirteen-c.webp)    | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![013](/assets/testing/testing-images/test-thirteen-a.webp) |   ![013](/assets/testing/testing-images/test-thirteen-b.webp) | ![013](/assets/testing/testing-images/test-thirteen-c.webp)  | N/A            | N/A| N/A|
 | 014         |  script.js / index.html    | Chrome        |  getQuestionArray      | Pass       | After case conferencing with a peer, I realised I was not correctly indexing the questions from the array. I should have used 'connect.results[id].correct_answer;' instead of 'connect.results.correct_answer'. Made adjustments and passed all tests. Questions are now working
-| **Before**                                          |   **After**          ||||
-| ![014](/assets/testing/testing-images/test-fourteen-a.webp) |       | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![014](/assets/testing/testing-images/test-fourteen-a.webp)  | N/A            | N/A| N/A| N/A| N/A |
 | 015         |  script.js / index.html    | Chrome        |  getScore      | Fail       | From console logs and alert boxes, I know my score is compiling as planned, but I can't get a static score to show on index.html. Attempts to push the score value through via innerHTML are failing. 
-| **Before**                                          |   **After**          ||||
-| ![015](/assets/testing/testing-images/test-fourteen-a.webp) |       | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| N/A  | N/A            | N/A| N/A| N/A| N/A |
 | 016         |  script.js / index.html    | Chrome        |  getScore      | Pass       | After rewriting the calculaeScore function, I have the score working. I intentionally made the text large and red at the top of the page to see when it was working properly. 
-| **Before**                                          |   **After**          ||||
-| ![016](/assets/testing/testing-images/test-sixteen-a.webp)  ![016](/assets/testing/testing-images/test-sixteen-b.webp) |       | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![016](/assets/testing/testing-images/test-sixteen-a.webp) |  ![016](/assets/testing/testing-images/test-sixteen-b.webp)  | N/A            | N/A| N/A| N/A|
 | 017         |  script.js / index.html    | Chrome        |  confirmAnswer      | Pass       | After almost twenty attempts, I managed to get the function working to highlight the correct answer if the user selects an incorrect answer.  
-| **Before**                                          |   **After**          ||||
-| ![017](/assets/testing/testing-images/test-seventeen-a.webp)  ![017](/assets/testing/testing-images/test-seventeen-b.webp) |       | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![017](/assets/testing/testing-images/test-seventeen-a.webp)  ![017](/assets/testing/testing-images/test-seventeen-b.webp)  | N/A            | N/A| N/A| N/A|
 | 018         |  script.js / index.html    | Chrome        |  user-screen-container      | Fail       | I wanted to set the background to a transparent brown. I used the opaque CSS setting, but it did not work as planned, as this was applied to all child elements even though I'd redeclared it in the other classes. Failed tests  
-| **Before**                                          |   **After**          ||||
-| ![018](/assets/testing/testing-images/test-eighteen-a.webp)  ![018](/assets/testing/testing-images/test-eighteen-b.webp) |       | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![018](/assets/testing/testing-images/test-eighteen-a.webp)  | ![018](/assets/testing/testing-images/test-eighteen-b.webp) |  N/A            | N/A| N/A| N/A|
 | 019         |  script.js / index.html    | Chrome        |  user-screen-container      | Pass       | I did some research Following test failures in Test 018. I discovered that what I wanted to do was not possible. On [Ww3 Schools] (https://www.w3schools.com/css/css3_colors.asp) I learned that I could convert the background colour to RGBA, where the 'alpha' part would determine the opacity. The test passed all tests
-| **Before**                                          |   **After**          ||||
-| ![019](/assets/testing/testing-images/test-nineteen-a.webp)  ![019](/assets/testing/testing-images/test-nineteen-b.webp) |       | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![019](/assets/testing/testing-images/test-nineteen-a.webp) | ![019](/assets/testing/testing-images/test-nineteen-b.webp) |  N/A            | N/A| N/A| N/A|
 | 020         |  script.js / index.html    | Chrome        |  showQuizSection     | Fail       | Test 009 indicated that my code was in breach of the [DRY principle ](https://www.digitalocean.com/community/tutorials/what-is-dry-development). I asked a peer to review my code (see [Acknowledgments(#Acknowledgments)]). It was suggested to me that I use event.target rather than a function for each section. While the first section worked to show/hide the quiz section, the others did not. Tests failed
-| **Before**                                          |   **After**          ||||
-| ![020](/assets/testing/testing-images/test-twenty-a.webp)  ![020](/assets/testing/testing-images/test-twenty-b.webp) |       | |             | | |
-| 021         |  script.js / index.html    | Chrome        |  showQuizSection     | Pass       | I realised that my event listener was 'listening' for only the showQuiz variable. I removed this part, and the function worked as planned. 
-| **Before**                                          |   **After**          ||||
-| ![021](/assets/testing/testing-images/test-twenty-one-a.webp)  |       | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![020](/assets/testing/testing-images/test-twenty-a.webp)  ![020](/assets/testing/testing-images/test-twenty-b.webp) |  N/A            | N/A| N/A| N/A|
 | 022         |  script.js / index.html    | Chrome        |  passNickname     | Fail       | Following feedback on changing the order of my 'Enter Username' modal, I asked for the username first before the game started. However, the username was not pulling through to the passNickname function. My console log declared an undefined variable. 
-| **Before**                                          |   **After**          ||||
-| ![022](/assets/testing/testing-images/test-twenty-two-a.webp)  |  ![022](/assets/testing/testing-images/test-twenty-two-b.webp)      | |             | | |
- | 023         |  script.js / index.html    | Chrome        |  passNickname     | Pass       | Following several more variations of Test 022, I realised that I had included a previous 'let username' before the functions. This effectively meant that my username value was reset every time the script ran. I corrected the error and inserted two extra lines into the function, and it passed all tests
-| **Before**                                          |   **After**          ||||
-| ![023](/assets/testing/testing-images/test-twenty-three-a.webp)  |  ![023](/assets/testing/testing-images/test-twenty-three-b.webp)     | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![022](/assets/testing/testing-images/test-twenty-two-a.webp)  |  ![022](/assets/testing/testing-images/test-twenty-two-b.webp)  |  N/A            | N/A| N/A| N/A|
+| 023         |  script.js / index.html    | Chrome        |  passNickname     | Pass       | Following several more variations of Test 022, I realised that I had included a previous 'let username' before the functions. This effectively meant that my username value was reset every time the script ran. I corrected the error and inserted two extra lines into the function, and it passed all tests
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![023](/assets/testing/testing-images/test-twenty-three-a.webp)  |  ![023](/assets/testing/testing-images/test-twenty-three-b.webp) |  N/A            | N/A| N/A| N/A|
 | 024         |  script.js / index.html    | Chrome        |  getHighScores     | Fail       | Upon completing the quiz, the user is presented with the High Scores section. However, once back to the dashboard, if the user clicks High Scores (test-twenty-four-b), the array is not displaying. 
-| **Before**                                          |   **After**          ||||
-| ![024](/assets/testing/testing-images/test-twenty-four-a.webp)  |  ![024](/assets/testing/testing-images/test-twenty-four-b.webp)     | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![024](/assets/testing/testing-images/test-twenty-four-a.webp)  |  ![024](/assets/testing/testing-images/test-twenty-four-b.webp) |  N/A            | N/A| N/A| N/A|
 | 025         |  script.js / index.html    | Chrome        |  getHighScores     | Fail       | I have attempted to correct the issue in Test 024 by separating the getHighScores function into two separate functions. However, this also failed tests, as the variables were not pulled through to displayScore function
-| **Before**                                          |   **After**          ||||
-| ![025](/assets/testing/testing-images/test-twenty-five-a.webp)  |  ![025](/assets/testing/testing-images/test-twenty-five-b.webp)     | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![025](/assets/testing/testing-images/test-twenty-five-a.webp)  |  ![025](/assets/testing/testing-images/test-twenty-five-b.webp) |  N/A            | N/A| N/A| N/A|
 | 026         |  script.js / index.html    | Chrome        |  displayHighScores     | Pass       | I tried to correct the errors in Tests 024 and 025. However, I decided to try another way. I have reinstated the getHighScores function and created a separate function called displayHighScores, but rather, I rely on the variables of other functions. I have replicated the last three lines from getHighScores and assigned them different variable names. This means that I am accessing the array in exactly the same way without pushing any values or relying on other functions (see image b, replicated code is highlighted)
-| **Before**                                          |   **After**          ||||
-| ![026](/assets/testing/testing-images/test-twenty-six-a.webp)  |  ![026](/assets/testing/testing-images/test-twenty-six-b.webp)     | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![026](/assets/testing/testing-images/test-twenty-six-a.webp)  |  ![026](/assets/testing/testing-images/test-twenty-six-b.webp)  |  N/A            | N/A| N/A| N/A|
 | 027         |  script.js / index.html    | Chrome        |  confirmAnswer     | Fail       | There seems to be an instance in confirmAnswer where the selected answer has characters inserted into the value. This is causing a mismatch error, but the Next button isn't showing either. 
-| **Before**                                          |   **After**          ||||
-| ![027](/assets/testing/testing-images/test-twenty-seven-a.webp)  |  ![027](/assets/testing/testing-images/test-twenty-seven-b.webp)     | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![027](/assets/testing/testing-images/test-twenty-seven-a.webp)  |  ![027](/assets/testing/testing-images/test-twenty-seven-b.webp)  |  N/A            | N/A| N/A| N/A|
 | 028         |  script.js / index.html    | Chrome        |  confirmAnswer     | Fail       | I have changed the function in Test 027, but the error is still being generated. 
-| **Before**                                          |   **After**          ||||
-| ![028](/assets/testing/testing-images/test-twenty-eight-a.webp)  |  ![028](/assets/testing/testing-images/test-twenty-eight-b.webp)     | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![028](/assets/testing/testing-images/test-twenty-eight-a.webp)  | N/A  |  N/A            | N/A| N/A| N/A|
 | 029         |  script.js / index.html    | Chrome        |  confirmAnswer     | Fail       | I have taken a function from an [online source](https://gomakethings.com/) in attempt to escape any special characters. It seems to work for almost all tests but fails when an ampersand (&) is in the answer. 
-| **Before**                                          |   **After**          ||||
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |
 | There are no images for this test |    | |             | | |
 | 030         |  script.js / index.html    | Chrome        |  confirmAnswer     | Pass       | I have created two additional functions to work alongside the function I took from an online source. I learned this from an online tutorial and created my own based loosely on that. It passed all tests from a range of over 2000 questions. 
-| **Before**                                          |   **After**          ||||
-| ![028](/assets/testing/testing-images/test-thirty-a.webp)  |  ![028](/assets/testing/testing-images/test-thirty-b.webp     | |             | | |
+| **Image One**   |   **Image Two**          |**Image Three**        |**Image Four**       |**Image Five**       |**Image Six**  |
+| ![028](/assets/testing/testing-images/test-thirty-a.webp)  |  ![028](/assets/testing/testing-images/test-thirty-b.webp)   |  N/A            | N/A| N/A| N/A|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   - - -
 
