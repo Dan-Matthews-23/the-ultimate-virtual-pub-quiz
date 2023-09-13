@@ -188,11 +188,27 @@
 }
 
 /*--------------------MEDIA QUERIES - FOR RESPONSIVE DESIGN ---------------------------------------*/
- @media screen and (max-width: 576px) {
+@media screen and (max-width: 380px) {
+    .main-container {
+        padding-top: 130px;
+   }
+}
+
+@media screen and (max-width: 449px) {
+    .footer-style {
+        height: 180px;
+   }
+    .footer-links i {
+        padding: 15px;
+   }
+   
+}
+@media screen and (max-width: 576px) {
      .sub-button, .answer, .user-screen {
          font-size: 30px;
     }
 }
+
  @media screen and (max-width: 600px) {
      .user-screen-container, .hall-of-fame-container, .user-screen {
          padding: 0px;
@@ -214,18 +230,14 @@
          width: 60%;
     }
 }
- @media screen and (max-width: 380px) {
-     .main-container {
-         padding-top: 130px;
-    }
-}
- @media screen and (max-width: 449px) {
-     .footer-style {
-         height: 180px;
-    }
-     .footer-links i {
-         padding: 15px;
-    }
+
+@media screen and (max-width: 768px) {
+    .sub-button, .answer {
+        font-size: 20px;            
+   }
+   #score, #question, #question-number {
+    font-size: 20px;
+   }
 }
 /*--------------------END OF MEDIA QUERIES---------------------------------------*/
  
