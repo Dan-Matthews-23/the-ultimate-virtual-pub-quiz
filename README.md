@@ -65,7 +65,13 @@ The Ultimate Pub Quiz is an exciting development designed specifically for pub u
 
 ### Background
 
-The Ultimate Virtual Pub Quiz is designed for pub users and activity coordinators and is a way for all participants to enjoy the same experience of a traditional pub quiz. Designed with a 'mobile-first' principle, this project is perfect for pub users to enjoy the same experience across a range of devices. This quiz has been developed based on a real need - a good friend who is also a pub landlord  - for an exciting experience without the hassle of having someone organise it. 
+The Ultimate Virtual Pub Quiz is designed for pub users and activity coordinators and is a way for all participants to enjoy the same experience of a traditional pub quiz. Designed with a 'mobile-first' principle, this project is perfect for pub users to enjoy the same experience across a range of devices. 
+
+This project has been designed with a specific audience in mind and for a specific need. My friend, who is also a pub landlord, runs a weekly quiz every Friday night for the locals. He often organises the quiz himself which takes him quite a bit of time. He has quite a few clients who are hard of hearing, but with limited resources to print out the quiz dozens, perhaps even a hundred times a week just isn't viable for him any longer. He needs something else which will achieve the same thing but that is much less time-consumuing and requires fewer resources. 
+
+This is where this project will be applied - for a real need and areal audience. Every aspect of design has been approved by the landlord.
+
+**Notes for clarity:** Throughout this project, I refer to the facilitator, landlord and organiser interchangeably. They are all the same thing. As it stands currently, the landlord is the facilitator and organiser of the Friday night quiz. However once this project is implemented, the facilitator will be delegated to the manager, who will only need to decide on a room code (this can be any number, as long as everyone uses the same code), and then view the top score in the Hall of Fame. 
 
 The quiz has several aims:
 
@@ -73,7 +79,7 @@ The quiz has several aims:
 - Respond to user input.
 - Provide feedback.
 - Provide a final score. 
-- Display record of previous high scores .
+- Display record of previous high scores.
 
 ### Key information
 
@@ -87,7 +93,7 @@ This project has been designed with two end users in mind:
 
 - The pub user, who is the user participating in the quiz. They will be able to access the quiz via a smart device through their own internet or Wi-Fi of the premises if they have it. They will be given a 'Room Number' that they must enter along with their username when they join the quiz. They will be given the Room ID by the facilitator. The instructions will need to be clear. 
 
-- The facilitator, who is the person who will be facilitating the event. They will need to ensure everyone has the correct Room Code, and they need only advise the participants to begin at an allotted time. Once all participants have completed the quiz, the facilitator will be able to view the Hallf of Fame, which will be grouped and easy to identify a clear winner.  
+- The facilitator, who is the person who will be facilitating the event. They will need to ensure everyone has the correct Room Code, and they need only advise the participants to begin at an allotted time. Once all participants have completed the quiz, the facilitator will be able to view the Hall of Fame, which will be grouped and easy to identify a clear winner. The facilitator will need to chose a room code, which can be any number, and then make people aware of it.  
 
 ### User Goals
 The pub user:
@@ -99,7 +105,7 @@ The pub user:
 - To compare my score with other scores
 
 The facilitator:
-- To see the results of the users in the room once finished
+- To see the results of the users in any room once finished
 - To easily identify a winner amongst users in the room
 
 ### First Time Visitor Goals
