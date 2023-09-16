@@ -492,11 +492,9 @@ The following section will explain in detail how each function works. All functi
 
  ## Future Developments
 
-There are several improvements I would like to make to Heart Helpers in the future when my knowledge and experience are improved.
+There are several improvements I would like to make to this project in the future when my knowledge and experience are improved.
 
-|      Page     |   Future Development Ideas  | Reason not added in this release  |
-| ------------  | ------------                |                                   |
-| index.html    |  Facilitator Login System   | I would like to see a login system for the facilitator in future development, although this can only work by using a server-side script, probably Python, in conjunction with SQL. It would not work on this project in its current form, and I don't believe there is a way to do this using only client-side scripts.                                  |
+In a future development, when my knowledge of Python and SQL is satisfactory, I would like to introduce a login system for the facilitator, with scores in the Hall of Fame being stored in a temporary table that can be emptied by the facilitator.
 
 - - -
 
@@ -534,7 +532,7 @@ This function can be found at its source [here](https://www.freecodecamp.org/new
 
 ![connectapi function](/assets/images/api-connect-function-code-used.webp)
 
-The source of this code is a book. See below in the Acknowledgements for further details.
+The source of this code is a book by Chris Minnick. See below in the Acknowledgements for further details.
 
 - - -
 
