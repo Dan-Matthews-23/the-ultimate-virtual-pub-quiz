@@ -117,7 +117,7 @@ function confirmReturn() {
 function getQuestionArray() {
    const question = (document.getElementById("question").innerHTML = connect.results[id].question);
    const displayScore = (document.getElementById("score").innerHTML = `Score: ${score}`);
-   const setRawQuestionNumber = (document.getElementById("question-number").innerHTML = `Q: ${qID}`);
+   const setRawQuestionNumber = (document.getElementById("question-number").innerHTML = `Q ${qID}`);
    getAnswerArray(question, displayScore, setRawQuestionNumber);
 }
 //---End of default setting---//
@@ -241,14 +241,14 @@ function confirmAnswer() {
 //---Function to increase score if answer correct---//
 function increaseScore() {
    score += 10;
-   scoreCounter.innerText = ` Score: ${score}`;
+   scoreCounter.innerText = `Score: ${score}`;
 }
 //---End of increase score function---//
 
 //---Function to increase question number---//
 function increaseQuestionNumber() {
    qID += 1;
-   questionCounter.innerText = ` Q) ${qID}`;
+   questionCounter.innerText = `Q ${qID}`;
 }
 ///--End of increase question number function---//
 
